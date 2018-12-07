@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ASA/src" modelPluginID="ASA" modelName="M1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>M1.ecore</foreignModel>
+  <genPackages prefix="M1" disposableProviderFactory="true" ecorePackage="M1.ecore#/">
+    <genClasses ecoreClass="M1.ecore#//Client">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute M1.ecore#//Client/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute M1.ecore#//Client/pseudo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Client/portrpctoclient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Client/portclienttorpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Client/portclienttobinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Client/portbindingtoclient"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//ServerConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/bindingcmtoserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/bindingservertocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/portservertorpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/portrpctoserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/portservertobinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/portbindingtoserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsqltocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentcmtosql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsqltodb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentdbtosql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentdbtosq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsqtodb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsqtosm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsmtosq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentcrtocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentcmtocr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentsmtocr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentcrtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//ConnectionManager">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtocr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portsqltocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtosql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portbindingtocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtobinding"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//Database">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portdbtosql"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portsqltodb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portdbtosq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portsqtodb"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//SecurityManager">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsmtocr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsmtosq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsqtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortClienttoRPC"/>
+    <genClasses ecoreClass="M1.ecore#//PortRPCtoClient"/>
+    <genClasses ecoreClass="M1.ecore#//PortRPCtoServer"/>
+    <genClasses ecoreClass="M1.ecore#//PortServerToRPC"/>
+    <genClasses ecoreClass="M1.ecore#//AttachmentClienttoRPC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentClienttoRPC/portclienttorpc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentClienttoRPC/rolerpcfromclient"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//RPCConnectorClientServer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//RPCConnectorClientServer/rolerpctoserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//RPCConnectorClientServer/rolerpcfromclient"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentRPCtoServer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentRPCtoServer/portrpctoserver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentRPCtoServer/rolerpctoserver"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentServerToRPC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentServerToRPC/portservertorpc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentServerToRPC/rolerpcfromserver"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//RPCConnectorServerClient">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//RPCConnectorServerClient/rolerpctoclient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//RPCConnectorServerClient/rolerpcfromserver"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentRPCToClient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentRPCToClient/portrpctoclient"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentRPCToClient/rolerpctoclient"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortSQLtoCM"/>
+    <genClasses ecoreClass="M1.ecore#//PortCMtoCR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCMtoCR/attachmentcmtocr"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortCRtoSM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCRtoSM/securitymanager"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortSMtoCR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortSMtoCR/attachmentsmtocr"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortSQtoDB"/>
+    <genClasses ecoreClass="M1.ecore#//PortCRtoCM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCRtoCM/connectionmanager"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortCMtoSQL"/>
+    <genClasses ecoreClass="M1.ecore#//PortDBtoSQ"/>
+    <genClasses ecoreClass="M1.ecore#//PortDBtoSQL"/>
+    <genClasses ecoreClass="M1.ecore#//PortSQLtoDB"/>
+    <genClasses ecoreClass="M1.ecore#//SQLQueryConnectorOut">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SQLQueryConnectorOut/rolesqlfromdb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SQLQueryConnectorOut/rolesqltocm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//ClearanceRequestConnectorIn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ClearanceRequestConnectorIn/rolecrfromcm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ClearanceRequestConnectorIn/rolecrtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//SecurityQueryConnectorIn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityQueryConnectorIn/rolesqtodb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityQueryConnectorIn/rolesqfromsm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSQLtoDB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQLtoDB/portsqltodb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQLtoDB/rolesqltodb"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentDBtoSQL">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentDBtoSQL/portdbtosql"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentDBtoSQL/rolesqlfromdb"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSQLtoCM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQLtoCM/portsqltocm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQLtoCM/rolesqltocm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentCMtoSQL">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCMtoSQL/portcmtosql"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCMtoSQL/rolesqlfromcm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentDBtoSQ">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentDBtoSQ/portdbtosq"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentDBtoSQ/rolesqfromdb"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSQtoDB">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQtoDB/portsqtodb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQtoDB/rolesqtodb"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSQtoSM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQtoSM/portsqtosm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSQtoSM/rolesqtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSMtoSQ">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSMtoSQ/portsmtosq"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSMtoSQ/rolesqfromsm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentCRtoCM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCRtoCM/portcrtocm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCRtoCM/rolecrtocm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentCMtoCR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCMtoCR/rolecrfromcm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentSMtoCR">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSMtoCR/rolecrfromsm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//AttachmentCRtoSM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCRtoSM/portcrtosm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCRtoSM/rolecrtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//SQLQueryConnectorIn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SQLQueryConnectorIn/rolesqltodb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SQLQueryConnectorIn/rolesqlfromcm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//SecurityQueryConnectorOut">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityQueryConnectorOut/rolesqfromdb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityQueryConnectorOut/rolesqtosm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//ClearanceRequestConnectorOut">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ClearanceRequestConnectorOut/rolecrtocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ClearanceRequestConnectorOut/rolecrfromsm"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortSQtoSM"/>
+    <genClasses ecoreClass="M1.ecore#//PortSMtoSQ"/>
+    <genClasses ecoreClass="M1.ecore#//PortServerToBinding"/>
+    <genClasses ecoreClass="M1.ecore#//PortBindingToServer"/>
+    <genClasses ecoreClass="M1.ecore#//PortBindingToCM"/>
+    <genClasses ecoreClass="M1.ecore#//PortCMtoBinding"/>
+    <genClasses ecoreClass="M1.ecore#//BindingServerToCM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingServerToCM/portbindingtocm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingServerToCM/portservertobinding"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//BindingCMtoServer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingCMtoServer/portbindingtoserver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingCMtoServer/portcmtobinding"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//RoleRPCfromClient"/>
+    <genClasses ecoreClass="M1.ecore#//RoleRPCtoClient"/>
+    <genClasses ecoreClass="M1.ecore#//RoleRPCtoServer"/>
+    <genClasses ecoreClass="M1.ecore#//RoleRPCfromServer"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQLtoDB"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQLfromDB"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQLtoCM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQLfromCM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQfromDB"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQtoDB"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQtoSM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleSQfromSM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleCRtoCM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleCRfromSM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleCRtoSM"/>
+    <genClasses ecoreClass="M1.ecore#//RoleCRfromCM"/>
+    <genClasses ecoreClass="M1.ecore#//ConfigurationClientServer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/portbindingtoconfigclientserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/portconfigclientservertobinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/bindingclienttoconfigclientserver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/bindingconfigclientservertoclient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/attachmentrpctoclient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/attachmentservertorpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/attachmentclienttorpc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConfigurationClientServer/attachmentrpctoserver"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortBindingToConfigClientServer"/>
+    <genClasses ecoreClass="M1.ecore#//PortConfigClientServerToBinding"/>
+    <genClasses ecoreClass="M1.ecore#//PortClientToBinding"/>
+    <genClasses ecoreClass="M1.ecore#//PortBindingToClient"/>
+    <genClasses ecoreClass="M1.ecore#//BindingClientToConfigClientServer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingClientToConfigClientServer/portbindingtoconfigclientserver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingClientToConfigClientServer/portclienttobinding"/>
+    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//BindingConfigClientServerToClient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingConfigClientServerToClient/portbindingtoclient"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//BindingConfigClientServerToClient/portconfigclientservertobinding"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="ASA" disposableProviderFactory="true" ecorePackage="aSA.ecore#/">
+    <genClasses ecoreClass="aSA.ecore#//Composant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Composant/interfacecomposant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Composant/propriete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Composant/contraintetechnique"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//InterfaceComposant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//InterfaceComposant/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//InterfaceComposant/port"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//Service"/>
+    <genClasses ecoreClass="aSA.ecore#//ServiceRequis"/>
+    <genClasses ecoreClass="aSA.ecore#//ServiceFourni"/>
+    <genClasses ecoreClass="aSA.ecore#//PortComposantFourni"/>
+    <genClasses ecoreClass="aSA.ecore#//PortComposantRequis"/>
+    <genClasses ecoreClass="aSA.ecore#//PortComposant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aSA.ecore#//PortComposant/id"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//Propriete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aSA.ecore#//Propriete/fonctionnelle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aSA.ecore#//Propriete/configurable"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//ContrainteTechnique"/>
+    <genClasses ecoreClass="aSA.ecore#//ComposantSimple"/>
+    <genClasses ecoreClass="aSA.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Configuration/composant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Configuration/interfaceconfiguration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Configuration/attachment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Configuration/binding"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//InterfaceConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//InterfaceConfiguration/portconfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//PortConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aSA.ecore#//PortConfiguration/id"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//PortConfigurationRequis"/>
+    <genClasses ecoreClass="aSA.ecore#//PortConfigurationFourni"/>
+    <genClasses ecoreClass="aSA.ecore#//Binding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Binding/portcomposant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Binding/portconfiguration"/>
+      <genOperations ecoreOperation="aSA.ecore#//Binding/bindingConfigConponent">
+        <genParameters ecoreParameter="aSA.ecore#//Binding/bindingConfigConponent/portConfigFourni"/>
+      </genOperations>
+      <genOperations ecoreOperation="aSA.ecore#//Binding/bindingComponentConfig">
+        <genParameters ecoreParameter="aSA.ecore#//Binding/bindingComponentConfig/portCompoFourni"/>
+      </genOperations>
+      <genOperations ecoreOperation="aSA.ecore#//Binding/bindingConfigConponent.1">
+        <genParameters ecoreParameter="aSA.ecore#//Binding/bindingConfigConponent.1/portConfigRequis"/>
+      </genOperations>
+      <genOperations ecoreOperation="aSA.ecore#//Binding/bindingComponentConfig.1">
+        <genParameters ecoreParameter="aSA.ecore#//Binding/bindingComponentConfig.1/portCompoRequis"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//Connecteur">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Connecteur/interfaceconnecteur"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//Connecteur/glue"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//InterfaceConnecteur">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aSA.ecore#//InterfaceConnecteur/role"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aSA.ecore#//Role/id"/>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//RoleRequis"/>
+    <genClasses ecoreClass="aSA.ecore#//RoleFourni"/>
+    <genClasses ecoreClass="aSA.ecore#//Glue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Glue/TO"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Glue/FROM"/>
+      <genOperations ecoreOperation="aSA.ecore#//Glue/glueFunction">
+        <genParameters ecoreParameter="aSA.ecore#//Glue/glueFunction/roleFourni"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="aSA.ecore#//Attachment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Attachment/FROM_2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Attachment/TO_1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Attachment/FROM_1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aSA.ecore#//Attachment/TO_2"/>
+      <genOperations ecoreOperation="aSA.ecore#//Attachment/attachPortToRole">
+        <genParameters ecoreParameter="aSA.ecore#//Attachment/attachPortToRole/port"/>
+      </genOperations>
+      <genOperations ecoreOperation="aSA.ecore#//Attachment/attachRoleToPort">
+        <genParameters ecoreParameter="aSA.ecore#//Attachment/attachRoleToPort/role"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

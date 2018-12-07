@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="M1" nsURI="http://www.example.org/M1" nsPrefix="M1">
+  <eClassifiers xsi:type="ecore:EClass" name="Client" instanceClassName="aSA.ComposantSimple"
+      eSuperTypes="aSA.ecore#//ComposantSimple">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portrpctoclient" lowerBound="1"
+        eType="#//PortRPCtoClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portclienttorpc" lowerBound="1"
+        eType="#//PortClienttoRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portclienttobinding" lowerBound="1"
+        eType="#//PortClientToBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoclient" lowerBound="1"
+        eType="#//PortBindingToClient" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerConfiguration" instanceClassName="aSA.Configuration"
+      eSuperTypes="aSA.ecore#//Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingcmtoserver" lowerBound="1"
+        eType="#//BindingCMtoServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingservertocm" lowerBound="1"
+        eType="#//BindingServerToCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portservertorpc" lowerBound="1"
+        upperBound="-1" eType="#//PortServerToRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portrpctoserver" lowerBound="1"
+        upperBound="-1" eType="#//PortRPCtoServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portservertobinding" lowerBound="1"
+        eType="#//PortServerToBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoserver" lowerBound="1"
+        eType="#//PortBindingToServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsqltocm" lowerBound="1"
+        eType="#//AttachmentSQLtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcmtosql" lowerBound="1"
+        eType="#//AttachmentCMtoSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsqltodb" lowerBound="1"
+        eType="#//AttachmentSQLtoDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentdbtosql" lowerBound="1"
+        eType="#//AttachmentDBtoSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentdbtosq" lowerBound="1"
+        eType="#//AttachmentDBtoSQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsqtodb" lowerBound="1"
+        eType="#//AttachmentSQtoDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsqtosm" lowerBound="1"
+        eType="#//AttachmentSQtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsmtosq" lowerBound="1"
+        eType="#//AttachmentSMtoSQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcrtocm" lowerBound="1"
+        eType="#//AttachmentCRtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcmtocr" lowerBound="1"
+        eType="#//AttachmentCMtoCR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsmtocr" lowerBound="1"
+        eType="#//AttachmentSMtoCR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcrtosm" lowerBound="1"
+        eType="#//AttachmentCRtoSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" instanceClassName="aSA.ComposantSimple"
+      eSuperTypes="aSA.ecore#//ComposantSimple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtocr" lowerBound="1"
+        eType="#//PortCMtoCR"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqltocm" lowerBound="1"
+        eType="#//PortSQLtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtosql" lowerBound="1"
+        eType="#//PortCMtoSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtocm" lowerBound="1"
+        eType="#//PortBindingToCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtobinding" lowerBound="1"
+        eType="#//PortCMtoBinding" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database" instanceClassName="aSA.ComposantSimple"
+      eSuperTypes="aSA.ecore#//ComposantSimple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdbtosql" lowerBound="1"
+        eType="#//PortDBtoSQL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqltodb" lowerBound="1"
+        eType="#//PortSQLtoDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdbtosq" lowerBound="1"
+        eType="#//PortDBtoSQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqtodb" lowerBound="1"
+        eType="#//PortSQtoDB" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" instanceClassName="aSA.ComposantSimple"
+      eSuperTypes="aSA.ecore#//ComposantSimple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtocr" lowerBound="1"
+        eType="#//PortSMtoCR"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtosq" lowerBound="1"
+        eType="#//PortSMtoSQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqtosm" lowerBound="1"
+        eType="#//PortSQtoSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortClienttoRPC" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortRPCtoClient" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortRPCtoServer" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortServerToRPC" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentClienttoRPC" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portclienttorpc" lowerBound="1"
+        eType="#//PortClienttoRPC"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcfromclient" lowerBound="1"
+        eType="#//RoleRPCfromClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RPCConnectorClientServer" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpctoserver" lowerBound="1"
+        eType="#//RoleRPCtoServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcfromclient" lowerBound="1"
+        eType="#//RoleRPCfromClient" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRPCtoServer" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portrpctoserver" lowerBound="1"
+        eType="#//PortRPCtoServer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpctoserver" lowerBound="1"
+        eType="#//RoleRPCtoServer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentServerToRPC" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portservertorpc" lowerBound="1"
+        eType="#//PortServerToRPC"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcfromserver" lowerBound="1"
+        eType="#//RoleRPCfromServer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RPCConnectorServerClient" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpctoclient" lowerBound="1"
+        eType="#//RoleRPCtoClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpcfromserver" lowerBound="1"
+        eType="#//RoleRPCfromServer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRPCToClient" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portrpctoclient" lowerBound="1"
+        eType="#//PortRPCtoClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerpctoclient" lowerBound="1"
+        eType="#//RoleRPCtoClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSQLtoCM" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMtoCR" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcmtocr" lowerBound="1"
+        eType="#//AttachmentCMtoCR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCRtoSM" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitymanager" lowerBound="1"
+        eType="#//SecurityManager"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSMtoCR" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsmtocr" lowerBound="1"
+        eType="#//AttachmentSMtoCR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSQtoDB" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCRtoCM" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionmanager" lowerBound="1"
+        eType="#//ConnectionManager"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMtoSQL" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortDBtoSQ" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortDBtoSQL" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSQLtoDB" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SQLQueryConnectorOut" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqlfromdb" lowerBound="1"
+        eType="#//RoleSQLfromDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqltocm" lowerBound="1"
+        eType="#//RoleSQLtoCM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClearanceRequestConnectorIn" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromcm" lowerBound="1"
+        eType="#//RoleCRfromCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrtosm" lowerBound="1"
+        eType="#//RoleCRtoSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityQueryConnectorIn" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqtodb" lowerBound="1"
+        eType="#//RoleSQtoDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqfromsm" lowerBound="1"
+        eType="#//RoleSQfromSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSQLtoDB" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqltodb" lowerBound="1"
+        eType="#//PortSQLtoDB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqltodb" lowerBound="1"
+        eType="#//RoleSQLtoDB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentDBtoSQL" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdbtosql" lowerBound="1"
+        eType="#//PortDBtoSQL"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqlfromdb" lowerBound="1"
+        eType="#//RoleSQLfromDB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSQLtoCM" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqltocm" lowerBound="1"
+        eType="#//PortSQLtoCM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqltocm" lowerBound="1"
+        eType="#//RoleSQLtoCM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentCMtoSQL" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtosql" lowerBound="1"
+        eType="#//PortCMtoSQL"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqlfromcm" lowerBound="1"
+        eType="#//RoleSQLfromCM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentDBtoSQ" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdbtosq" lowerBound="1"
+        eType="#//PortDBtoSQ"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqfromdb" lowerBound="1"
+        eType="#//RoleSQfromDB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSQtoDB" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqtodb" lowerBound="1"
+        eType="#//PortSQtoDB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqtodb" lowerBound="1"
+        eType="#//RoleSQtoDB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSQtoSM" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsqtosm" lowerBound="1"
+        eType="#//PortSQtoSM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqtosm" lowerBound="1"
+        eType="#//RoleSQtoSM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSMtoSQ" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtosq" lowerBound="1"
+        eType="#//PortSMtoSQ"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqfromsm" lowerBound="1"
+        eType="#//RoleSQfromSM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentCRtoCM" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcrtocm" lowerBound="1"
+        eType="#//PortCRtoCM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrtocm" lowerBound="1"
+        eType="#//RoleCRtoCM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentCMtoCR" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromcm" lowerBound="1"
+        eType="#//RoleCRfromCM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentSMtoCR" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromsm" lowerBound="1"
+        eType="#//RoleCRfromSM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentCRtoSM" instanceClassName="aSA.Attachment"
+      eSuperTypes="aSA.ecore#//Attachment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcrtosm" lowerBound="1"
+        eType="#//PortCRtoSM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrtosm" lowerBound="1"
+        eType="#//RoleCRtoSM"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SQLQueryConnectorIn" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqltodb" lowerBound="1"
+        eType="#//RoleSQLtoDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqlfromcm" lowerBound="1"
+        eType="#//RoleSQLfromCM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityQueryConnectorOut" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqfromdb" lowerBound="1"
+        eType="#//RoleSQfromDB" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolesqtosm" lowerBound="1"
+        eType="#//RoleSQtoSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClearanceRequestConnectorOut" instanceClassName="aSA.Connecteur"
+      eSuperTypes="aSA.ecore#//Connecteur">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrtocm" lowerBound="1"
+        eType="#//RoleCRtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromsm" lowerBound="1"
+        eType="#//RoleCRfromSM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSQtoSM" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSMtoSQ" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortServerToBinding" instanceClassName="aSA.PortConfigurationRequis"
+      eSuperTypes="aSA.ecore#//PortConfigurationRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortBindingToServer" instanceClassName="aSA.PortConfigurationFourni"
+      eSuperTypes="aSA.ecore#//PortConfigurationFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortBindingToCM" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMtoBinding" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingServerToCM" instanceClassName="aSA.Binding"
+      eSuperTypes="aSA.ecore#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtocm" lowerBound="1"
+        eType="#//PortBindingToCM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portservertobinding" lowerBound="1"
+        eType="#//PortServerToBinding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingCMtoServer" instanceClassName="aSA.Binding"
+      eSuperTypes="aSA.ecore#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoserver" lowerBound="1"
+        eType="#//PortBindingToServer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtobinding" lowerBound="1"
+        eType="#//PortCMtoBinding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromClient" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoClient" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoServer" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromServer" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoDB" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromDB" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoCM" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromCM" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromDB" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoDB" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoSM" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromSM" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoCM" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromSM" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoSM" instanceClassName="Package.aSA.RoleRequis"
+      eSuperTypes="aSA.ecore#//RoleRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromCM" instanceClassName="Package.aSA.RoleFourni"
+      eSuperTypes="aSA.ecore#//RoleFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClientServer" instanceClassName="Package.aSA.Configuration"
+      eSuperTypes="aSA.ecore#//Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoconfigclientserver"
+        lowerBound="1" upperBound="-1" eType="#//PortBindingToConfigClientServer"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconfigclientservertobinding"
+        lowerBound="1" upperBound="-1" eType="#//PortConfigClientServerToBinding"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingclienttoconfigclientserver"
+        upperBound="-1" eType="#//BindingClientToConfigClientServer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingconfigclientservertoclient"
+        upperBound="-1" eType="#//BindingConfigClientServerToClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrpctoclient"
+        upperBound="-1" eType="#//AttachmentRPCToClient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentservertorpc"
+        upperBound="-1" eType="#//AttachmentServerToRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentclienttorpc"
+        upperBound="-1" eType="#//AttachmentClienttoRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrpctoserver"
+        upperBound="-1" eType="#//AttachmentRPCtoServer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortBindingToConfigClientServer" instanceClassName="aSA.PortConfigurationRequis"
+      eSuperTypes="aSA.ecore#//PortConfigurationRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConfigClientServerToBinding" instanceClassName="aSA.PortConfigurationFourni"
+      eSuperTypes="aSA.ecore#//PortConfigurationFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortClientToBinding" instanceClassName="aSA.PortComposantFourni"
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortBindingToClient" instanceClassName="aSA.PortComposantRequis"
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingClientToConfigClientServer" eSuperTypes="aSA.ecore#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoconfigclientserver"
+        lowerBound="1" eType="#//PortBindingToConfigClientServer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portclienttobinding" lowerBound="1"
+        eType="#//PortClientToBinding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingConfigClientServerToClient" eSuperTypes="aSA.ecore#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoclient" lowerBound="1"
+        eType="#//PortBindingToClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portconfigclientservertobinding"
+        lowerBound="1" eType="#//PortConfigClientServerToBinding"/>
+  </eClassifiers>
+</ecore:EPackage>
