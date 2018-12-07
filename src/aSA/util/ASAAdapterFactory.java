@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  */
 public class ASAAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * The cached model 
+	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

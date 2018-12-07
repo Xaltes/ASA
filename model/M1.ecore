@@ -317,39 +317,39 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtobinding" lowerBound="1"
         eType="#//PortCMtoBinding"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromClient" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromClient" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoClient" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoClient" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoServer" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCtoServer" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromServer" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRPCfromServer" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoDB" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoDB" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromDB" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromDB" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoCM" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLtoCM" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromCM" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQLfromCM" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromDB" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromDB" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoDB" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoDB" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoSM" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQtoSM" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromSM" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleSQfromSM" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoCM" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoCM" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromSM" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromSM" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoSM" instanceClassName="Package.aSA.RoleRequis"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRtoSM" instanceClassName="aSA.RoleRequis"
       eSuperTypes="aSA.ecore#//RoleRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromCM" instanceClassName="Package.aSA.RoleFourni"
+  <eClassifiers xsi:type="ecore:EClass" name="RoleCRfromCM" instanceClassName="aSA.RoleFourni"
       eSuperTypes="aSA.ecore#//RoleFourni"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClientServer" instanceClassName="Package.aSA.Configuration"
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClientServer" instanceClassName="aSA.Configuration"
       eSuperTypes="aSA.ecore#//Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoconfigclientserver"
         lowerBound="1" upperBound="-1" eType="#//PortBindingToConfigClientServer"
@@ -378,13 +378,15 @@
       eSuperTypes="aSA.ecore#//PortComposantFourni"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortBindingToClient" instanceClassName="aSA.PortComposantRequis"
       eSuperTypes="aSA.ecore#//PortComposantRequis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingClientToConfigClientServer" eSuperTypes="aSA.ecore#//Binding">
+  <eClassifiers xsi:type="ecore:EClass" name="BindingClientToConfigClientServer" instanceClassName="aSA.Binding"
+      eSuperTypes="aSA.ecore#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoconfigclientserver"
         lowerBound="1" eType="#//PortBindingToConfigClientServer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portclienttobinding" lowerBound="1"
         eType="#//PortClientToBinding"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BindingConfigClientServerToClient" eSuperTypes="aSA.ecore#//Binding">
+  <eClassifiers xsi:type="ecore:EClass" name="BindingConfigClientServerToClient" instanceClassName="aSA.Binding"
+      eSuperTypes="aSA.ecore#//Binding">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portbindingtoclient" lowerBound="1"
         eType="#//PortBindingToClient"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portconfigclientservertobinding"

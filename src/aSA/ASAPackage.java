@@ -50,7 +50,7 @@ public interface ASAPackage extends EPackage {
 	String eNS_PREFIX = "aSA";
 
 	/**
-	 * The singleton instance of the 
+	 * The singleton instance of the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -2,13 +2,8 @@
  */
 package M1.impl;
 
-import M1.BindingClientToConfigClientServer;
-import M1.BindingConfigClientServerToClient;
 import M1.M1Factory;
 import M1.M1Package;
-
-import aSA.RoleFourni;
-import aSA.RoleRequis;
 
 import aSA.Attachment;
 import aSA.Binding;
@@ -19,6 +14,8 @@ import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
+import aSA.RoleFourni;
+import aSA.RoleRequis;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -144,8 +141,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 			case M1Package.PORT_CONFIG_CLIENT_SERVER_TO_BINDING: return (EObject)createPortConfigClientServerToBinding();
 			case M1Package.PORT_CLIENT_TO_BINDING: return (EObject)createPortClientToBinding();
 			case M1Package.PORT_BINDING_TO_CLIENT: return (EObject)createPortBindingToClient();
-			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER: return createBindingClientToConfigClientServer();
-			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT: return createBindingConfigClientServerToClient();
+			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER: return (EObject)createBindingClientToConfigClientServer();
+			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT: return (EObject)createBindingConfigClientServerToClient();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -826,7 +823,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public aSA.Configuration createConfigurationClientServer() {
+	public Configuration createConfigurationClientServer() {
 		ConfigurationClientServerImpl configurationClientServer = new ConfigurationClientServerImpl();
 		return configurationClientServer;
 	}
@@ -876,7 +873,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BindingClientToConfigClientServer createBindingClientToConfigClientServer() {
+	public Binding createBindingClientToConfigClientServer() {
 		BindingClientToConfigClientServerImpl bindingClientToConfigClientServer = new BindingClientToConfigClientServerImpl();
 		return bindingClientToConfigClientServer;
 	}
@@ -886,7 +883,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BindingConfigClientServerToClient createBindingConfigClientServerToClient() {
+	public Binding createBindingConfigClientServerToClient() {
 		BindingConfigClientServerToClientImpl bindingConfigClientServerToClient = new BindingConfigClientServerToClientImpl();
 		return bindingConfigClientServerToClient;
 	}

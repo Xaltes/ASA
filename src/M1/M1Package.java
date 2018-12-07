@@ -51,7 +51,7 @@ public interface M1Package extends EPackage {
 	String eNS_PREFIX = "M1";
 
 	/**
-	 * The singleton instance of the 
+	 * The singleton instance of the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6424,7 +6424,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role RP Cfrom Client</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleRPCfromClient();
@@ -6435,7 +6435,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role RP Cto Client</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleRPCtoClient();
@@ -6446,7 +6446,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role RP Cto Server</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleRPCtoServer();
@@ -6457,7 +6457,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role RP Cfrom Server</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleRPCfromServer();
@@ -6468,7 +6468,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQ Lto DB</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleSQLtoDB();
@@ -6479,7 +6479,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQ Lfrom DB</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleSQLfromDB();
@@ -6490,7 +6490,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQ Lto CM</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleSQLtoCM();
@@ -6501,7 +6501,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQ Lfrom CM</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleSQLfromCM();
@@ -6512,7 +6512,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQfrom DB</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleSQfromDB();
@@ -6523,7 +6523,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQto DB</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleSQtoDB();
@@ -6534,7 +6534,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQto SM</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleSQtoSM();
@@ -6545,7 +6545,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role SQfrom SM</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleSQfromSM();
@@ -6556,7 +6556,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role CRto CM</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleCRtoCM();
@@ -6567,7 +6567,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role CRfrom SM</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleCRfromSM();
@@ -6578,7 +6578,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role CRto SM</em>'.
 	 * @see aSA.RoleRequis
-	 * @model instanceClass="Package.aSA.RoleRequis"
+	 * @model instanceClass="aSA.RoleRequis"
 	 * @generated
 	 */
 	EClass getRoleCRtoSM();
@@ -6589,7 +6589,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Role CRfrom CM</em>'.
 	 * @see aSA.RoleFourni
-	 * @model instanceClass="Package.aSA.RoleFourni"
+	 * @model instanceClass="aSA.RoleFourni"
 	 * @generated
 	 */
 	EClass getRoleCRfromCM();
@@ -6600,7 +6600,7 @@ public interface M1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Configuration Client Server</em>'.
 	 * @see aSA.Configuration
-	 * @model instanceClass="Package.aSA.Configuration"
+	 * @model instanceClass="aSA.Configuration"
 	 * @generated
 	 */
 	EClass getConfigurationClientServer();
@@ -6738,64 +6738,66 @@ public interface M1Package extends EPackage {
 	EClass getPortBindingToClient();
 
 	/**
-	 * Returns the meta object for class '{@link M1.BindingClientToConfigClientServer <em>Binding Client To Config Client Server</em>}'.
+	 * Returns the meta object for class '{@link aSA.Binding <em>Binding Client To Config Client Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Binding Client To Config Client Server</em>'.
-	 * @see M1.BindingClientToConfigClientServer
+	 * @see aSA.Binding
+	 * @model instanceClass="aSA.Binding"
 	 * @generated
 	 */
 	EClass getBindingClientToConfigClientServer();
 
 	/**
-	 * Returns the meta object for the reference '{@link M1.BindingClientToConfigClientServer#getPortbindingtoconfigclientserver <em>Portbindingtoconfigclientserver</em>}'.
+	 * Returns the meta object for the reference '{@link aSA.Binding#getPortbindingtoconfigclientserver <em>Portbindingtoconfigclientserver</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Portbindingtoconfigclientserver</em>'.
-	 * @see M1.BindingClientToConfigClientServer#getPortbindingtoconfigclientserver()
+	 * @see aSA.Binding#getPortbindingtoconfigclientserver()
 	 * @see #getBindingClientToConfigClientServer()
 	 * @generated
 	 */
 	EReference getBindingClientToConfigClientServer_Portbindingtoconfigclientserver();
 
 	/**
-	 * Returns the meta object for the reference '{@link M1.BindingClientToConfigClientServer#getPortclienttobinding <em>Portclienttobinding</em>}'.
+	 * Returns the meta object for the reference '{@link aSA.Binding#getPortclienttobinding <em>Portclienttobinding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Portclienttobinding</em>'.
-	 * @see M1.BindingClientToConfigClientServer#getPortclienttobinding()
+	 * @see aSA.Binding#getPortclienttobinding()
 	 * @see #getBindingClientToConfigClientServer()
 	 * @generated
 	 */
 	EReference getBindingClientToConfigClientServer_Portclienttobinding();
 
 	/**
-	 * Returns the meta object for class '{@link M1.BindingConfigClientServerToClient <em>Binding Config Client Server To Client</em>}'.
+	 * Returns the meta object for class '{@link aSA.Binding <em>Binding Config Client Server To Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Binding Config Client Server To Client</em>'.
-	 * @see M1.BindingConfigClientServerToClient
+	 * @see aSA.Binding
+	 * @model instanceClass="aSA.Binding"
 	 * @generated
 	 */
 	EClass getBindingConfigClientServerToClient();
 
 	/**
-	 * Returns the meta object for the reference '{@link M1.BindingConfigClientServerToClient#getPortbindingtoclient <em>Portbindingtoclient</em>}'.
+	 * Returns the meta object for the reference '{@link aSA.Binding#getPortbindingtoclient <em>Portbindingtoclient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Portbindingtoclient</em>'.
-	 * @see M1.BindingConfigClientServerToClient#getPortbindingtoclient()
+	 * @see aSA.Binding#getPortbindingtoclient()
 	 * @see #getBindingConfigClientServerToClient()
 	 * @generated
 	 */
 	EReference getBindingConfigClientServerToClient_Portbindingtoclient();
 
 	/**
-	 * Returns the meta object for the reference '{@link M1.BindingConfigClientServerToClient#getPortconfigclientservertobinding <em>Portconfigclientservertobinding</em>}'.
+	 * Returns the meta object for the reference '{@link aSA.Binding#getPortconfigclientservertobinding <em>Portconfigclientservertobinding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Portconfigclientservertobinding</em>'.
-	 * @see M1.BindingConfigClientServerToClient#getPortconfigclientservertobinding()
+	 * @see aSA.Binding#getPortconfigclientservertobinding()
 	 * @see #getBindingConfigClientServerToClient()
 	 * @generated
 	 */

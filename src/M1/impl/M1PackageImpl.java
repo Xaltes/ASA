@@ -2,13 +2,8 @@
  */
 package M1.impl;
 
-import M1.BindingClientToConfigClientServer;
-import M1.BindingConfigClientServerToClient;
 import M1.M1Factory;
 import M1.M1Package;
-
-import aSA.RoleFourni;
-import aSA.RoleRequis;
 
 import aSA.ASAPackage;
 import aSA.Attachment;
@@ -20,11 +15,14 @@ import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
+import aSA.RoleFourni;
+import aSA.RoleRequis;
 
 import aSA.impl.ASAPackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -556,7 +554,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.Registry Registry} by the package
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
 	 * <p>Note: the correct way to create the package is via the static
 	 * factory method {@link #init init()}, which also performs
@@ -564,7 +562,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.ecore.Registry
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see M1.M1Package#eNS_URI
 	 * @see #init()
 	 * @generated
@@ -584,7 +582,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link M1Package#eINSTANCE} when that field is accessed.
-	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the 
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
@@ -593,15 +591,15 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * @generated
 	 */
 	public static M1Package init() {
-		if (isInited) return (M1Package)Registry.INSTANCE.getEPackage(M1Package.eNS_URI);
+		if (isInited) return (M1Package)EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI);
 
 		// Obtain or create and register package
-		M1PackageImpl theM1Package = (M1PackageImpl)(Registry.INSTANCE.get(eNS_URI) instanceof M1PackageImpl ? Registry.INSTANCE.get(eNS_URI) : new M1PackageImpl());
+		M1PackageImpl theM1Package = (M1PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof M1PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new M1PackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ASAPackageImpl theASAPackage = (ASAPackageImpl)(Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) instanceof ASAPackageImpl ? Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) : ASAPackage.eINSTANCE);
+		ASAPackageImpl theASAPackage = (ASAPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) instanceof ASAPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) : ASAPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theM1Package.createPackageContents();
@@ -616,7 +614,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
   
 		// Update the registry and return the package
-		Registry.INSTANCE.put(M1Package.eNS_URI, theM1Package);
+		EPackage.Registry.INSTANCE.put(M1Package.eNS_URI, theM1Package);
 		return theM1Package;
 	}
 
@@ -2221,7 +2219,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	private boolean isCreated = false;
 
 	/**
-	 * Creates the meta-model objects for the   This method is
+	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2507,7 +2505,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ASAPackage theASAPackage = (ASAPackage)Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
+		ASAPackage theASAPackage = (ASAPackage)EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2814,15 +2812,15 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 		initEClass(roleCRfromCMEClass, RoleFourni.class, "RoleCRfromCM", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(configurationClientServerEClass, aSA.Configuration.class, "ConfigurationClientServer", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConfigurationClientServer_Portbindingtoconfigclientserver(), this.getPortBindingToConfigClientServer(), null, "portbindingtoconfigclientserver", null, 1, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Portconfigclientservertobinding(), this.getPortConfigClientServerToBinding(), null, "portconfigclientservertobinding", null, 1, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Bindingclienttoconfigclientserver(), this.getBindingClientToConfigClientServer(), null, "bindingclienttoconfigclientserver", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Bindingconfigclientservertoclient(), this.getBindingConfigClientServerToClient(), null, "bindingconfigclientservertoclient", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Attachmentrpctoclient(), this.getAttachmentRPCToClient(), null, "attachmentrpctoclient", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Attachmentservertorpc(), this.getAttachmentServerToRPC(), null, "attachmentservertorpc", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Attachmentclienttorpc(), this.getAttachmentClienttoRPC(), null, "attachmentclienttorpc", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfigurationClientServer_Attachmentrpctoserver(), this.getAttachmentRPCtoServer(), null, "attachmentrpctoserver", null, 0, -1, aSA.Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(configurationClientServerEClass, Configuration.class, "ConfigurationClientServer", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConfigurationClientServer_Portbindingtoconfigclientserver(), this.getPortBindingToConfigClientServer(), null, "portbindingtoconfigclientserver", null, 1, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Portconfigclientservertobinding(), this.getPortConfigClientServerToBinding(), null, "portconfigclientservertobinding", null, 1, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Bindingclienttoconfigclientserver(), this.getBindingClientToConfigClientServer(), null, "bindingclienttoconfigclientserver", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Bindingconfigclientservertoclient(), this.getBindingConfigClientServerToClient(), null, "bindingconfigclientservertoclient", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Attachmentrpctoclient(), this.getAttachmentRPCToClient(), null, "attachmentrpctoclient", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Attachmentservertorpc(), this.getAttachmentServerToRPC(), null, "attachmentservertorpc", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Attachmentclienttorpc(), this.getAttachmentClienttoRPC(), null, "attachmentclienttorpc", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfigurationClientServer_Attachmentrpctoserver(), this.getAttachmentRPCtoServer(), null, "attachmentrpctoserver", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portBindingToConfigClientServerEClass, PortConfigurationRequis.class, "PortBindingToConfigClientServer", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
@@ -2832,13 +2830,13 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 		initEClass(portBindingToClientEClass, PortComposantRequis.class, "PortBindingToClient", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(bindingClientToConfigClientServerEClass, BindingClientToConfigClientServer.class, "BindingClientToConfigClientServer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindingClientToConfigClientServer_Portbindingtoconfigclientserver(), this.getPortBindingToConfigClientServer(), null, "portbindingtoconfigclientserver", null, 1, 1, BindingClientToConfigClientServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBindingClientToConfigClientServer_Portclienttobinding(), this.getPortClientToBinding(), null, "portclienttobinding", null, 1, 1, BindingClientToConfigClientServer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(bindingClientToConfigClientServerEClass, Binding.class, "BindingClientToConfigClientServer", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBindingClientToConfigClientServer_Portbindingtoconfigclientserver(), this.getPortBindingToConfigClientServer(), null, "portbindingtoconfigclientserver", null, 1, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindingClientToConfigClientServer_Portclienttobinding(), this.getPortClientToBinding(), null, "portclienttobinding", null, 1, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(bindingConfigClientServerToClientEClass, BindingConfigClientServerToClient.class, "BindingConfigClientServerToClient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindingConfigClientServerToClient_Portbindingtoclient(), this.getPortBindingToClient(), null, "portbindingtoclient", null, 1, 1, BindingConfigClientServerToClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBindingConfigClientServerToClient_Portconfigclientservertobinding(), this.getPortConfigClientServerToBinding(), null, "portconfigclientservertobinding", null, 1, 1, BindingConfigClientServerToClient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(bindingConfigClientServerToClientEClass, Binding.class, "BindingConfigClientServerToClient", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBindingConfigClientServerToClient_Portbindingtoclient(), this.getPortBindingToClient(), null, "portbindingtoclient", null, 1, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindingConfigClientServerToClient_Portconfigclientservertobinding(), this.getPortConfigClientServerToBinding(), null, "portconfigclientservertobinding", null, 1, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

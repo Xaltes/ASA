@@ -4,10 +4,9 @@ package M1.impl;
 
 import M1.M1Package;
 
+import aSA.Connecteur;
 import aSA.RoleFourni;
 import aSA.RoleRequis;
-
-import aSA.Connecteur;
 
 import aSA.impl.ConnecteurImpl;
 

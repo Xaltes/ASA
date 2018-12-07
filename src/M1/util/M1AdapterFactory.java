@@ -2,12 +2,7 @@
  */
 package M1.util;
 
-import M1.BindingClientToConfigClientServer;
-import M1.BindingConfigClientServerToClient;
 import M1.M1Package;
-
-import aSA.RoleFourni;
-import aSA.RoleRequis;
 
 import aSA.Attachment;
 import aSA.Binding;
@@ -22,6 +17,8 @@ import aSA.PortConfiguration;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 import aSA.Role;
+import aSA.RoleFourni;
+import aSA.RoleRequis;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -40,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  */
 public class M1AdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * The cached model 
+	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -355,7 +352,7 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 				return createRoleCRfromCMAdapter();
 			}
 			@Override
-			public Adapter caseConfigurationClientServer(aSA.Configuration object) {
+			public Adapter caseConfigurationClientServer(Configuration object) {
 				return createConfigurationClientServerAdapter();
 			}
 			@Override
@@ -375,11 +372,11 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 				return createPortBindingToClientAdapter();
 			}
 			@Override
-			public Adapter caseBindingClientToConfigClientServer(BindingClientToConfigClientServer object) {
+			public Adapter caseBindingClientToConfigClientServer(Binding object) {
 				return createBindingClientToConfigClientServerAdapter();
 			}
 			@Override
-			public Adapter caseBindingConfigClientServerToClient(BindingConfigClientServerToClient object) {
+			public Adapter caseBindingConfigClientServerToClient(Binding object) {
 				return createBindingConfigClientServerToClientAdapter();
 			}
 			@Override
@@ -435,11 +432,11 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 				return createRoleAdapter();
 			}
 			@Override
-			public Adapter caseRoleRequis(aSA.RoleRequis object) {
+			public Adapter caseRoleRequis(RoleRequis object) {
 				return createRoleRequisAdapter();
 			}
 			@Override
-			public Adapter caseRoleFourni(aSA.RoleFourni object) {
+			public Adapter caseRoleFourni(RoleFourni object) {
 				return createRoleFourniAdapter();
 			}
 			@Override
@@ -1471,13 +1468,13 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link M1.BindingClientToConfigClientServer <em>Binding Client To Config Client Server</em>}'.
+	 * Creates a new adapter for an object of class '{@link aSA.Binding <em>Binding Client To Config Client Server</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see M1.BindingClientToConfigClientServer
+	 * @see aSA.Binding
 	 * @generated
 	 */
 	public Adapter createBindingClientToConfigClientServerAdapter() {
@@ -1485,13 +1482,13 @@ public class M1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link M1.BindingConfigClientServerToClient <em>Binding Config Client Server To Client</em>}'.
+	 * Creates a new adapter for an object of class '{@link aSA.Binding <em>Binding Config Client Server To Client</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see M1.BindingConfigClientServerToClient
+	 * @see aSA.Binding
 	 * @generated
 	 */
 	public Adapter createBindingConfigClientServerToClientAdapter() {

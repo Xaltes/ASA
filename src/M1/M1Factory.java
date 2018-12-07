@@ -2,9 +2,6 @@
  */
 package M1;
 
-import aSA.RoleFourni;
-import aSA.RoleRequis;
-
 import aSA.Attachment;
 import aSA.Binding;
 import aSA.ComposantSimple;
@@ -14,6 +11,8 @@ import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
+import aSA.RoleFourni;
+import aSA.RoleRequis;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -644,7 +643,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Configuration Client Server</em>'.
 	 * @generated
 	 */
-	aSA.Configuration createConfigurationClientServer();
+	Configuration createConfigurationClientServer();
 
 	/**
 	 * Returns a new object of class '<em>Port Binding To Config Client Server</em>'.
@@ -689,7 +688,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding Client To Config Client Server</em>'.
 	 * @generated
 	 */
-	BindingClientToConfigClientServer createBindingClientToConfigClientServer();
+	Binding createBindingClientToConfigClientServer();
 
 	/**
 	 * Returns a new object of class '<em>Binding Config Client Server To Client</em>'.
@@ -698,7 +697,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding Config Client Server To Client</em>'.
 	 * @generated
 	 */
-	BindingConfigClientServerToClient createBindingConfigClientServerToClient();
+	Binding createBindingConfigClientServerToClient();
 
 	/**
 	 * Returns the package supported by this factory.

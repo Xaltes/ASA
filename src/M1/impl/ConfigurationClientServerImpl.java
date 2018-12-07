@@ -2,13 +2,11 @@
  */
 package M1.impl;
 
-import M1.BindingClientToConfigClientServer;
-import M1.BindingConfigClientServerToClient;
 import M1.M1Package;
 
-import aSA.Configuration;
-
 import aSA.Attachment;
+import aSA.Binding;
+import aSA.Configuration;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 
@@ -75,7 +73,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BindingClientToConfigClientServer> bindingclienttoconfigclientserver;
+	protected EList<Binding> bindingclienttoconfigclientserver;
 
 	/**
 	 * The cached value of the '{@link #getBindingconfigclientservertoclient() <em>Bindingconfigclientservertoclient</em>}' containment reference list.
@@ -85,7 +83,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BindingConfigClientServerToClient> bindingconfigclientservertoclient;
+	protected EList<Binding> bindingconfigclientservertoclient;
 
 	/**
 	 * The cached value of the '{@link #getAttachmentrpctoclient() <em>Attachmentrpctoclient</em>}' containment reference list.
@@ -175,9 +173,9 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BindingClientToConfigClientServer> getBindingclienttoconfigclientserver() {
+	public EList<Binding> getBindingclienttoconfigclientserver() {
 		if (bindingclienttoconfigclientserver == null) {
-			bindingclienttoconfigclientserver = new EObjectContainmentEList<BindingClientToConfigClientServer>(BindingClientToConfigClientServer.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER);
+			bindingclienttoconfigclientserver = new EObjectContainmentEList<Binding>(Binding.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER);
 		}
 		return bindingclienttoconfigclientserver;
 	}
@@ -187,9 +185,9 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BindingConfigClientServerToClient> getBindingconfigclientservertoclient() {
+	public EList<Binding> getBindingconfigclientservertoclient() {
 		if (bindingconfigclientservertoclient == null) {
-			bindingconfigclientservertoclient = new EObjectContainmentEList<BindingConfigClientServerToClient>(BindingConfigClientServerToClient.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT);
+			bindingconfigclientservertoclient = new EObjectContainmentEList<Binding>(Binding.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT);
 		}
 		return bindingconfigclientservertoclient;
 	}
@@ -317,11 +315,11 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 				return;
 			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
 				getBindingclienttoconfigclientserver().clear();
-				getBindingclienttoconfigclientserver().addAll((Collection<? extends BindingClientToConfigClientServer>)newValue);
+				getBindingclienttoconfigclientserver().addAll((Collection<? extends Binding>)newValue);
 				return;
 			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
 				getBindingconfigclientservertoclient().clear();
-				getBindingconfigclientservertoclient().addAll((Collection<? extends BindingConfigClientServerToClient>)newValue);
+				getBindingconfigclientservertoclient().addAll((Collection<? extends Binding>)newValue);
 				return;
 			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
 				getAttachmentrpctoclient().clear();

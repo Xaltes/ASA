@@ -2,12 +2,7 @@
  */
 package M1.util;
 
-import M1.BindingClientToConfigClientServer;
-import M1.BindingConfigClientServerToClient;
 import M1.M1Package;
-
-import aSA.RoleFourni;
-import aSA.RoleRequis;
 
 import aSA.Attachment;
 import aSA.Binding;
@@ -22,6 +17,8 @@ import aSA.PortConfiguration;
 import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 import aSA.Role;
+import aSA.RoleFourni;
+import aSA.RoleRequis;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -63,11 +60,11 @@ public class M1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Checks whether this is a switch for the given 
+	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param ePackage the package in question.
-	 * @return whether this is a switch for the given 
+	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
 	@Override
@@ -596,7 +593,7 @@ public class M1Switch<T> extends Switch<T> {
 				return result;
 			}
 			case M1Package.CONFIGURATION_CLIENT_SERVER: {
-				aSA.Configuration configurationClientServer = (aSA.Configuration)theEObject;
+				Configuration configurationClientServer = (Configuration)theEObject;
 				T result = caseConfigurationClientServer(configurationClientServer);
 				if (result == null) result = caseConfiguration(configurationClientServer);
 				if (result == null) result = caseComposant(configurationClientServer);
@@ -636,14 +633,14 @@ public class M1Switch<T> extends Switch<T> {
 				return result;
 			}
 			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER: {
-				BindingClientToConfigClientServer bindingClientToConfigClientServer = (BindingClientToConfigClientServer)theEObject;
+				Binding bindingClientToConfigClientServer = (Binding)theEObject;
 				T result = caseBindingClientToConfigClientServer(bindingClientToConfigClientServer);
 				if (result == null) result = caseBinding(bindingClientToConfigClientServer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT: {
-				BindingConfigClientServerToClient bindingConfigClientServerToClient = (BindingConfigClientServerToClient)theEObject;
+				Binding bindingConfigClientServerToClient = (Binding)theEObject;
 				T result = caseBindingConfigClientServerToClient(bindingConfigClientServerToClient);
 				if (result == null) result = caseBinding(bindingConfigClientServerToClient);
 				if (result == null) result = defaultCase(theEObject);
@@ -1669,7 +1666,7 @@ public class M1Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConfigurationClientServer(aSA.Configuration object) {
+	public T caseConfigurationClientServer(Configuration object) {
 		return null;
 	}
 
@@ -1744,7 +1741,7 @@ public class M1Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBindingClientToConfigClientServer(BindingClientToConfigClientServer object) {
+	public T caseBindingClientToConfigClientServer(Binding object) {
 		return null;
 	}
 
@@ -1759,7 +1756,7 @@ public class M1Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBindingConfigClientServerToClient(BindingConfigClientServerToClient object) {
+	public T caseBindingConfigClientServerToClient(Binding object) {
 		return null;
 	}
 
@@ -1969,7 +1966,7 @@ public class M1Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoleRequis(aSA.RoleRequis object) {
+	public T caseRoleRequis(RoleRequis object) {
 		return null;
 	}
 
@@ -1984,7 +1981,7 @@ public class M1Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoleFourni(aSA.RoleFourni object) {
+	public T caseRoleFourni(RoleFourni object) {
 		return null;
 	}
 

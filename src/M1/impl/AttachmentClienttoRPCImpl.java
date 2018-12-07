@@ -4,10 +4,9 @@ package M1.impl;
 
 import M1.M1Package;
 
-import aSA.RoleRequis;
-
 import aSA.Attachment;
 import aSA.PortComposantFourni;
+import aSA.RoleRequis;
 
 import aSA.impl.AttachmentImpl;
 

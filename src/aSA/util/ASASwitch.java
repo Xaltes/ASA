@@ -44,11 +44,11 @@ public class ASASwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Checks whether this is a switch for the given 
+	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param ePackage the package in question.
-	 * @return whether this is a switch for the given 
+	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
 	@Override

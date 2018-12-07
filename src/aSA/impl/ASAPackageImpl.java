@@ -36,6 +36,7 @@ import aSA.ServiceRequis;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -217,7 +218,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.Registry Registry} by the package
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
 	 * <p>Note: the correct way to create the package is via the static
 	 * factory method {@link #init init()}, which also performs
@@ -225,7 +226,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.ecore.Registry
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see aSA.ASAPackage#eNS_URI
 	 * @see #init()
 	 * @generated
@@ -245,7 +246,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
 	 * <p>This method is used to initialize {@link ASAPackage#eINSTANCE} when that field is accessed.
-	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the 
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
@@ -254,15 +255,15 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 	 * @generated
 	 */
 	public static ASAPackage init() {
-		if (isInited) return (ASAPackage)Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
+		if (isInited) return (ASAPackage)EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ASAPackageImpl theASAPackage = (ASAPackageImpl)(Registry.INSTANCE.get(eNS_URI) instanceof ASAPackageImpl ? Registry.INSTANCE.get(eNS_URI) : new ASAPackageImpl());
+		ASAPackageImpl theASAPackage = (ASAPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ASAPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ASAPackageImpl());
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		M1PackageImpl theM1Package = (M1PackageImpl)(Registry.INSTANCE.getEPackage(M1Package.eNS_URI) instanceof M1PackageImpl ? Registry.INSTANCE.getEPackage(M1Package.eNS_URI) : M1Package.eINSTANCE);
+		M1PackageImpl theM1Package = (M1PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI) instanceof M1PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI) : M1Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theASAPackage.createPackageContents();
@@ -277,7 +278,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 
   
 		// Update the registry and return the package
-		Registry.INSTANCE.put(ASAPackage.eNS_URI, theASAPackage);
+		EPackage.Registry.INSTANCE.put(ASAPackage.eNS_URI, theASAPackage);
 		return theASAPackage;
 	}
 
@@ -811,7 +812,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 	private boolean isCreated = false;
 
 	/**
-	 * Creates the meta-model objects for the   This method is
+	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

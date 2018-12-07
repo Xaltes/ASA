@@ -2,9 +2,9 @@
  */
 package M1.impl;
 
-import M1.BindingConfigClientServerToClient;
 import M1.M1Package;
 
+import aSA.Binding;
 import aSA.PortComposantRequis;
 import aSA.PortConfigurationFourni;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BindingConfigClientServerToClientImpl extends BindingImpl implements BindingConfigClientServerToClient {
+public class BindingConfigClientServerToClientImpl extends BindingImpl implements Binding {
 	/**
 	 * The cached value of the '{@link #getPortbindingtoclient() <em>Portbindingtoclient</em>}' reference.
 	 * <!-- begin-user-doc -->
