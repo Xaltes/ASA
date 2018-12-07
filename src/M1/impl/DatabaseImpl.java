@@ -10,6 +10,14 @@ import aSA.PortComposantRequis;
 
 import aSA.impl.ComposantSimpleImpl;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -17,6 +25,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +48,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple {
+	private static final String dbPath = "../database.json";
+	private BufferedWriter jsonWritter;
+	private BufferedReader jsonReader;
+	private JsonObject data;
+	private Gson gson;
+	
 	/**
 	 * The cached value of the '{@link #getPortdbtosql() <em>Portdbtosql</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -82,6 +101,8 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	 */
 	protected DatabaseImpl() {
 		super();
+		JsonParser parser = new JsonParser();
+		this.data = parser.parse(this.jsonReader).getAsJsonObject();
 	}
 
 	/**
@@ -372,6 +393,74 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 				return portsqtodb != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	//database control with json file
+	
+	/**
+	 * method to add a client in the database
+	 * @param client : the client you want to add in the database
+	 */
+	public void add(ClientImpl client) {
+		this.data.get("clients").getAsJsonArray().add(gson.toJsonTree(client));
+		try {
+			Path file = Paths.get(dbPath);
+			this.jsonWritter = Files.newBufferedWriter(file, StandardOpenOption.CREATE);
+			jsonWritter.write(data.toString());
+			jsonWritter.flush();
+		} catch (IOException error) {
+			error.printStackTrace();
+		}
+		System.out.println("Added client " + client.pseudo + " to the database with value " + client.getValue());
+	}
+	
+	/**
+	 * method to update informations of a client already in the database
+	 * @param client : the client you want to update the informations in the database
+	 */
+	public void update(ClientImpl client) {
+		JsonElement clients = data.get("clients");
+		if (clients.isJsonArray()){
+			for (JsonElement c : clients.getAsJsonArray()){
+				if (c.getAsJsonObject().get("id").getAsString().equals(client.pseudo)) {
+					clients.getAsJsonArray().remove(c);
+					break;
+				}
+			}
+		}
+		this.data.get("clients").getAsJsonArray().add(gson.toJsonTree(client));
+		try {
+			Path file = Paths.get(dbPath);
+			this.jsonWritter = Files.newBufferedWriter(file, StandardOpenOption.CREATE);
+			jsonWritter.write(data.toString());
+			jsonWritter.flush();
+		} catch (IOException error) {
+			error.printStackTrace();
+		}
+	}
+	
+	/**
+	 * method to delete a client from the database
+	 * @param client : the client you want to delete from the database
+	 */
+	public void delete(ClientImpl client) {
+		JsonElement clients = data.get("clients");
+		if (clients.isJsonArray()){
+			for (JsonElement c : clients.getAsJsonArray()){
+				if (c.getAsJsonObject().get("id").getAsString().equals(client.pseudo)) {
+					clients.getAsJsonArray().remove(c);
+					break;
+				}
+			}
+		}
+		try {
+			Path file = Paths.get(dbPath);
+			this.jsonWritter = Files.newBufferedWriter(file, StandardOpenOption.CREATE);
+			jsonWritter.write(data.toString());
+			jsonWritter.flush();
+		} catch (IOException error) {
+			error.printStackTrace();
+		}
 	}
 
 } //DatabaseImpl
