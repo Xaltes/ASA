@@ -1250,4 +1250,11 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 		return super.eIsSet(featureID);
 	}
 
+	public boolean testConnection(String motDePasse) {
+		boolean test = true; //TODO change value to false when function entirely done
+		// TODO renvoyer une requete via la connection avec DatabaseImpl pour tester le mot de passe d'un client qui souhaite se connecter
+		
+		return test;
+	}
+
 } //ServerConfigurationImpl

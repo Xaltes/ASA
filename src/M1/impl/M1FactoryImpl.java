@@ -69,7 +69,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case M1Package.CLIENT: return (EObject)createClient();
+			case M1Package.CLIENT: return (EObject)createClient(null, null, eFlags);
 			case M1Package.SERVER_CONFIGURATION: return (EObject)createServerConfiguration();
 			case M1Package.CONNECTION_MANAGER: return (EObject)createConnectionManager();
 			case M1Package.DATABASE: return (EObject)createDatabase();
@@ -153,8 +153,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposantSimple createClient() {
-		ClientImpl client = new ClientImpl();
+	public ComposantSimple createClient(String s, String p, int v) {
+		ClientImpl client = new ClientImpl(s, p, v);
 		return client;
 	}
 

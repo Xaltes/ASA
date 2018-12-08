@@ -40,7 +40,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Client</em>'.
 	 * @generated
 	 */
-	ComposantSimple createClient();
+	ComposantSimple createClient(String n, String p, int v);
 
 	/**
 	 * Returns a new object of class '<em>Server Configuration</em>'.

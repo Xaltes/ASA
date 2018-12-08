@@ -10,6 +10,8 @@ import aSA.PortComposantRequis;
 
 import aSA.impl.ComposantSimpleImpl;
 
+import java.util.ArrayList;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -75,13 +77,62 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	 */
 	protected PortComposantRequis portsqtodb;
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DatabaseImpl() {
+	private ArrayList<ClientImpl> clients = new ArrayList<ClientImpl>();
+	
+	public DatabaseImpl() {
 		super();
+		ClientImpl c1 = new ClientImpl("Florian","1234",2);
+		ClientImpl c2 = new ClientImpl("Ophelie","4321",1);
+		this.clients.add(c1);
+		this.clients.add(c2);
+	}
+	
+	public String read() {
+		String result = "";
+		for(ClientImpl client : clients) {
+			if(result.equals("")) {
+				result = client.toString();
+			}
+			else{
+				result = result + ", " + client.toString();
+			}
+		}
+		return result;
+	}
+	
+	public void add(String s, String p, int v) {
+		ClientImpl newClient = new ClientImpl(s, p, v);
+		clients.add(newClient);
+		System.out.println("Successfully added new client " + newClient.getPseudo() + " to DB with value " + newClient.getValue());
+	}
+	
+	public void update(String pseudo, String mdp) {
+		for(ClientImpl client : clients) {
+			if(client.getPseudo().equals(pseudo)) {
+				client.setPassword(mdp);
+				System.out.println("Successfully changed client " + client.getPseudo() + " password to " + client.getPassword());
+				break;
+			}
+		}
+	}
+	
+	public void update(String pseudo, int value) {
+		for(ClientImpl client : clients) {
+			if(client.getPseudo().equals(pseudo)) {
+				client.setValue(value);
+				System.out.println("Successfully changed client " + client.getPseudo() + " value to " + client.getValue());
+				break;
+			}
+		}
+	}
+	
+	public void delete(String pseudo) {
+		for(ClientImpl client : clients) {
+			if(client.getPseudo().equals(pseudo)) {
+				clients.remove(client);
+				System.out.println("Successfully deleted client " + client.getPseudo());				
+			}
+		}
 	}
 
 	/**

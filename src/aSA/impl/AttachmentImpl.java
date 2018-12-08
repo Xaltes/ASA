@@ -252,7 +252,7 @@ public class AttachmentImpl extends MinimalEObjectImpl.Container implements Atta
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
 	public RoleRequis attachPortToRole(PortComposantFourni port) {
 		// TODO: implement this method

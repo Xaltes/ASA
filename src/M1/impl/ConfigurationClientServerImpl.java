@@ -12,10 +12,8 @@ import aSA.PortConfigurationRequis;
 
 import aSA.impl.ConfigurationImpl;
 
-import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.Collection;
-import java.util.Scanner;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -134,62 +132,9 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 */
 	protected ConfigurationClientServerImpl() {
-		super();
+		super();		
 	}
 
-	
-	public static void main (String[] args) {
-		// lancer le serveur
-		LancementServeur();
-	
-		String pseudo;
-		String motDePasse;
-		Scanner in = new Scanner(System.in);
-		// "veuillez entrer votre pseudo et mdp" dans la console
-		System.out.println("Veuillez entrer votre pseudo");
-		pseudo = in.nextLine();
-		
-		System.out.println("Veuillez entrer votre mot de passe");
-		motDePasse = in.nextLine();
-		
-		System.out.println("Bienvenue " + pseudo + " !");
-
-	}
-	
-	public static void LancementServeur() {
-		
-		int port = 2380;
-		ServerSocket sSocket = null;
-		boolean ok = true;
-		
-		while(ok) {
-	         try {        	
-	            sSocket = new ServerSocket(port);
-	            System.out.println("Création du serveur avec le port numéro " + port);
-	            //s=sSocket.accept();
-	            ok = false;
-
-	         } catch (IOException e) {
-	        	 
-	            System.err.println("Le port " + port + " est déjà utilisé ! ");
-
-	         }	         
-		}
-		arreterServeur(sSocket);
-	}
-	
-	
-	public static void arreterServeur(ServerSocket ss) {
-		// Fermeture du socket
-        try {
-			ss.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -304,22 +249,22 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				return ((InternalEList<?>)getPortbindingtoconfigclientserver()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
-				return ((InternalEList<?>)getPortconfigclientservertobinding()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
-				return ((InternalEList<?>)getBindingclienttoconfigclientserver()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
-				return ((InternalEList<?>)getBindingconfigclientservertoclient()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
-				return ((InternalEList<?>)getAttachmentrpctoclient()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
-				return ((InternalEList<?>)getAttachmentservertorpc()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
-				return ((InternalEList<?>)getAttachmentclienttorpc()).basicRemove(otherEnd, msgs);
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
-				return ((InternalEList<?>)getAttachmentrpctoserver()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
+			return ((InternalEList<?>)getPortbindingtoconfigclientserver()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
+			return ((InternalEList<?>)getPortconfigclientservertobinding()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
+			return ((InternalEList<?>)getBindingclienttoconfigclientserver()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
+			return ((InternalEList<?>)getBindingconfigclientservertoclient()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
+			return ((InternalEList<?>)getAttachmentrpctoclient()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
+			return ((InternalEList<?>)getAttachmentservertorpc()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
+			return ((InternalEList<?>)getAttachmentclienttorpc()).basicRemove(otherEnd, msgs);
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
+			return ((InternalEList<?>)getAttachmentrpctoserver()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -332,22 +277,22 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				return getPortbindingtoconfigclientserver();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
-				return getPortconfigclientservertobinding();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
-				return getBindingclienttoconfigclientserver();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
-				return getBindingconfigclientservertoclient();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
-				return getAttachmentrpctoclient();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
-				return getAttachmentservertorpc();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
-				return getAttachmentclienttorpc();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
-				return getAttachmentrpctoserver();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
+			return getPortbindingtoconfigclientserver();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
+			return getPortconfigclientservertobinding();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
+			return getBindingclienttoconfigclientserver();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
+			return getBindingconfigclientservertoclient();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
+			return getAttachmentrpctoclient();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
+			return getAttachmentservertorpc();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
+			return getAttachmentclienttorpc();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
+			return getAttachmentrpctoserver();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -361,38 +306,38 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				getPortbindingtoconfigclientserver().clear();
-				getPortbindingtoconfigclientserver().addAll((Collection<? extends PortConfigurationRequis>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
-				getPortconfigclientservertobinding().clear();
-				getPortconfigclientservertobinding().addAll((Collection<? extends PortConfigurationFourni>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
-				getBindingclienttoconfigclientserver().clear();
-				getBindingclienttoconfigclientserver().addAll((Collection<? extends Binding>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
-				getBindingconfigclientservertoclient().clear();
-				getBindingconfigclientservertoclient().addAll((Collection<? extends Binding>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
-				getAttachmentrpctoclient().clear();
-				getAttachmentrpctoclient().addAll((Collection<? extends Attachment>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
-				getAttachmentservertorpc().clear();
-				getAttachmentservertorpc().addAll((Collection<? extends Attachment>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
-				getAttachmentclienttorpc().clear();
-				getAttachmentclienttorpc().addAll((Collection<? extends Attachment>)newValue);
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
-				getAttachmentrpctoserver().clear();
-				getAttachmentrpctoserver().addAll((Collection<? extends Attachment>)newValue);
-				return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
+			getPortbindingtoconfigclientserver().clear();
+			getPortbindingtoconfigclientserver().addAll((Collection<? extends PortConfigurationRequis>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
+			getPortconfigclientservertobinding().clear();
+			getPortconfigclientservertobinding().addAll((Collection<? extends PortConfigurationFourni>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
+			getBindingclienttoconfigclientserver().clear();
+			getBindingclienttoconfigclientserver().addAll((Collection<? extends Binding>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
+			getBindingconfigclientservertoclient().clear();
+			getBindingconfigclientservertoclient().addAll((Collection<? extends Binding>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
+			getAttachmentrpctoclient().clear();
+			getAttachmentrpctoclient().addAll((Collection<? extends Attachment>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
+			getAttachmentservertorpc().clear();
+			getAttachmentservertorpc().addAll((Collection<? extends Attachment>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
+			getAttachmentclienttorpc().clear();
+			getAttachmentclienttorpc().addAll((Collection<? extends Attachment>)newValue);
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
+			getAttachmentrpctoserver().clear();
+			getAttachmentrpctoserver().addAll((Collection<? extends Attachment>)newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -405,30 +350,30 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				getPortbindingtoconfigclientserver().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
-				getPortconfigclientservertobinding().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
-				getBindingclienttoconfigclientserver().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
-				getBindingconfigclientservertoclient().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
-				getAttachmentrpctoclient().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
-				getAttachmentservertorpc().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
-				getAttachmentclienttorpc().clear();
-				return;
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
-				getAttachmentrpctoserver().clear();
-				return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
+			getPortbindingtoconfigclientserver().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
+			getPortconfigclientservertobinding().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
+			getBindingclienttoconfigclientserver().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
+			getBindingconfigclientservertoclient().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
+			getAttachmentrpctoclient().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
+			getAttachmentservertorpc().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
+			getAttachmentclienttorpc().clear();
+			return;
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
+			getAttachmentrpctoserver().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -441,22 +386,22 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				return portbindingtoconfigclientserver != null && !portbindingtoconfigclientserver.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
-				return portconfigclientservertobinding != null && !portconfigclientservertobinding.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
-				return bindingclienttoconfigclientserver != null && !bindingclienttoconfigclientserver.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
-				return bindingconfigclientservertoclient != null && !bindingconfigclientservertoclient.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
-				return attachmentrpctoclient != null && !attachmentrpctoclient.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
-				return attachmentservertorpc != null && !attachmentservertorpc.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
-				return attachmentclienttorpc != null && !attachmentclienttorpc.isEmpty();
-			case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
-				return attachmentrpctoserver != null && !attachmentrpctoserver.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
+			return portbindingtoconfigclientserver != null && !portbindingtoconfigclientserver.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
+			return portconfigclientservertobinding != null && !portconfigclientservertobinding.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
+			return bindingclienttoconfigclientserver != null && !bindingclienttoconfigclientserver.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT:
+			return bindingconfigclientservertoclient != null && !bindingconfigclientservertoclient.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT:
+			return attachmentrpctoclient != null && !attachmentrpctoclient.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC:
+			return attachmentservertorpc != null && !attachmentservertorpc.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC:
+			return attachmentclienttorpc != null && !attachmentclienttorpc.isEmpty();
+		case M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER:
+			return attachmentrpctoserver != null && !attachmentrpctoserver.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -10,6 +10,8 @@ import aSA.PortComposantRequis;
 
 import aSA.impl.ComposantSimpleImpl;
 
+import java.util.Random;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -85,6 +87,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	 * @generated
 	 * @ordered
 	 */
+
+	private String password;
+	private int value;
+
 	protected PortComposantRequis portrpctoclient;
 
 	/**
@@ -122,8 +128,43 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClientImpl() {
+	protected ClientImpl(String p, String pwd, int v) {
 		super();
+		this.id = generateRandomId();
+		this.pseudo = p;
+		this.setPassword(pwd);
+		this.setValue(v);
+	}
+
+	/**
+	 * generate a random String of length 10
+	 * @return the generated String
+	 */
+	private String generateRandomId() {		
+		int numberLeftLimit = 48; // number '0'
+		int numberRightLimit = 57; // number '9'
+		int majLeftLimit = 65; // letter 'A'
+		int majRightLimit = 90; // letter 'Z'
+		int leftLimit = 97; // letter 'a'
+		int rightLimit = 122; // letter 'z'
+		int targetStringLength = 10;
+		Random random = new Random();
+		StringBuilder buffer = new StringBuilder(targetStringLength);
+		for (int i = 0; i < targetStringLength; i++) {
+			int randomLimitedInt = numberLeftLimit + (int) 
+					(random.nextFloat() * (rightLimit - numberLeftLimit + 1));
+			if((randomLimitedInt >= numberLeftLimit && randomLimitedInt <= numberRightLimit) 
+					|| (randomLimitedInt >= majLeftLimit && randomLimitedInt <= majRightLimit) 
+					|| (randomLimitedInt >= leftLimit && randomLimitedInt <= rightLimit)) {
+				buffer.append((char) randomLimitedInt);
+			}
+			else {
+				i--;
+			}
+		}
+		String generatedString = buffer.toString();
+
+		return generatedString;
 	}
 
 	/**
@@ -210,10 +251,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortrpctoclient(PortComposantRequis newPortrpctoclient) {
 		if (newPortrpctoclient != portrpctoclient) {
 			NotificationChain msgs = null;
-			//if (portrpctoclient != null)
-				//msgs = ((InternalEObject)portrpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
-			//if (newPortrpctoclient != null)
-				//msgs = ((InternalEObject)newPortrpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
+			if (portrpctoclient != null)
+				msgs = ((InternalEObject)portrpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
+			if (newPortrpctoclient != null)
+				msgs = ((InternalEObject)newPortrpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
 			msgs = basicSetPortrpctoclient(newPortrpctoclient, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -253,10 +294,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortclienttorpc(PortComposantFourni newPortclienttorpc) {
 		if (newPortclienttorpc != portclienttorpc) {
 			NotificationChain msgs = null;
-			//if (portclienttorpc != null)
-				//msgs = ((InternalEObject)portclienttorpc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
-			//if (newPortclienttorpc != null)
-				//msgs = ((InternalEObject)newPortclienttorpc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
+			if (portclienttorpc != null)
+				msgs = ((InternalEObject)portclienttorpc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
+			if (newPortclienttorpc != null)
+				msgs = ((InternalEObject)newPortclienttorpc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
 			msgs = basicSetPortclienttorpc(newPortclienttorpc, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -296,10 +337,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortclienttobinding(PortComposantFourni newPortclienttobinding) {
 		if (newPortclienttobinding != portclienttobinding) {
 			NotificationChain msgs = null;
-			//if (portclienttobinding != null)
-				//msgs = ((InternalEObject)portclienttobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
-			//if (newPortclienttobinding != null)
-				//msgs = ((InternalEObject)newPortclienttobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
+			if (portclienttobinding != null)
+				msgs = ((InternalEObject)portclienttobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
+			if (newPortclienttobinding != null)
+				msgs = ((InternalEObject)newPortclienttobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
 			msgs = basicSetPortclienttobinding(newPortclienttobinding, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -339,10 +380,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortbindingtoclient(PortComposantRequis newPortbindingtoclient) {
 		if (newPortbindingtoclient != portbindingtoclient) {
 			NotificationChain msgs = null;
-			//if (portbindingtoclient != null)
-				//msgs = ((InternalEObject)portbindingtoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
-			//if (newPortbindingtoclient != null)
-				//msgs = ((InternalEObject)newPortbindingtoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
+			if (portbindingtoclient != null)
+				msgs = ((InternalEObject)portbindingtoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
+			if (newPortbindingtoclient != null)
+				msgs = ((InternalEObject)newPortbindingtoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
 			msgs = basicSetPortbindingtoclient(newPortbindingtoclient, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -358,14 +399,14 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case M1Package.CLIENT__PORTRPCTOCLIENT:
-				return basicSetPortrpctoclient(null, msgs);
-			case M1Package.CLIENT__PORTCLIENTTORPC:
-				return basicSetPortclienttorpc(null, msgs);
-			case M1Package.CLIENT__PORTCLIENTTOBINDING:
-				return basicSetPortclienttobinding(null, msgs);
-			case M1Package.CLIENT__PORTBINDINGTOCLIENT:
-				return basicSetPortbindingtoclient(null, msgs);
+		case M1Package.CLIENT__PORTRPCTOCLIENT:
+			return basicSetPortrpctoclient(null, msgs);
+		case M1Package.CLIENT__PORTCLIENTTORPC:
+			return basicSetPortclienttorpc(null, msgs);
+		case M1Package.CLIENT__PORTCLIENTTOBINDING:
+			return basicSetPortclienttobinding(null, msgs);
+		case M1Package.CLIENT__PORTBINDINGTOCLIENT:
+			return basicSetPortbindingtoclient(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -378,18 +419,18 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case M1Package.CLIENT__ID:
-				return getId();
-			case M1Package.CLIENT__PSEUDO:
-				return getPseudo();
-			case M1Package.CLIENT__PORTRPCTOCLIENT:
-				return getPortrpctoclient();
-			case M1Package.CLIENT__PORTCLIENTTORPC:
-				return getPortclienttorpc();
-			case M1Package.CLIENT__PORTCLIENTTOBINDING:
-				return getPortclienttobinding();
-			case M1Package.CLIENT__PORTBINDINGTOCLIENT:
-				return getPortbindingtoclient();
+		case M1Package.CLIENT__ID:
+			return getId();
+		case M1Package.CLIENT__PSEUDO:
+			return getPseudo();
+		case M1Package.CLIENT__PORTRPCTOCLIENT:
+			return getPortrpctoclient();
+		case M1Package.CLIENT__PORTCLIENTTORPC:
+			return getPortclienttorpc();
+		case M1Package.CLIENT__PORTCLIENTTOBINDING:
+			return getPortclienttobinding();
+		case M1Package.CLIENT__PORTBINDINGTOCLIENT:
+			return getPortbindingtoclient();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -402,24 +443,24 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case M1Package.CLIENT__ID:
-				setId((String)newValue);
-				return;
-			case M1Package.CLIENT__PSEUDO:
-				setPseudo((String)newValue);
-				return;
-			case M1Package.CLIENT__PORTRPCTOCLIENT:
-				setPortrpctoclient((PortComposantRequis)newValue);
-				return;
-			case M1Package.CLIENT__PORTCLIENTTORPC:
-				setPortclienttorpc((PortComposantFourni)newValue);
-				return;
-			case M1Package.CLIENT__PORTCLIENTTOBINDING:
-				setPortclienttobinding((PortComposantFourni)newValue);
-				return;
-			case M1Package.CLIENT__PORTBINDINGTOCLIENT:
-				setPortbindingtoclient((PortComposantRequis)newValue);
-				return;
+		case M1Package.CLIENT__ID:
+			setId((String)newValue);
+			return;
+		case M1Package.CLIENT__PSEUDO:
+			setPseudo((String)newValue);
+			return;
+		case M1Package.CLIENT__PORTRPCTOCLIENT:
+			setPortrpctoclient((PortComposantRequis)newValue);
+			return;
+		case M1Package.CLIENT__PORTCLIENTTORPC:
+			setPortclienttorpc((PortComposantFourni)newValue);
+			return;
+		case M1Package.CLIENT__PORTCLIENTTOBINDING:
+			setPortclienttobinding((PortComposantFourni)newValue);
+			return;
+		case M1Package.CLIENT__PORTBINDINGTOCLIENT:
+			setPortbindingtoclient((PortComposantRequis)newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -432,24 +473,24 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case M1Package.CLIENT__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case M1Package.CLIENT__PSEUDO:
-				setPseudo(PSEUDO_EDEFAULT);
-				return;
-			case M1Package.CLIENT__PORTRPCTOCLIENT:
-				setPortrpctoclient((PortComposantRequis)null);
-				return;
-			case M1Package.CLIENT__PORTCLIENTTORPC:
-				setPortclienttorpc((PortComposantFourni)null);
-				return;
-			case M1Package.CLIENT__PORTCLIENTTOBINDING:
-				setPortclienttobinding((PortComposantFourni)null);
-				return;
-			case M1Package.CLIENT__PORTBINDINGTOCLIENT:
-				setPortbindingtoclient((PortComposantRequis)null);
-				return;
+		case M1Package.CLIENT__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case M1Package.CLIENT__PSEUDO:
+			setPseudo(PSEUDO_EDEFAULT);
+			return;
+		case M1Package.CLIENT__PORTRPCTOCLIENT:
+			setPortrpctoclient((PortComposantRequis)null);
+			return;
+		case M1Package.CLIENT__PORTCLIENTTORPC:
+			setPortclienttorpc((PortComposantFourni)null);
+			return;
+		case M1Package.CLIENT__PORTCLIENTTOBINDING:
+			setPortclienttobinding((PortComposantFourni)null);
+			return;
+		case M1Package.CLIENT__PORTBINDINGTOCLIENT:
+			setPortbindingtoclient((PortComposantRequis)null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -462,18 +503,18 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case M1Package.CLIENT__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case M1Package.CLIENT__PSEUDO:
-				return PSEUDO_EDEFAULT == null ? pseudo != null : !PSEUDO_EDEFAULT.equals(pseudo);
-			case M1Package.CLIENT__PORTRPCTOCLIENT:
-				return portrpctoclient != null;
-			case M1Package.CLIENT__PORTCLIENTTORPC:
-				return portclienttorpc != null;
-			case M1Package.CLIENT__PORTCLIENTTOBINDING:
-				return portclienttobinding != null;
-			case M1Package.CLIENT__PORTBINDINGTOCLIENT:
-				return portbindingtoclient != null;
+		case M1Package.CLIENT__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case M1Package.CLIENT__PSEUDO:
+			return PSEUDO_EDEFAULT == null ? pseudo != null : !PSEUDO_EDEFAULT.equals(pseudo);
+		case M1Package.CLIENT__PORTRPCTOCLIENT:
+			return portrpctoclient != null;
+		case M1Package.CLIENT__PORTCLIENTTORPC:
+			return portclienttorpc != null;
+		case M1Package.CLIENT__PORTCLIENTTOBINDING:
+			return portclienttobinding != null;
+		case M1Package.CLIENT__PORTBINDINGTOCLIENT:
+			return portbindingtoclient != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -487,13 +528,32 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
 		result.append(", pseudo: ");
 		result.append(pseudo);
-		result.append(')');
+		result.append(", password: ");
+		result.append(password);
+		result.append(", value: ");
+		result.append(value + ")");
 		return result.toString();
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 } //ClientImpl
