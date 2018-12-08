@@ -126,10 +126,10 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	public void setPortdbtosql(PortComposantFourni newPortdbtosql) {
 		if (newPortdbtosql != portdbtosql) {
 			NotificationChain msgs = null;
-			if (portdbtosql != null)
-				msgs = ((InternalEObject)portdbtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQL, null, msgs);
-			if (newPortdbtosql != null)
-				msgs = ((InternalEObject)newPortdbtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQL, null, msgs);
+			//if (portdbtosql != null)
+				//msgs = ((InternalEObject)portdbtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQL, null, msgs);
+			//if (newPortdbtosql != null)
+				//msgs = ((InternalEObject)newPortdbtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQL, null, msgs);
 			msgs = basicSetPortdbtosql(newPortdbtosql, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -169,10 +169,10 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	public void setPortsqltodb(PortComposantRequis newPortsqltodb) {
 		if (newPortsqltodb != portsqltodb) {
 			NotificationChain msgs = null;
-			if (portsqltodb != null)
-				msgs = ((InternalEObject)portsqltodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQLTODB, null, msgs);
-			if (newPortsqltodb != null)
-				msgs = ((InternalEObject)newPortsqltodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQLTODB, null, msgs);
+			//if (portsqltodb != null)
+				//msgs = ((InternalEObject)portsqltodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQLTODB, null, msgs);
+			//if (newPortsqltodb != null)
+				//msgs = ((InternalEObject)newPortsqltodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQLTODB, null, msgs);
 			msgs = basicSetPortsqltodb(newPortsqltodb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -212,10 +212,10 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	public void setPortdbtosq(PortComposantFourni newPortdbtosq) {
 		if (newPortdbtosq != portdbtosq) {
 			NotificationChain msgs = null;
-			if (portdbtosq != null)
-				msgs = ((InternalEObject)portdbtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQ, null, msgs);
-			if (newPortdbtosq != null)
-				msgs = ((InternalEObject)newPortdbtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQ, null, msgs);
+			//if (portdbtosq != null)
+				//msgs = ((InternalEObject)portdbtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQ, null, msgs);
+			//if (newPortdbtosq != null)
+				//msgs = ((InternalEObject)newPortdbtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTDBTOSQ, null, msgs);
 			msgs = basicSetPortdbtosq(newPortdbtosq, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -255,10 +255,10 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	public void setPortsqtodb(PortComposantRequis newPortsqtodb) {
 		if (newPortsqtodb != portsqtodb) {
 			NotificationChain msgs = null;
-			if (portsqtodb != null)
-				msgs = ((InternalEObject)portsqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQTODB, null, msgs);
-			if (newPortsqtodb != null)
-				msgs = ((InternalEObject)newPortsqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQTODB, null, msgs);
+			//if (portsqtodb != null)
+				//msgs = ((InternalEObject)portsqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQTODB, null, msgs);
+			//if (newPortsqtodb != null)
+				//msgs = ((InternalEObject)newPortsqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.DATABASE__PORTSQTODB, null, msgs);
 			msgs = basicSetPortsqtodb(newPortsqtodb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

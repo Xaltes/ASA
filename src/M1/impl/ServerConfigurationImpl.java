@@ -291,10 +291,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setBindingcmtoserver(Binding newBindingcmtoserver) {
 		if (newBindingcmtoserver != bindingcmtoserver) {
 			NotificationChain msgs = null;
-			if (bindingcmtoserver != null)
-				msgs = ((InternalEObject)bindingcmtoserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGCMTOSERVER, null, msgs);
-			if (newBindingcmtoserver != null)
-				msgs = ((InternalEObject)newBindingcmtoserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGCMTOSERVER, null, msgs);
+			//if (bindingcmtoserver != null)
+				//msgs = ((InternalEObject)bindingcmtoserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGCMTOSERVER, null, msgs);
+			//if (newBindingcmtoserver != null)
+				//msgs = ((InternalEObject)newBindingcmtoserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGCMTOSERVER, null, msgs);
 			msgs = basicSetBindingcmtoserver(newBindingcmtoserver, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -334,10 +334,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setBindingservertocm(Binding newBindingservertocm) {
 		if (newBindingservertocm != bindingservertocm) {
 			NotificationChain msgs = null;
-			if (bindingservertocm != null)
-				msgs = ((InternalEObject)bindingservertocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGSERVERTOCM, null, msgs);
-			if (newBindingservertocm != null)
-				msgs = ((InternalEObject)newBindingservertocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGSERVERTOCM, null, msgs);
+			//if (bindingservertocm != null)
+				//msgs = ((InternalEObject)bindingservertocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGSERVERTOCM, null, msgs);
+			//if (newBindingservertocm != null)
+				//msgs = ((InternalEObject)newBindingservertocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__BINDINGSERVERTOCM, null, msgs);
 			msgs = basicSetBindingservertocm(newBindingservertocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -401,10 +401,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setPortservertobinding(PortConfigurationRequis newPortservertobinding) {
 		if (newPortservertobinding != portservertobinding) {
 			NotificationChain msgs = null;
-			if (portservertobinding != null)
-				msgs = ((InternalEObject)portservertobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTSERVERTOBINDING, null, msgs);
-			if (newPortservertobinding != null)
-				msgs = ((InternalEObject)newPortservertobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTSERVERTOBINDING, null, msgs);
+			//if (portservertobinding != null)
+				//msgs = ((InternalEObject)portservertobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTSERVERTOBINDING, null, msgs);
+			//if (newPortservertobinding != null)
+				//msgs = ((InternalEObject)newPortservertobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTSERVERTOBINDING, null, msgs);
 			msgs = basicSetPortservertobinding(newPortservertobinding, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -444,10 +444,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setPortbindingtoserver(PortConfigurationFourni newPortbindingtoserver) {
 		if (newPortbindingtoserver != portbindingtoserver) {
 			NotificationChain msgs = null;
-			if (portbindingtoserver != null)
-				msgs = ((InternalEObject)portbindingtoserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTBINDINGTOSERVER, null, msgs);
-			if (newPortbindingtoserver != null)
-				msgs = ((InternalEObject)newPortbindingtoserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTBINDINGTOSERVER, null, msgs);
+			//if (portbindingtoserver != null)
+				//msgs = ((InternalEObject)portbindingtoserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTBINDINGTOSERVER, null, msgs);
+			//if (newPortbindingtoserver != null)
+				//msgs = ((InternalEObject)newPortbindingtoserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__PORTBINDINGTOSERVER, null, msgs);
 			msgs = basicSetPortbindingtoserver(newPortbindingtoserver, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -487,10 +487,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsqltocm(Attachment newAttachmentsqltocm) {
 		if (newAttachmentsqltocm != attachmentsqltocm) {
 			NotificationChain msgs = null;
-			if (attachmentsqltocm != null)
-				msgs = ((InternalEObject)attachmentsqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTOCM, null, msgs);
-			if (newAttachmentsqltocm != null)
-				msgs = ((InternalEObject)newAttachmentsqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTOCM, null, msgs);
+			//if (attachmentsqltocm != null)
+				//msgs = ((InternalEObject)attachmentsqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTOCM, null, msgs);
+			//if (newAttachmentsqltocm != null)
+				//msgs = ((InternalEObject)newAttachmentsqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTOCM, null, msgs);
 			msgs = basicSetAttachmentsqltocm(newAttachmentsqltocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -530,10 +530,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentcmtosql(Attachment newAttachmentcmtosql) {
 		if (newAttachmentcmtosql != attachmentcmtosql) {
 			NotificationChain msgs = null;
-			if (attachmentcmtosql != null)
-				msgs = ((InternalEObject)attachmentcmtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOSQL, null, msgs);
-			if (newAttachmentcmtosql != null)
-				msgs = ((InternalEObject)newAttachmentcmtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOSQL, null, msgs);
+			//if (attachmentcmtosql != null)
+				//msgs = ((InternalEObject)attachmentcmtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOSQL, null, msgs);
+			//if (newAttachmentcmtosql != null)
+				//msgs = ((InternalEObject)newAttachmentcmtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOSQL, null, msgs);
 			msgs = basicSetAttachmentcmtosql(newAttachmentcmtosql, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -573,10 +573,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsqltodb(Attachment newAttachmentsqltodb) {
 		if (newAttachmentsqltodb != attachmentsqltodb) {
 			NotificationChain msgs = null;
-			if (attachmentsqltodb != null)
-				msgs = ((InternalEObject)attachmentsqltodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTODB, null, msgs);
-			if (newAttachmentsqltodb != null)
-				msgs = ((InternalEObject)newAttachmentsqltodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTODB, null, msgs);
+			//if (attachmentsqltodb != null)
+				//msgs = ((InternalEObject)attachmentsqltodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTODB, null, msgs);
+			//if (newAttachmentsqltodb != null)
+				//msgs = ((InternalEObject)newAttachmentsqltodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQLTODB, null, msgs);
 			msgs = basicSetAttachmentsqltodb(newAttachmentsqltodb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -616,10 +616,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentdbtosql(Attachment newAttachmentdbtosql) {
 		if (newAttachmentdbtosql != attachmentdbtosql) {
 			NotificationChain msgs = null;
-			if (attachmentdbtosql != null)
-				msgs = ((InternalEObject)attachmentdbtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQL, null, msgs);
-			if (newAttachmentdbtosql != null)
-				msgs = ((InternalEObject)newAttachmentdbtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQL, null, msgs);
+			//if (attachmentdbtosql != null)
+				//msgs = ((InternalEObject)attachmentdbtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQL, null, msgs);
+			//if (newAttachmentdbtosql != null)
+				//msgs = ((InternalEObject)newAttachmentdbtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQL, null, msgs);
 			msgs = basicSetAttachmentdbtosql(newAttachmentdbtosql, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -659,10 +659,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentdbtosq(Attachment newAttachmentdbtosq) {
 		if (newAttachmentdbtosq != attachmentdbtosq) {
 			NotificationChain msgs = null;
-			if (attachmentdbtosq != null)
-				msgs = ((InternalEObject)attachmentdbtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQ, null, msgs);
-			if (newAttachmentdbtosq != null)
-				msgs = ((InternalEObject)newAttachmentdbtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQ, null, msgs);
+			//if (attachmentdbtosq != null)
+				//msgs = ((InternalEObject)attachmentdbtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQ, null, msgs);
+			//if (newAttachmentdbtosq != null)
+				//msgs = ((InternalEObject)newAttachmentdbtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTDBTOSQ, null, msgs);
 			msgs = basicSetAttachmentdbtosq(newAttachmentdbtosq, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -702,10 +702,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsqtodb(Attachment newAttachmentsqtodb) {
 		if (newAttachmentsqtodb != attachmentsqtodb) {
 			NotificationChain msgs = null;
-			if (attachmentsqtodb != null)
-				msgs = ((InternalEObject)attachmentsqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTODB, null, msgs);
-			if (newAttachmentsqtodb != null)
-				msgs = ((InternalEObject)newAttachmentsqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTODB, null, msgs);
+			//if (attachmentsqtodb != null)
+				//msgs = ((InternalEObject)attachmentsqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTODB, null, msgs);
+			//if (newAttachmentsqtodb != null)
+				//msgs = ((InternalEObject)newAttachmentsqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTODB, null, msgs);
 			msgs = basicSetAttachmentsqtodb(newAttachmentsqtodb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -745,10 +745,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsqtosm(Attachment newAttachmentsqtosm) {
 		if (newAttachmentsqtosm != attachmentsqtosm) {
 			NotificationChain msgs = null;
-			if (attachmentsqtosm != null)
-				msgs = ((InternalEObject)attachmentsqtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTOSM, null, msgs);
-			if (newAttachmentsqtosm != null)
-				msgs = ((InternalEObject)newAttachmentsqtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTOSM, null, msgs);
+			//if (attachmentsqtosm != null)
+				//msgs = ((InternalEObject)attachmentsqtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTOSM, null, msgs);
+			//if (newAttachmentsqtosm != null)
+				//msgs = ((InternalEObject)newAttachmentsqtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSQTOSM, null, msgs);
 			msgs = basicSetAttachmentsqtosm(newAttachmentsqtosm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -788,10 +788,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsmtosq(Attachment newAttachmentsmtosq) {
 		if (newAttachmentsmtosq != attachmentsmtosq) {
 			NotificationChain msgs = null;
-			if (attachmentsmtosq != null)
-				msgs = ((InternalEObject)attachmentsmtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOSQ, null, msgs);
-			if (newAttachmentsmtosq != null)
-				msgs = ((InternalEObject)newAttachmentsmtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOSQ, null, msgs);
+			//if (attachmentsmtosq != null)
+				//msgs = ((InternalEObject)attachmentsmtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOSQ, null, msgs);
+			//if (newAttachmentsmtosq != null)
+				//msgs = ((InternalEObject)newAttachmentsmtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOSQ, null, msgs);
 			msgs = basicSetAttachmentsmtosq(newAttachmentsmtosq, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -831,10 +831,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentcrtocm(Attachment newAttachmentcrtocm) {
 		if (newAttachmentcrtocm != attachmentcrtocm) {
 			NotificationChain msgs = null;
-			if (attachmentcrtocm != null)
-				msgs = ((InternalEObject)attachmentcrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOCM, null, msgs);
-			if (newAttachmentcrtocm != null)
-				msgs = ((InternalEObject)newAttachmentcrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOCM, null, msgs);
+			//if (attachmentcrtocm != null)
+				//msgs = ((InternalEObject)attachmentcrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOCM, null, msgs);
+			//if (newAttachmentcrtocm != null)
+				//msgs = ((InternalEObject)newAttachmentcrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOCM, null, msgs);
 			msgs = basicSetAttachmentcrtocm(newAttachmentcrtocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -874,10 +874,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentcmtocr(Attachment newAttachmentcmtocr) {
 		if (newAttachmentcmtocr != attachmentcmtocr) {
 			NotificationChain msgs = null;
-			if (attachmentcmtocr != null)
-				msgs = ((InternalEObject)attachmentcmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOCR, null, msgs);
-			if (newAttachmentcmtocr != null)
-				msgs = ((InternalEObject)newAttachmentcmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOCR, null, msgs);
+			//if (attachmentcmtocr != null)
+				//msgs = ((InternalEObject)attachmentcmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOCR, null, msgs);
+			//if (newAttachmentcmtocr != null)
+				//msgs = ((InternalEObject)newAttachmentcmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCMTOCR, null, msgs);
 			msgs = basicSetAttachmentcmtocr(newAttachmentcmtocr, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -917,10 +917,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentsmtocr(Attachment newAttachmentsmtocr) {
 		if (newAttachmentsmtocr != attachmentsmtocr) {
 			NotificationChain msgs = null;
-			if (attachmentsmtocr != null)
-				msgs = ((InternalEObject)attachmentsmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOCR, null, msgs);
-			if (newAttachmentsmtocr != null)
-				msgs = ((InternalEObject)newAttachmentsmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOCR, null, msgs);
+			//if (attachmentsmtocr != null)
+				//msgs = ((InternalEObject)attachmentsmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOCR, null, msgs);
+			//if (newAttachmentsmtocr != null)
+				//msgs = ((InternalEObject)newAttachmentsmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTSMTOCR, null, msgs);
 			msgs = basicSetAttachmentsmtocr(newAttachmentsmtocr, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -960,10 +960,10 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	public void setAttachmentcrtosm(Attachment newAttachmentcrtosm) {
 		if (newAttachmentcrtosm != attachmentcrtosm) {
 			NotificationChain msgs = null;
-			if (attachmentcrtosm != null)
-				msgs = ((InternalEObject)attachmentcrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOSM, null, msgs);
-			if (newAttachmentcrtosm != null)
-				msgs = ((InternalEObject)newAttachmentcrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOSM, null, msgs);
+			//if (attachmentcrtosm != null)
+				//msgs = ((InternalEObject)attachmentcrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOSM, null, msgs);
+			//if (newAttachmentcrtosm != null)
+				//msgs = ((InternalEObject)newAttachmentcrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SERVER_CONFIGURATION__ATTACHMENTCRTOSM, null, msgs);
 			msgs = basicSetAttachmentcrtosm(newAttachmentcrtosm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

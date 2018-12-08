@@ -148,10 +148,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortsqltocm(PortComposantRequis newPortsqltocm) {
 		if (newPortsqltocm != portsqltocm) {
 			NotificationChain msgs = null;
-			if (portsqltocm != null)
-				msgs = ((InternalEObject)portsqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTSQLTOCM, null, msgs);
-			if (newPortsqltocm != null)
-				msgs = ((InternalEObject)newPortsqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTSQLTOCM, null, msgs);
+			//if (portsqltocm != null)
+				//msgs = ((InternalEObject)portsqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTSQLTOCM, null, msgs);
+			//if (newPortsqltocm != null)
+				//msgs = ((InternalEObject)newPortsqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTSQLTOCM, null, msgs);
 			msgs = basicSetPortsqltocm(newPortsqltocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -191,10 +191,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortcmtosql(PortComposantFourni newPortcmtosql) {
 		if (newPortcmtosql != portcmtosql) {
 			NotificationChain msgs = null;
-			if (portcmtosql != null)
-				msgs = ((InternalEObject)portcmtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOSQL, null, msgs);
-			if (newPortcmtosql != null)
-				msgs = ((InternalEObject)newPortcmtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOSQL, null, msgs);
+			//if (portcmtosql != null)
+				//msgs = ((InternalEObject)portcmtosql).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOSQL, null, msgs);
+			//if (newPortcmtosql != null)
+				//msgs = ((InternalEObject)newPortcmtosql).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOSQL, null, msgs);
 			msgs = basicSetPortcmtosql(newPortcmtosql, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -234,10 +234,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortbindingtocm(PortComposantRequis newPortbindingtocm) {
 		if (newPortbindingtocm != portbindingtocm) {
 			NotificationChain msgs = null;
-			if (portbindingtocm != null)
-				msgs = ((InternalEObject)portbindingtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTBINDINGTOCM, null, msgs);
-			if (newPortbindingtocm != null)
-				msgs = ((InternalEObject)newPortbindingtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTBINDINGTOCM, null, msgs);
+			//if (portbindingtocm != null)
+				//msgs = ((InternalEObject)portbindingtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTBINDINGTOCM, null, msgs);
+			//if (newPortbindingtocm != null)
+				//msgs = ((InternalEObject)newPortbindingtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTBINDINGTOCM, null, msgs);
 			msgs = basicSetPortbindingtocm(newPortbindingtocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -277,10 +277,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortcmtobinding(PortComposantFourni newPortcmtobinding) {
 		if (newPortcmtobinding != portcmtobinding) {
 			NotificationChain msgs = null;
-			if (portcmtobinding != null)
-				msgs = ((InternalEObject)portcmtobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOBINDING, null, msgs);
-			if (newPortcmtobinding != null)
-				msgs = ((InternalEObject)newPortcmtobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOBINDING, null, msgs);
+			//if (portcmtobinding != null)
+				//msgs = ((InternalEObject)portcmtobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOBINDING, null, msgs);
+			//if (newPortcmtobinding != null)
+				//msgs = ((InternalEObject)newPortcmtobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOBINDING, null, msgs);
 			msgs = basicSetPortcmtobinding(newPortcmtobinding, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -320,10 +320,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortcrtocm(PortComposantRequis newPortcrtocm) {
 		if (newPortcrtocm != portcrtocm) {
 			NotificationChain msgs = null;
-			if (portcrtocm != null)
-				msgs = ((InternalEObject)portcrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
-			if (newPortcrtocm != null)
-				msgs = ((InternalEObject)newPortcrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
+			//if (portcrtocm != null)
+				//msgs = ((InternalEObject)portcrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
+			//if (newPortcrtocm != null)
+				//msgs = ((InternalEObject)newPortcrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
 			msgs = basicSetPortcrtocm(newPortcrtocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -363,10 +363,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public void setPortcmtocr(PortComposantFourni newPortcmtocr) {
 		if (newPortcmtocr != portcmtocr) {
 			NotificationChain msgs = null;
-			if (portcmtocr != null)
-				msgs = ((InternalEObject)portcmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
-			if (newPortcmtocr != null)
-				msgs = ((InternalEObject)newPortcmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
+			//if (portcmtocr != null)
+				//msgs = ((InternalEObject)portcmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
+			//if (newPortcmtocr != null)
+				//msgs = ((InternalEObject)newPortcmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
 			msgs = basicSetPortcmtocr(newPortcmtocr, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

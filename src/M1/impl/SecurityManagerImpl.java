@@ -126,10 +126,10 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	public void setPortsmtosq(PortComposantFourni newPortsmtosq) {
 		if (newPortsmtosq != portsmtosq) {
 			NotificationChain msgs = null;
-			if (portsmtosq != null)
-				msgs = ((InternalEObject)portsmtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOSQ, null, msgs);
-			if (newPortsmtosq != null)
-				msgs = ((InternalEObject)newPortsmtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOSQ, null, msgs);
+			//if (portsmtosq != null)
+				//msgs = ((InternalEObject)portsmtosq).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOSQ, null, msgs);
+			//if (newPortsmtosq != null)
+				//msgs = ((InternalEObject)newPortsmtosq).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOSQ, null, msgs);
 			msgs = basicSetPortsmtosq(newPortsmtosq, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -212,10 +212,10 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	public void setPortcrtosm(PortComposantRequis newPortcrtosm) {
 		if (newPortcrtosm != portcrtosm) {
 			NotificationChain msgs = null;
-			if (portcrtosm != null)
-				msgs = ((InternalEObject)portcrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
-			if (newPortcrtosm != null)
-				msgs = ((InternalEObject)newPortcrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
+			//if (portcrtosm != null)
+				//msgs = ((InternalEObject)portcrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
+			//if (newPortcrtosm != null)
+				//msgs = ((InternalEObject)newPortcrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
 			msgs = basicSetPortcrtosm(newPortcrtosm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

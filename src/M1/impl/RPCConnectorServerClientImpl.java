@@ -104,10 +104,10 @@ public class RPCConnectorServerClientImpl extends ConnecteurImpl implements Conn
 	public void setRolerpctoclient(RoleFourni newRolerpctoclient) {
 		if (newRolerpctoclient != rolerpctoclient) {
 			NotificationChain msgs = null;
-			if (rolerpctoclient != null)
-				msgs = ((InternalEObject)rolerpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCTOCLIENT, null, msgs);
-			if (newRolerpctoclient != null)
-				msgs = ((InternalEObject)newRolerpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCTOCLIENT, null, msgs);
+			//if (rolerpctoclient != null)
+				//msgs = ((InternalEObject)rolerpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCTOCLIENT, null, msgs);
+			//if (newRolerpctoclient != null)
+				//msgs = ((InternalEObject)newRolerpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCTOCLIENT, null, msgs);
 			msgs = basicSetRolerpctoclient(newRolerpctoclient, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -147,10 +147,10 @@ public class RPCConnectorServerClientImpl extends ConnecteurImpl implements Conn
 	public void setRolerpcfromserver(RoleRequis newRolerpcfromserver) {
 		if (newRolerpcfromserver != rolerpcfromserver) {
 			NotificationChain msgs = null;
-			if (rolerpcfromserver != null)
-				msgs = ((InternalEObject)rolerpcfromserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCFROMSERVER, null, msgs);
-			if (newRolerpcfromserver != null)
-				msgs = ((InternalEObject)newRolerpcfromserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCFROMSERVER, null, msgs);
+			//if (rolerpcfromserver != null)
+				//msgs = ((InternalEObject)rolerpcfromserver).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCFROMSERVER, null, msgs);
+			//if (newRolerpcfromserver != null)
+				//msgs = ((InternalEObject)newRolerpcfromserver).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.RPC_CONNECTOR_SERVER_CLIENT__ROLERPCFROMSERVER, null, msgs);
 			msgs = basicSetRolerpcfromserver(newRolerpcfromserver, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

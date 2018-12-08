@@ -104,10 +104,10 @@ public class ClearanceRequestConnectorOutImpl extends ConnecteurImpl implements 
 	public void setRolecrtocm(RoleRequis newRolecrtocm) {
 		if (newRolecrtocm != rolecrtocm) {
 			NotificationChain msgs = null;
-			if (rolecrtocm != null)
-				msgs = ((InternalEObject)rolecrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_OUT__ROLECRTOCM, null, msgs);
-			if (newRolecrtocm != null)
-				msgs = ((InternalEObject)newRolecrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_OUT__ROLECRTOCM, null, msgs);
+			//if (rolecrtocm != null)
+				//msgs = ((InternalEObject)rolecrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_OUT__ROLECRTOCM, null, msgs);
+			//if (newRolecrtocm != null)
+				//msgs = ((InternalEObject)newRolecrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_OUT__ROLECRTOCM, null, msgs);
 			msgs = basicSetRolecrtocm(newRolecrtocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

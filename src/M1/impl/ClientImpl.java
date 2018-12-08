@@ -210,10 +210,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortrpctoclient(PortComposantRequis newPortrpctoclient) {
 		if (newPortrpctoclient != portrpctoclient) {
 			NotificationChain msgs = null;
-			if (portrpctoclient != null)
-				msgs = ((InternalEObject)portrpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
-			if (newPortrpctoclient != null)
-				msgs = ((InternalEObject)newPortrpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
+			//if (portrpctoclient != null)
+				//msgs = ((InternalEObject)portrpctoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
+			//if (newPortrpctoclient != null)
+				//msgs = ((InternalEObject)newPortrpctoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTRPCTOCLIENT, null, msgs);
 			msgs = basicSetPortrpctoclient(newPortrpctoclient, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -253,10 +253,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortclienttorpc(PortComposantFourni newPortclienttorpc) {
 		if (newPortclienttorpc != portclienttorpc) {
 			NotificationChain msgs = null;
-			if (portclienttorpc != null)
-				msgs = ((InternalEObject)portclienttorpc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
-			if (newPortclienttorpc != null)
-				msgs = ((InternalEObject)newPortclienttorpc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
+			//if (portclienttorpc != null)
+				//msgs = ((InternalEObject)portclienttorpc).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
+			//if (newPortclienttorpc != null)
+				//msgs = ((InternalEObject)newPortclienttorpc).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTORPC, null, msgs);
 			msgs = basicSetPortclienttorpc(newPortclienttorpc, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -296,10 +296,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortclienttobinding(PortComposantFourni newPortclienttobinding) {
 		if (newPortclienttobinding != portclienttobinding) {
 			NotificationChain msgs = null;
-			if (portclienttobinding != null)
-				msgs = ((InternalEObject)portclienttobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
-			if (newPortclienttobinding != null)
-				msgs = ((InternalEObject)newPortclienttobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
+			//if (portclienttobinding != null)
+				//msgs = ((InternalEObject)portclienttobinding).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
+			//if (newPortclienttobinding != null)
+				//msgs = ((InternalEObject)newPortclienttobinding).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTCLIENTTOBINDING, null, msgs);
 			msgs = basicSetPortclienttobinding(newPortclienttobinding, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -339,10 +339,10 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPortbindingtoclient(PortComposantRequis newPortbindingtoclient) {
 		if (newPortbindingtoclient != portbindingtoclient) {
 			NotificationChain msgs = null;
-			if (portbindingtoclient != null)
-				msgs = ((InternalEObject)portbindingtoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
-			if (newPortbindingtoclient != null)
-				msgs = ((InternalEObject)newPortbindingtoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
+			//if (portbindingtoclient != null)
+				//msgs = ((InternalEObject)portbindingtoclient).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
+			//if (newPortbindingtoclient != null)
+				//msgs = ((InternalEObject)newPortbindingtoclient).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLIENT__PORTBINDINGTOCLIENT, null, msgs);
 			msgs = basicSetPortbindingtoclient(newPortbindingtoclient, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

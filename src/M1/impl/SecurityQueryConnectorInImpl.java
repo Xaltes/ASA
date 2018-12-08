@@ -104,10 +104,10 @@ public class SecurityQueryConnectorInImpl extends ConnecteurImpl implements Conn
 	public void setRolesqtodb(RoleRequis newRolesqtodb) {
 		if (newRolesqtodb != rolesqtodb) {
 			NotificationChain msgs = null;
-			if (rolesqtodb != null)
-				msgs = ((InternalEObject)rolesqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQTODB, null, msgs);
-			if (newRolesqtodb != null)
-				msgs = ((InternalEObject)newRolesqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQTODB, null, msgs);
+			//if (rolesqtodb != null)
+				//msgs = ((InternalEObject)rolesqtodb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQTODB, null, msgs);
+			//if (newRolesqtodb != null)
+				//msgs = ((InternalEObject)newRolesqtodb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQTODB, null, msgs);
 			msgs = basicSetRolesqtodb(newRolesqtodb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -147,10 +147,10 @@ public class SecurityQueryConnectorInImpl extends ConnecteurImpl implements Conn
 	public void setRolesqfromsm(RoleFourni newRolesqfromsm) {
 		if (newRolesqfromsm != rolesqfromsm) {
 			NotificationChain msgs = null;
-			if (rolesqfromsm != null)
-				msgs = ((InternalEObject)rolesqfromsm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQFROMSM, null, msgs);
-			if (newRolesqfromsm != null)
-				msgs = ((InternalEObject)newRolesqfromsm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQFROMSM, null, msgs);
+			//if (rolesqfromsm != null)
+				//msgs = ((InternalEObject)rolesqfromsm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQFROMSM, null, msgs);
+			//if (newRolesqfromsm != null)
+				//msgs = ((InternalEObject)newRolesqfromsm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_QUERY_CONNECTOR_IN__ROLESQFROMSM, null, msgs);
 			msgs = basicSetRolesqfromsm(newRolesqfromsm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

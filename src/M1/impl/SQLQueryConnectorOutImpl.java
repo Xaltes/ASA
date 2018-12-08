@@ -104,10 +104,10 @@ public class SQLQueryConnectorOutImpl extends ConnecteurImpl implements Connecte
 	public void setRolesqlfromdb(RoleRequis newRolesqlfromdb) {
 		if (newRolesqlfromdb != rolesqlfromdb) {
 			NotificationChain msgs = null;
-			if (rolesqlfromdb != null)
-				msgs = ((InternalEObject)rolesqlfromdb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLFROMDB, null, msgs);
-			if (newRolesqlfromdb != null)
-				msgs = ((InternalEObject)newRolesqlfromdb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLFROMDB, null, msgs);
+			//if (rolesqlfromdb != null)
+				//msgs = ((InternalEObject)rolesqlfromdb).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLFROMDB, null, msgs);
+			//if (newRolesqlfromdb != null)
+				//msgs = ((InternalEObject)newRolesqlfromdb).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLFROMDB, null, msgs);
 			msgs = basicSetRolesqlfromdb(newRolesqlfromdb, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -147,10 +147,10 @@ public class SQLQueryConnectorOutImpl extends ConnecteurImpl implements Connecte
 	public void setRolesqltocm(RoleFourni newRolesqltocm) {
 		if (newRolesqltocm != rolesqltocm) {
 			NotificationChain msgs = null;
-			if (rolesqltocm != null)
-				msgs = ((InternalEObject)rolesqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLTOCM, null, msgs);
-			if (newRolesqltocm != null)
-				msgs = ((InternalEObject)newRolesqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLTOCM, null, msgs);
+			//if (rolesqltocm != null)
+				//msgs = ((InternalEObject)rolesqltocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLTOCM, null, msgs);
+			//if (newRolesqltocm != null)
+				//msgs = ((InternalEObject)newRolesqltocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SQL_QUERY_CONNECTOR_OUT__ROLESQLTOCM, null, msgs);
 			msgs = basicSetRolesqltocm(newRolesqltocm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}

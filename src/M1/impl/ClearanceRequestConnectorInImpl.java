@@ -104,10 +104,10 @@ public class ClearanceRequestConnectorInImpl extends ConnecteurImpl implements C
 	public void setRolecrfromcm(RoleFourni newRolecrfromcm) {
 		if (newRolecrfromcm != rolecrfromcm) {
 			NotificationChain msgs = null;
-			if (rolecrfromcm != null)
-				msgs = ((InternalEObject)rolecrfromcm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRFROMCM, null, msgs);
-			if (newRolecrfromcm != null)
-				msgs = ((InternalEObject)newRolecrfromcm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRFROMCM, null, msgs);
+			//if (rolecrfromcm != null)
+				//msgs = ((InternalEObject)rolecrfromcm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRFROMCM, null, msgs);
+			//if (newRolecrfromcm != null)
+				//msgs = ((InternalEObject)newRolecrfromcm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRFROMCM, null, msgs);
 			msgs = basicSetRolecrfromcm(newRolecrfromcm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -147,10 +147,10 @@ public class ClearanceRequestConnectorInImpl extends ConnecteurImpl implements C
 	public void setRolecrtosm(RoleRequis newRolecrtosm) {
 		if (newRolecrtosm != rolecrtosm) {
 			NotificationChain msgs = null;
-			if (rolecrtosm != null)
-				msgs = ((InternalEObject)rolecrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRTOSM, null, msgs);
-			if (newRolecrtosm != null)
-				msgs = ((InternalEObject)newRolecrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRTOSM, null, msgs);
+			//if (rolecrtosm != null)
+				//msgs = ((InternalEObject)rolecrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRTOSM, null, msgs);
+			//if (newRolecrtosm != null)
+				//msgs = ((InternalEObject)newRolecrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CLEARANCE_REQUEST_CONNECTOR_IN__ROLECRTOSM, null, msgs);
 			msgs = basicSetRolecrtosm(newRolecrtosm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
