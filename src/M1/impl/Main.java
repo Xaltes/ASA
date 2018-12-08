@@ -48,23 +48,25 @@ public class Main {
 			System.out.println("	5-montrer tous les éléments de la database");
 			System.out.println("	6-quitter l'exécution");
 			choice = in.nextInt();
+			in.nextLine();
 			switch (choice){
 			case 1 : {
-				System.out.println("\nVeuillez rentrer un nouveau mot de passe : ");
+				System.out.println("Veuillez rentrer un nouveau mot de passe : ");
 				String newMDP = in.nextLine();
 				database.update(pseudo, newMDP);
 				break;
 			}			
 			case 2 : {
-				System.out.println("\nVeuillez rentrer votre nouvelle value : ");
+				System.out.println("Veuillez rentrer votre nouvelle value : ");
 				int newValue = in.nextInt();
+				in.nextLine();
 				database.update(pseudo, newValue);
 				break;
 			}
 			case 3 : {
-				System.out.println("\nVeuillez rentrer le pseudo du nouveau client : ");
+				System.out.println("Veuillez rentrer le pseudo du nouveau client : ");
 				String newPseudo = in.nextLine();
-				System.out.println("veuillez rentrer le mot de passe du nouveau client : ");
+				System.out.println("Veuillez rentrer le mot de passe du nouveau client : ");
 				String newMDP = in.nextLine();
 				System.out.println("Veuillez rentrer la value que vous voulez pour ce nouveau client : ");
 				int newValue = 0;
@@ -81,18 +83,18 @@ public class Main {
 				break;
 			}
 			case 4 : {
-				System.out.println("\nVeuillez entrer le pseudo du client que vous souhaiter supprimer de la database : ");
+				System.out.println("Veuillez entrer le pseudo du client que vous souhaiter supprimer de la database : ");
 				String p = in.nextLine();
 				database.delete(p);
 				break;
 			}
 			case 5 : {
 				String dbAll = database.read();
-				System.out.println("\nVoici le contenu de la DB :\n" + dbAll);
+				System.out.println("Voici le contenu de la DB : \n" + dbAll + "\n");
 				break;
 			}
 			case 6 : {
-				System.out.println("\nA bientôt !");
+				System.out.println("A bientôt !");
 				doingThings = false;
 				break;
 			}
