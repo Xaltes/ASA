@@ -244,7 +244,7 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ASAPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -258,12 +258,14 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 		if (isInited) return (ASAPackage)EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ASAPackageImpl theASAPackage = (ASAPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ASAPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ASAPackageImpl());
+		Object registeredASAPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ASAPackageImpl theASAPackage = registeredASAPackage instanceof ASAPackageImpl ? (ASAPackageImpl)registeredASAPackage : new ASAPackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		M1PackageImpl theM1Package = (M1PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI) instanceof M1PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI) : M1Package.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI);
+		M1PackageImpl theM1Package = (M1PackageImpl)(registeredPackage instanceof M1PackageImpl ? registeredPackage : M1Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theASAPackage.createPackageContents();
@@ -276,7 +278,6 @@ public class ASAPackageImpl extends EPackageImpl implements ASAPackage {
 		// Mark meta-data to indicate it can't be changed
 		theASAPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ASAPackage.eNS_URI, theASAPackage);
 		return theASAPackage;

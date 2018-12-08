@@ -205,7 +205,7 @@ public class ProprieteImpl extends MinimalEObjectImpl.Container implements Propr
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (fonctionnelle: ");
 		result.append(fonctionnelle);
 		result.append(", configurable: ");

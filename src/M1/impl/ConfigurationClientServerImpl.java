@@ -12,11 +12,7 @@ import aSA.PortConfigurationRequis;
 
 import aSA.impl.ConfigurationImpl;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.Collection;
-import java.util.Scanner;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -138,57 +134,6 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 		super();
 	}
 
-	public static void main (String[] args) {
-		// lancer le serveur
-		LancementServeur();
-	
-		String pseudo;
-		String motDePasse;
-		Scanner in = new Scanner(System.in);
-		// "veuillez entrer votre pseudo et mdp" dans la console
-		System.out.println("Veuillez entrer votre pseudo");
-		pseudo = in.nextLine();
-		
-		System.out.println("Veuillez entrer votre mot de passe");
-		motDePasse = in.nextLine();
-		
-		System.out.println("Bienvenue " + pseudo + " !");
-
-	}
-	
-	public static void LancementServeur() {
-		
-		int port = 2380;
-		ServerSocket sSocket = null;
-		boolean ok = true;
-		
-		while(ok) {
-	         try {        	
-	            sSocket = new ServerSocket(port);
-	            System.out.println("Création du serveur avec le port numéro " + port);
-	            //s=sSocket.accept();
-	            ok = false;
-
-	         } catch (IOException e) {
-	        	 
-	            System.err.println("Le port " + port + " est déjà utilisé ! ");
-
-	         }	         
-		}
-		arreterServeur(sSocket);
-	}
-	
-	
-	public static void arreterServeur(ServerSocket ss) {
-		// Fermeture du socket
-        try {
-			ss.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -85,10 +85,6 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	 * @generated
 	 * @ordered
 	 */
-	
-	private String password;
-	private int value;
-	
 	protected PortComposantRequis portrpctoclient;
 
 	/**
@@ -126,11 +122,8 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClientImpl(String p, String pwd, int v) {
+	protected ClientImpl() {
 		super();
-		this.pseudo = p;
-		this.setPassword(pwd);
-		this.setValue(v);
 	}
 
 	/**
@@ -494,31 +487,13 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
 		result.append(", pseudo: ");
 		result.append(pseudo);
 		result.append(')');
-		result.append(" (value: ");
-		result.append(value);
 		return result.toString();
-	}
-
-	public int getValue() {
-		return value;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 } //ClientImpl

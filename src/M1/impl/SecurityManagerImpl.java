@@ -14,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -27,24 +26,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link M1.impl.SecurityManagerImpl#getPortsmtocr <em>Portsmtocr</em>}</li>
  *   <li>{@link M1.impl.SecurityManagerImpl#getPortsmtosq <em>Portsmtosq</em>}</li>
  *   <li>{@link M1.impl.SecurityManagerImpl#getPortsqtosm <em>Portsqtosm</em>}</li>
+ *   <li>{@link M1.impl.SecurityManagerImpl#getPortcrtosm <em>Portcrtosm</em>}</li>
+ *   <li>{@link M1.impl.SecurityManagerImpl#getPortsmtocr <em>Portsmtocr</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SecurityManagerImpl extends ComposantSimpleImpl implements ComposantSimple {
-	/**
-	 * The cached value of the '{@link #getPortsmtocr() <em>Portsmtocr</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPortsmtocr()
-	 * @generated
-	 * @ordered
-	 */
-	protected PortComposantFourni portsmtocr;
-
 	/**
 	 * The cached value of the '{@link #getPortsmtosq() <em>Portsmtosq</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -66,6 +56,26 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	protected PortComposantRequis portsqtosm;
 
 	/**
+	 * The cached value of the '{@link #getPortcrtosm() <em>Portcrtosm</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortcrtosm()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantRequis portcrtosm;
+
+	/**
+	 * The cached value of the '{@link #getPortsmtocr() <em>Portsmtocr</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortsmtocr()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantFourni portsmtocr;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -82,44 +92,6 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	@Override
 	protected EClass eStaticClass() {
 		return M1Package.Literals.SECURITY_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortComposantFourni getPortsmtocr() {
-		if (portsmtocr != null && ((EObject)portsmtocr).eIsProxy()) {
-			InternalEObject oldPortsmtocr = (InternalEObject)portsmtocr;
-			portsmtocr = (PortComposantFourni)eResolveProxy(oldPortsmtocr);
-			if (portsmtocr != oldPortsmtocr) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.SECURITY_MANAGER__PORTSMTOCR, oldPortsmtocr, portsmtocr));
-			}
-		}
-		return portsmtocr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortComposantFourni basicGetPortsmtocr() {
-		return portsmtocr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPortsmtocr(PortComposantFourni newPortsmtocr) {
-		PortComposantFourni oldPortsmtocr = portsmtocr;
-		portsmtocr = newPortsmtocr;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.SECURITY_MANAGER__PORTSMTOCR, oldPortsmtocr, portsmtocr));
 	}
 
 	/**
@@ -213,6 +185,92 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PortComposantRequis getPortcrtosm() {
+		return portcrtosm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPortcrtosm(PortComposantRequis newPortcrtosm, NotificationChain msgs) {
+		PortComposantRequis oldPortcrtosm = portcrtosm;
+		portcrtosm = newPortcrtosm;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, M1Package.SECURITY_MANAGER__PORTCRTOSM, oldPortcrtosm, newPortcrtosm);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortcrtosm(PortComposantRequis newPortcrtosm) {
+		if (newPortcrtosm != portcrtosm) {
+			NotificationChain msgs = null;
+			if (portcrtosm != null)
+				msgs = ((InternalEObject)portcrtosm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
+			if (newPortcrtosm != null)
+				msgs = ((InternalEObject)newPortcrtosm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTCRTOSM, null, msgs);
+			msgs = basicSetPortcrtosm(newPortcrtosm, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.SECURITY_MANAGER__PORTCRTOSM, newPortcrtosm, newPortcrtosm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PortComposantFourni getPortsmtocr() {
+		return portsmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPortsmtocr(PortComposantFourni newPortsmtocr, NotificationChain msgs) {
+		PortComposantFourni oldPortsmtocr = portsmtocr;
+		portsmtocr = newPortsmtocr;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, M1Package.SECURITY_MANAGER__PORTSMTOCR, oldPortsmtocr, newPortsmtocr);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortsmtocr(PortComposantFourni newPortsmtocr) {
+		if (newPortsmtocr != portsmtocr) {
+			NotificationChain msgs = null;
+			if (portsmtocr != null)
+				msgs = ((InternalEObject)portsmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOCR, null, msgs);
+			if (newPortsmtocr != null)
+				msgs = ((InternalEObject)newPortsmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.SECURITY_MANAGER__PORTSMTOCR, null, msgs);
+			msgs = basicSetPortsmtocr(newPortsmtocr, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.SECURITY_MANAGER__PORTSMTOCR, newPortsmtocr, newPortsmtocr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -220,6 +278,10 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 				return basicSetPortsmtosq(null, msgs);
 			case M1Package.SECURITY_MANAGER__PORTSQTOSM:
 				return basicSetPortsqtosm(null, msgs);
+			case M1Package.SECURITY_MANAGER__PORTCRTOSM:
+				return basicSetPortcrtosm(null, msgs);
+			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
+				return basicSetPortsmtocr(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -232,13 +294,14 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
-				if (resolve) return getPortsmtocr();
-				return basicGetPortsmtocr();
 			case M1Package.SECURITY_MANAGER__PORTSMTOSQ:
 				return getPortsmtosq();
 			case M1Package.SECURITY_MANAGER__PORTSQTOSM:
 				return getPortsqtosm();
+			case M1Package.SECURITY_MANAGER__PORTCRTOSM:
+				return getPortcrtosm();
+			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
+				return getPortsmtocr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,14 +314,17 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
-				setPortsmtocr((PortComposantFourni)newValue);
-				return;
 			case M1Package.SECURITY_MANAGER__PORTSMTOSQ:
 				setPortsmtosq((PortComposantFourni)newValue);
 				return;
 			case M1Package.SECURITY_MANAGER__PORTSQTOSM:
 				setPortsqtosm((PortComposantRequis)newValue);
+				return;
+			case M1Package.SECURITY_MANAGER__PORTCRTOSM:
+				setPortcrtosm((PortComposantRequis)newValue);
+				return;
+			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
+				setPortsmtocr((PortComposantFourni)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,14 +338,17 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
-				setPortsmtocr((PortComposantFourni)null);
-				return;
 			case M1Package.SECURITY_MANAGER__PORTSMTOSQ:
 				setPortsmtosq((PortComposantFourni)null);
 				return;
 			case M1Package.SECURITY_MANAGER__PORTSQTOSM:
 				setPortsqtosm((PortComposantRequis)null);
+				return;
+			case M1Package.SECURITY_MANAGER__PORTCRTOSM:
+				setPortcrtosm((PortComposantRequis)null);
+				return;
+			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
+				setPortsmtocr((PortComposantFourni)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,12 +362,14 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
-				return portsmtocr != null;
 			case M1Package.SECURITY_MANAGER__PORTSMTOSQ:
 				return portsmtosq != null;
 			case M1Package.SECURITY_MANAGER__PORTSQTOSM:
 				return portsqtosm != null;
+			case M1Package.SECURITY_MANAGER__PORTCRTOSM:
+				return portcrtosm != null;
+			case M1Package.SECURITY_MANAGER__PORTSMTOCR:
+				return portsmtocr != null;
 		}
 		return super.eIsSet(featureID);
 	}

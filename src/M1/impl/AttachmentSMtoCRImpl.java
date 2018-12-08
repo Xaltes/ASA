@@ -5,6 +5,7 @@ package M1.impl;
 import M1.M1Package;
 
 import aSA.Attachment;
+import aSA.PortComposantFourni;
 import aSA.RoleFourni;
 
 import aSA.impl.AttachmentImpl;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link M1.impl.AttachmentSMtoCRImpl#getRolecrfromsm <em>Rolecrfromsm</em>}</li>
+ *   <li>{@link M1.impl.AttachmentSMtoCRImpl#getPortsmtocr <em>Portsmtocr</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,6 +42,16 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 	 * @ordered
 	 */
 	protected RoleFourni rolecrfromsm;
+
+	/**
+	 * The cached value of the '{@link #getPortsmtocr() <em>Portsmtocr</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortsmtocr()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantFourni portsmtocr;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,12 +115,53 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PortComposantFourni getPortsmtocr() {
+		if (portsmtocr != null && ((EObject)portsmtocr).eIsProxy()) {
+			InternalEObject oldPortsmtocr = (InternalEObject)portsmtocr;
+			portsmtocr = (PortComposantFourni)eResolveProxy(oldPortsmtocr);
+			if (portsmtocr != oldPortsmtocr) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR, oldPortsmtocr, portsmtocr));
+			}
+		}
+		return portsmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PortComposantFourni basicGetPortsmtocr() {
+		return portsmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortsmtocr(PortComposantFourni newPortsmtocr) {
+		PortComposantFourni oldPortsmtocr = portsmtocr;
+		portsmtocr = newPortsmtocr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR, oldPortsmtocr, portsmtocr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_SMTO_CR__ROLECRFROMSM:
 				if (resolve) return getRolecrfromsm();
 				return basicGetRolecrfromsm();
+			case M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR:
+				if (resolve) return getPortsmtocr();
+				return basicGetPortsmtocr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +176,9 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_SMTO_CR__ROLECRFROMSM:
 				setRolecrfromsm((RoleFourni)newValue);
+				return;
+			case M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR:
+				setPortsmtocr((PortComposantFourni)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +195,9 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 			case M1Package.ATTACHMENT_SMTO_CR__ROLECRFROMSM:
 				setRolecrfromsm((RoleFourni)null);
 				return;
+			case M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR:
+				setPortsmtocr((PortComposantFourni)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,6 +212,8 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_SMTO_CR__ROLECRFROMSM:
 				return rolecrfromsm != null;
+			case M1Package.ATTACHMENT_SMTO_CR__PORTSMTOCR:
+				return portsmtocr != null;
 		}
 		return super.eIsSet(featureID);
 	}

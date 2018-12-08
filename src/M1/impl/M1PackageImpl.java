@@ -580,7 +580,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link M1Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -594,12 +594,14 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		if (isInited) return (M1Package)EPackage.Registry.INSTANCE.getEPackage(M1Package.eNS_URI);
 
 		// Obtain or create and register package
-		M1PackageImpl theM1Package = (M1PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof M1PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new M1PackageImpl());
+		Object registeredM1Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		M1PackageImpl theM1Package = registeredM1Package instanceof M1PackageImpl ? (M1PackageImpl)registeredM1Package : new M1PackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		ASAPackageImpl theASAPackage = (ASAPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) instanceof ASAPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI) : ASAPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ASAPackage.eNS_URI);
+		ASAPackageImpl theASAPackage = (ASAPackageImpl)(registeredPackage instanceof ASAPackageImpl ? registeredPackage : ASAPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theM1Package.createPackageContents();
@@ -612,7 +614,6 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		// Mark meta-data to indicate it can't be changed
 		theM1Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(M1Package.eNS_URI, theM1Package);
 		return theM1Package;
@@ -866,7 +867,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionManager_Portcmtocr() {
+	public EReference getConnectionManager_Portsqltocm() {
 		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -875,7 +876,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionManager_Portsqltocm() {
+	public EReference getConnectionManager_Portcmtosql() {
 		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -884,7 +885,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionManager_Portcmtosql() {
+	public EReference getConnectionManager_Portbindingtocm() {
 		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -893,7 +894,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionManager_Portbindingtocm() {
+	public EReference getConnectionManager_Portcmtobinding() {
 		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -902,8 +903,17 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionManager_Portcmtobinding() {
+	public EReference getConnectionManager_Portcrtocm() {
 		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnectionManager_Portcmtocr() {
+		return (EReference)connectionManagerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -965,7 +975,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSecurityManager_Portsmtocr() {
+	public EReference getSecurityManager_Portsmtosq() {
 		return (EReference)securityManagerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -974,7 +984,7 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSecurityManager_Portsmtosq() {
+	public EReference getSecurityManager_Portsqtosm() {
 		return (EReference)securityManagerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -983,8 +993,17 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSecurityManager_Portsqtosm() {
+	public EReference getSecurityManager_Portcrtosm() {
 		return (EReference)securityManagerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSecurityManager_Portsmtocr() {
+		return (EReference)securityManagerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1208,15 +1227,6 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPortCMtoCR_Attachmentcmtocr() {
-		return (EReference)portCMtoCREClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPortCRtoSM() {
 		return portCRtoSMEClass;
 	}
@@ -1226,26 +1236,8 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPortCRtoSM_Securitymanager() {
-		return (EReference)portCRtoSMEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPortSMtoCR() {
 		return portSMtoCREClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPortSMtoCR_Attachmentsmtocr() {
-		return (EReference)portSMtoCREClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1264,15 +1256,6 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 */
 	public EClass getPortCRtoCM() {
 		return portCRtoCMEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPortCRtoCM_Connectionmanager() {
-		return (EReference)portCRtoCMEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1658,6 +1641,15 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAttachmentCMtoCR_Portcmtocr() {
+		return (EReference)attachmentCMtoCREClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAttachmentSMtoCR() {
 		return attachmentSMtoCREClass;
 	}
@@ -1669,6 +1661,15 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 	 */
 	public EReference getAttachmentSMtoCR_Rolecrfromsm() {
 		return (EReference)attachmentSMtoCREClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAttachmentSMtoCR_Portsmtocr() {
+		return (EReference)attachmentSMtoCREClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2259,11 +2260,12 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		createEReference(serverConfigurationEClass, SERVER_CONFIGURATION__ATTACHMENTCRTOSM);
 
 		connectionManagerEClass = createEClass(CONNECTION_MANAGER);
-		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTCMTOCR);
 		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTSQLTOCM);
 		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTCMTOSQL);
 		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTBINDINGTOCM);
 		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTCMTOBINDING);
+		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTCRTOCM);
+		createEReference(connectionManagerEClass, CONNECTION_MANAGER__PORTCMTOCR);
 
 		databaseEClass = createEClass(DATABASE);
 		createEReference(databaseEClass, DATABASE__PORTDBTOSQL);
@@ -2272,9 +2274,10 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		createEReference(databaseEClass, DATABASE__PORTSQTODB);
 
 		securityManagerEClass = createEClass(SECURITY_MANAGER);
-		createEReference(securityManagerEClass, SECURITY_MANAGER__PORTSMTOCR);
 		createEReference(securityManagerEClass, SECURITY_MANAGER__PORTSMTOSQ);
 		createEReference(securityManagerEClass, SECURITY_MANAGER__PORTSQTOSM);
+		createEReference(securityManagerEClass, SECURITY_MANAGER__PORTCRTOSM);
+		createEReference(securityManagerEClass, SECURITY_MANAGER__PORTSMTOCR);
 
 		portClienttoRPCEClass = createEClass(PORT_CLIENTTO_RPC);
 
@@ -2311,18 +2314,14 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		portSQLtoCMEClass = createEClass(PORT_SQ_LTO_CM);
 
 		portCMtoCREClass = createEClass(PORT_CMTO_CR);
-		createEReference(portCMtoCREClass, PORT_CMTO_CR__ATTACHMENTCMTOCR);
 
 		portCRtoSMEClass = createEClass(PORT_CRTO_SM);
-		createEReference(portCRtoSMEClass, PORT_CRTO_SM__SECURITYMANAGER);
 
 		portSMtoCREClass = createEClass(PORT_SMTO_CR);
-		createEReference(portSMtoCREClass, PORT_SMTO_CR__ATTACHMENTSMTOCR);
 
 		portSQtoDBEClass = createEClass(PORT_SQTO_DB);
 
 		portCRtoCMEClass = createEClass(PORT_CRTO_CM);
-		createEReference(portCRtoCMEClass, PORT_CRTO_CM__CONNECTIONMANAGER);
 
 		portCMtoSQLEClass = createEClass(PORT_CMTO_SQL);
 
@@ -2382,9 +2381,11 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 		attachmentCMtoCREClass = createEClass(ATTACHMENT_CMTO_CR);
 		createEReference(attachmentCMtoCREClass, ATTACHMENT_CMTO_CR__ROLECRFROMCM);
+		createEReference(attachmentCMtoCREClass, ATTACHMENT_CMTO_CR__PORTCMTOCR);
 
 		attachmentSMtoCREClass = createEClass(ATTACHMENT_SMTO_CR);
 		createEReference(attachmentSMtoCREClass, ATTACHMENT_SMTO_CR__ROLECRFROMSM);
+		createEReference(attachmentSMtoCREClass, ATTACHMENT_SMTO_CR__PORTSMTOCR);
 
 		attachmentCRtoSMEClass = createEClass(ATTACHMENT_CRTO_SM);
 		createEReference(attachmentCRtoSMEClass, ATTACHMENT_CRTO_SM__PORTCRTOSM);
@@ -2617,11 +2618,12 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		initEReference(getServerConfiguration_Attachmentcrtosm(), this.getAttachmentCRtoSM(), null, "attachmentcrtosm", null, 1, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionManagerEClass, ComposantSimple.class, "ConnectionManager", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnectionManager_Portcmtocr(), this.getPortCMtoCR(), null, "portcmtocr", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionManager_Portsqltocm(), this.getPortSQLtoCM(), null, "portsqltocm", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionManager_Portcmtosql(), this.getPortCMtoSQL(), null, "portcmtosql", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionManager_Portbindingtocm(), this.getPortBindingToCM(), null, "portbindingtocm", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionManager_Portcmtobinding(), this.getPortCMtoBinding(), null, "portcmtobinding", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionManager_Portcrtocm(), this.getPortCRtoCM(), null, "portcrtocm", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionManager_Portcmtocr(), this.getPortCMtoCR(), null, "portcmtocr", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(databaseEClass, ComposantSimple.class, "Database", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDatabase_Portdbtosql(), this.getPortDBtoSQL(), null, "portdbtosql", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2630,9 +2632,10 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		initEReference(getDatabase_Portsqtodb(), this.getPortSQtoDB(), null, "portsqtodb", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(securityManagerEClass, ComposantSimple.class, "SecurityManager", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSecurityManager_Portsmtocr(), this.getPortSMtoCR(), null, "portsmtocr", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSecurityManager_Portsmtosq(), this.getPortSMtoSQ(), null, "portsmtosq", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSecurityManager_Portsqtosm(), this.getPortSQtoSM(), null, "portsqtosm", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSecurityManager_Portcrtosm(), this.getPortCRtoSM(), null, "portcrtosm", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSecurityManager_Portsmtocr(), this.getPortSMtoCR(), null, "portsmtocr", null, 1, 1, ComposantSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portClienttoRPCEClass, PortComposantFourni.class, "PortClienttoRPC", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
@@ -2669,18 +2672,14 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 		initEClass(portSQLtoCMEClass, PortComposantRequis.class, "PortSQLtoCM", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(portCMtoCREClass, PortComposantFourni.class, "PortCMtoCR", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPortCMtoCR_Attachmentcmtocr(), this.getAttachmentCMtoCR(), null, "attachmentcmtocr", null, 1, 1, PortComposantFourni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portCRtoSMEClass, PortComposantRequis.class, "PortCRtoSM", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPortCRtoSM_Securitymanager(), this.getSecurityManager(), null, "securitymanager", null, 1, 1, PortComposantRequis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portSMtoCREClass, PortComposantFourni.class, "PortSMtoCR", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPortSMtoCR_Attachmentsmtocr(), this.getAttachmentSMtoCR(), null, "attachmentsmtocr", null, 1, 1, PortComposantFourni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portSQtoDBEClass, PortComposantRequis.class, "PortSQtoDB", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(portCRtoCMEClass, PortComposantRequis.class, "PortCRtoCM", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPortCRtoCM_Connectionmanager(), this.getConnectionManager(), null, "connectionmanager", null, 1, 1, PortComposantRequis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portCMtoSQLEClass, PortComposantFourni.class, "PortCMtoSQL", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 
@@ -2740,9 +2739,11 @@ public class M1PackageImpl extends EPackageImpl implements M1Package {
 
 		initEClass(attachmentCMtoCREClass, Attachment.class, "AttachmentCMtoCR", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttachmentCMtoCR_Rolecrfromcm(), this.getRoleCRfromCM(), null, "rolecrfromcm", null, 1, 1, Attachment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttachmentCMtoCR_Portcmtocr(), this.getPortCMtoCR(), null, "portcmtocr", null, 1, 1, Attachment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attachmentSMtoCREClass, Attachment.class, "AttachmentSMtoCR", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttachmentSMtoCR_Rolecrfromsm(), this.getRoleCRfromSM(), null, "rolecrfromsm", null, 1, 1, Attachment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttachmentSMtoCR_Portsmtocr(), this.getPortSMtoCR(), null, "portsmtocr", null, 1, 1, Attachment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attachmentCRtoSMEClass, Attachment.class, "AttachmentCRtoSM", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttachmentCRtoSM_Portcrtosm(), this.getPortCRtoSM(), null, "portcrtosm", null, 1, 1, Attachment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

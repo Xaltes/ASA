@@ -14,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -27,26 +26,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link M1.impl.ConnectionManagerImpl#getPortcmtocr <em>Portcmtocr</em>}</li>
  *   <li>{@link M1.impl.ConnectionManagerImpl#getPortsqltocm <em>Portsqltocm</em>}</li>
  *   <li>{@link M1.impl.ConnectionManagerImpl#getPortcmtosql <em>Portcmtosql</em>}</li>
  *   <li>{@link M1.impl.ConnectionManagerImpl#getPortbindingtocm <em>Portbindingtocm</em>}</li>
  *   <li>{@link M1.impl.ConnectionManagerImpl#getPortcmtobinding <em>Portcmtobinding</em>}</li>
+ *   <li>{@link M1.impl.ConnectionManagerImpl#getPortcrtocm <em>Portcrtocm</em>}</li>
+ *   <li>{@link M1.impl.ConnectionManagerImpl#getPortcmtocr <em>Portcmtocr</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConnectionManagerImpl extends ComposantSimpleImpl implements ComposantSimple {
-	/**
-	 * The cached value of the '{@link #getPortcmtocr() <em>Portcmtocr</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPortcmtocr()
-	 * @generated
-	 * @ordered
-	 */
-	protected PortComposantFourni portcmtocr;
-
 	/**
 	 * The cached value of the '{@link #getPortsqltocm() <em>Portsqltocm</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -88,6 +78,26 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	protected PortComposantFourni portcmtobinding;
 
 	/**
+	 * The cached value of the '{@link #getPortcrtocm() <em>Portcrtocm</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortcrtocm()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantRequis portcrtocm;
+
+	/**
+	 * The cached value of the '{@link #getPortcmtocr() <em>Portcmtocr</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortcmtocr()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantFourni portcmtocr;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,44 +114,6 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	@Override
 	protected EClass eStaticClass() {
 		return M1Package.Literals.CONNECTION_MANAGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortComposantFourni getPortcmtocr() {
-		if (portcmtocr != null && ((EObject)portcmtocr).eIsProxy()) {
-			InternalEObject oldPortcmtocr = (InternalEObject)portcmtocr;
-			portcmtocr = (PortComposantFourni)eResolveProxy(oldPortcmtocr);
-			if (portcmtocr != oldPortcmtocr) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.CONNECTION_MANAGER__PORTCMTOCR, oldPortcmtocr, portcmtocr));
-			}
-		}
-		return portcmtocr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PortComposantFourni basicGetPortcmtocr() {
-		return portcmtocr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPortcmtocr(PortComposantFourni newPortcmtocr) {
-		PortComposantFourni oldPortcmtocr = portcmtocr;
-		portcmtocr = newPortcmtocr;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.CONNECTION_MANAGER__PORTCMTOCR, oldPortcmtocr, portcmtocr));
 	}
 
 	/**
@@ -321,6 +293,92 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PortComposantRequis getPortcrtocm() {
+		return portcrtocm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPortcrtocm(PortComposantRequis newPortcrtocm, NotificationChain msgs) {
+		PortComposantRequis oldPortcrtocm = portcrtocm;
+		portcrtocm = newPortcrtocm;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, M1Package.CONNECTION_MANAGER__PORTCRTOCM, oldPortcrtocm, newPortcrtocm);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortcrtocm(PortComposantRequis newPortcrtocm) {
+		if (newPortcrtocm != portcrtocm) {
+			NotificationChain msgs = null;
+			if (portcrtocm != null)
+				msgs = ((InternalEObject)portcrtocm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
+			if (newPortcrtocm != null)
+				msgs = ((InternalEObject)newPortcrtocm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCRTOCM, null, msgs);
+			msgs = basicSetPortcrtocm(newPortcrtocm, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.CONNECTION_MANAGER__PORTCRTOCM, newPortcrtocm, newPortcrtocm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PortComposantFourni getPortcmtocr() {
+		return portcmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPortcmtocr(PortComposantFourni newPortcmtocr, NotificationChain msgs) {
+		PortComposantFourni oldPortcmtocr = portcmtocr;
+		portcmtocr = newPortcmtocr;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, M1Package.CONNECTION_MANAGER__PORTCMTOCR, oldPortcmtocr, newPortcmtocr);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortcmtocr(PortComposantFourni newPortcmtocr) {
+		if (newPortcmtocr != portcmtocr) {
+			NotificationChain msgs = null;
+			if (portcmtocr != null)
+				msgs = ((InternalEObject)portcmtocr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
+			if (newPortcmtocr != null)
+				msgs = ((InternalEObject)newPortcmtocr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - M1Package.CONNECTION_MANAGER__PORTCMTOCR, null, msgs);
+			msgs = basicSetPortcmtocr(newPortcmtocr, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.CONNECTION_MANAGER__PORTCMTOCR, newPortcmtocr, newPortcmtocr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -332,6 +390,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return basicSetPortbindingtocm(null, msgs);
 			case M1Package.CONNECTION_MANAGER__PORTCMTOBINDING:
 				return basicSetPortcmtobinding(null, msgs);
+			case M1Package.CONNECTION_MANAGER__PORTCRTOCM:
+				return basicSetPortcrtocm(null, msgs);
+			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
+				return basicSetPortcmtocr(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -344,9 +406,6 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
-				if (resolve) return getPortcmtocr();
-				return basicGetPortcmtocr();
 			case M1Package.CONNECTION_MANAGER__PORTSQLTOCM:
 				return getPortsqltocm();
 			case M1Package.CONNECTION_MANAGER__PORTCMTOSQL:
@@ -355,6 +414,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return getPortbindingtocm();
 			case M1Package.CONNECTION_MANAGER__PORTCMTOBINDING:
 				return getPortcmtobinding();
+			case M1Package.CONNECTION_MANAGER__PORTCRTOCM:
+				return getPortcrtocm();
+			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
+				return getPortcmtocr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -367,9 +430,6 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
-				setPortcmtocr((PortComposantFourni)newValue);
-				return;
 			case M1Package.CONNECTION_MANAGER__PORTSQLTOCM:
 				setPortsqltocm((PortComposantRequis)newValue);
 				return;
@@ -381,6 +441,12 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return;
 			case M1Package.CONNECTION_MANAGER__PORTCMTOBINDING:
 				setPortcmtobinding((PortComposantFourni)newValue);
+				return;
+			case M1Package.CONNECTION_MANAGER__PORTCRTOCM:
+				setPortcrtocm((PortComposantRequis)newValue);
+				return;
+			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
+				setPortcmtocr((PortComposantFourni)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -394,9 +460,6 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
-				setPortcmtocr((PortComposantFourni)null);
-				return;
 			case M1Package.CONNECTION_MANAGER__PORTSQLTOCM:
 				setPortsqltocm((PortComposantRequis)null);
 				return;
@@ -408,6 +471,12 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return;
 			case M1Package.CONNECTION_MANAGER__PORTCMTOBINDING:
 				setPortcmtobinding((PortComposantFourni)null);
+				return;
+			case M1Package.CONNECTION_MANAGER__PORTCRTOCM:
+				setPortcrtocm((PortComposantRequis)null);
+				return;
+			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
+				setPortcmtocr((PortComposantFourni)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -421,8 +490,6 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
-				return portcmtocr != null;
 			case M1Package.CONNECTION_MANAGER__PORTSQLTOCM:
 				return portsqltocm != null;
 			case M1Package.CONNECTION_MANAGER__PORTCMTOSQL:
@@ -431,6 +498,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return portbindingtocm != null;
 			case M1Package.CONNECTION_MANAGER__PORTCMTOBINDING:
 				return portcmtobinding != null;
+			case M1Package.CONNECTION_MANAGER__PORTCRTOCM:
+				return portcrtocm != null;
+			case M1Package.CONNECTION_MANAGER__PORTCMTOCR:
+				return portcmtocr != null;
 		}
 		return super.eIsSet(featureID);
 	}

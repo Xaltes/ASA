@@ -5,6 +5,7 @@ package M1.impl;
 import M1.M1Package;
 
 import aSA.Attachment;
+import aSA.PortComposantFourni;
 import aSA.RoleFourni;
 
 import aSA.impl.AttachmentImpl;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link M1.impl.AttachmentCMtoCRImpl#getRolecrfromcm <em>Rolecrfromcm</em>}</li>
+ *   <li>{@link M1.impl.AttachmentCMtoCRImpl#getPortcmtocr <em>Portcmtocr</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,6 +42,16 @@ public class AttachmentCMtoCRImpl extends AttachmentImpl implements Attachment {
 	 * @ordered
 	 */
 	protected RoleFourni rolecrfromcm;
+
+	/**
+	 * The cached value of the '{@link #getPortcmtocr() <em>Portcmtocr</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPortcmtocr()
+	 * @generated
+	 * @ordered
+	 */
+	protected PortComposantFourni portcmtocr;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,12 +115,53 @@ public class AttachmentCMtoCRImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PortComposantFourni getPortcmtocr() {
+		if (portcmtocr != null && ((EObject)portcmtocr).eIsProxy()) {
+			InternalEObject oldPortcmtocr = (InternalEObject)portcmtocr;
+			portcmtocr = (PortComposantFourni)eResolveProxy(oldPortcmtocr);
+			if (portcmtocr != oldPortcmtocr) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR, oldPortcmtocr, portcmtocr));
+			}
+		}
+		return portcmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PortComposantFourni basicGetPortcmtocr() {
+		return portcmtocr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPortcmtocr(PortComposantFourni newPortcmtocr) {
+		PortComposantFourni oldPortcmtocr = portcmtocr;
+		portcmtocr = newPortcmtocr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR, oldPortcmtocr, portcmtocr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_CMTO_CR__ROLECRFROMCM:
 				if (resolve) return getRolecrfromcm();
 				return basicGetRolecrfromcm();
+			case M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR:
+				if (resolve) return getPortcmtocr();
+				return basicGetPortcmtocr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +176,9 @@ public class AttachmentCMtoCRImpl extends AttachmentImpl implements Attachment {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_CMTO_CR__ROLECRFROMCM:
 				setRolecrfromcm((RoleFourni)newValue);
+				return;
+			case M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR:
+				setPortcmtocr((PortComposantFourni)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,6 +195,9 @@ public class AttachmentCMtoCRImpl extends AttachmentImpl implements Attachment {
 			case M1Package.ATTACHMENT_CMTO_CR__ROLECRFROMCM:
 				setRolecrfromcm((RoleFourni)null);
 				return;
+			case M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR:
+				setPortcmtocr((PortComposantFourni)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -153,6 +212,8 @@ public class AttachmentCMtoCRImpl extends AttachmentImpl implements Attachment {
 		switch (featureID) {
 			case M1Package.ATTACHMENT_CMTO_CR__ROLECRFROMCM:
 				return rolecrfromcm != null;
+			case M1Package.ATTACHMENT_CMTO_CR__PORTCMTOCR:
+				return portcmtocr != null;
 		}
 		return super.eIsSet(featureID);
 	}

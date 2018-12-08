@@ -458,22 +458,13 @@ public interface M1Package extends EPackage {
 	int CONNECTION_MANAGER__CONTRAINTETECHNIQUE = ASAPackage.COMPOSANT_SIMPLE__CONTRAINTETECHNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Portcmtocr</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION_MANAGER__PORTCMTOCR = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Portsqltocm</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_MANAGER__PORTSQLTOCM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 1;
+	int CONNECTION_MANAGER__PORTSQLTOCM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Portcmtosql</b></em>' containment reference.
@@ -482,7 +473,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_MANAGER__PORTCMTOSQL = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 2;
+	int CONNECTION_MANAGER__PORTCMTOSQL = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Portbindingtocm</b></em>' containment reference.
@@ -491,7 +482,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_MANAGER__PORTBINDINGTOCM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 3;
+	int CONNECTION_MANAGER__PORTBINDINGTOCM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Portcmtobinding</b></em>' containment reference.
@@ -500,7 +491,25 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_MANAGER__PORTCMTOBINDING = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 4;
+	int CONNECTION_MANAGER__PORTCMTOBINDING = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Portcrtocm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_MANAGER__PORTCRTOCM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Portcmtocr</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_MANAGER__PORTCMTOCR = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Connection Manager</em>' class.
@@ -509,7 +518,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_MANAGER_FEATURE_COUNT = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 5;
+	int CONNECTION_MANAGER_FEATURE_COUNT = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Connection Manager</em>' class.
@@ -649,22 +658,13 @@ public interface M1Package extends EPackage {
 	int SECURITY_MANAGER__CONTRAINTETECHNIQUE = ASAPackage.COMPOSANT_SIMPLE__CONTRAINTETECHNIQUE;
 
 	/**
-	 * The feature id for the '<em><b>Portsmtocr</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECURITY_MANAGER__PORTSMTOCR = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Portsmtosq</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_MANAGER__PORTSMTOSQ = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 1;
+	int SECURITY_MANAGER__PORTSMTOSQ = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Portsqtosm</b></em>' containment reference.
@@ -673,7 +673,25 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_MANAGER__PORTSQTOSM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 2;
+	int SECURITY_MANAGER__PORTSQTOSM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Portcrtosm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_MANAGER__PORTCRTOSM = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Portsmtocr</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECURITY_MANAGER__PORTSMTOCR = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Security Manager</em>' class.
@@ -682,7 +700,7 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURITY_MANAGER_FEATURE_COUNT = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 3;
+	int SECURITY_MANAGER_FEATURE_COUNT = ASAPackage.COMPOSANT_SIMPLE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Security Manager</em>' class.
@@ -1426,22 +1444,13 @@ public interface M1Package extends EPackage {
 	int PORT_CMTO_CR__ID = ASAPackage.PORT_COMPOSANT_FOURNI__ID;
 
 	/**
-	 * The feature id for the '<em><b>Attachmentcmtocr</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORT_CMTO_CR__ATTACHMENTCMTOCR = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Port CMto CR</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORT_CMTO_CR_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 1;
+	int PORT_CMTO_CR_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Port CMto CR</em>' class.
@@ -1472,22 +1481,13 @@ public interface M1Package extends EPackage {
 	int PORT_CRTO_SM__ID = ASAPackage.PORT_COMPOSANT_REQUIS__ID;
 
 	/**
-	 * The feature id for the '<em><b>Securitymanager</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORT_CRTO_SM__SECURITYMANAGER = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Port CRto SM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORT_CRTO_SM_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 1;
+	int PORT_CRTO_SM_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Port CRto SM</em>' class.
@@ -1518,22 +1518,13 @@ public interface M1Package extends EPackage {
 	int PORT_SMTO_CR__ID = ASAPackage.PORT_COMPOSANT_FOURNI__ID;
 
 	/**
-	 * The feature id for the '<em><b>Attachmentsmtocr</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORT_SMTO_CR__ATTACHMENTSMTOCR = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Port SMto CR</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORT_SMTO_CR_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 1;
+	int PORT_SMTO_CR_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_FOURNI_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Port SMto CR</em>' class.
@@ -1601,22 +1592,13 @@ public interface M1Package extends EPackage {
 	int PORT_CRTO_CM__ID = ASAPackage.PORT_COMPOSANT_REQUIS__ID;
 
 	/**
-	 * The feature id for the '<em><b>Connectionmanager</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORT_CRTO_CM__CONNECTIONMANAGER = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Port CRto CM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORT_CRTO_CM_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 1;
+	int PORT_CRTO_CM_FEATURE_COUNT = ASAPackage.PORT_COMPOSANT_REQUIS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Port CRto CM</em>' class.
@@ -2923,13 +2905,22 @@ public interface M1Package extends EPackage {
 	int ATTACHMENT_CMTO_CR__ROLECRFROMCM = ASAPackage.ATTACHMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Portcmtocr</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACHMENT_CMTO_CR__PORTCMTOCR = ASAPackage.ATTACHMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Attachment CMto CR</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACHMENT_CMTO_CR_FEATURE_COUNT = ASAPackage.ATTACHMENT_FEATURE_COUNT + 1;
+	int ATTACHMENT_CMTO_CR_FEATURE_COUNT = ASAPackage.ATTACHMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Attach Port To Role</em>' operation.
@@ -3014,13 +3005,22 @@ public interface M1Package extends EPackage {
 	int ATTACHMENT_SMTO_CR__ROLECRFROMSM = ASAPackage.ATTACHMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Portsmtocr</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACHMENT_SMTO_CR__PORTSMTOCR = ASAPackage.ATTACHMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Attachment SMto CR</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACHMENT_SMTO_CR_FEATURE_COUNT = ASAPackage.ATTACHMENT_FEATURE_COUNT + 1;
+	int ATTACHMENT_SMTO_CR_FEATURE_COUNT = ASAPackage.ATTACHMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Attach Port To Role</em>' operation.
@@ -5165,17 +5165,6 @@ public interface M1Package extends EPackage {
 	EClass getConnectionManager();
 
 	/**
-	 * Returns the meta object for the reference '{@link aSA.ComposantSimple#getPortcmtocr <em>Portcmtocr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Portcmtocr</em>'.
-	 * @see aSA.ComposantSimple#getPortcmtocr()
-	 * @see #getConnectionManager()
-	 * @generated
-	 */
-	EReference getConnectionManager_Portcmtocr();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortsqltocm <em>Portsqltocm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5218,6 +5207,28 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getConnectionManager_Portcmtobinding();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortcrtocm <em>Portcrtocm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Portcrtocm</em>'.
+	 * @see aSA.ComposantSimple#getPortcrtocm()
+	 * @see #getConnectionManager()
+	 * @generated
+	 */
+	EReference getConnectionManager_Portcrtocm();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortcmtocr <em>Portcmtocr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Portcmtocr</em>'.
+	 * @see aSA.ComposantSimple#getPortcmtocr()
+	 * @see #getConnectionManager()
+	 * @generated
+	 */
+	EReference getConnectionManager_Portcmtocr();
 
 	/**
 	 * Returns the meta object for class '{@link aSA.ComposantSimple <em>Database</em>}'.
@@ -5286,17 +5297,6 @@ public interface M1Package extends EPackage {
 	EClass getSecurityManager();
 
 	/**
-	 * Returns the meta object for the reference '{@link aSA.ComposantSimple#getPortsmtocr <em>Portsmtocr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Portsmtocr</em>'.
-	 * @see aSA.ComposantSimple#getPortsmtocr()
-	 * @see #getSecurityManager()
-	 * @generated
-	 */
-	EReference getSecurityManager_Portsmtocr();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortsmtosq <em>Portsmtosq</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5317,6 +5317,28 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getSecurityManager_Portsqtosm();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortcrtosm <em>Portcrtosm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Portcrtosm</em>'.
+	 * @see aSA.ComposantSimple#getPortcrtosm()
+	 * @see #getSecurityManager()
+	 * @generated
+	 */
+	EReference getSecurityManager_Portcrtosm();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link aSA.ComposantSimple#getPortsmtocr <em>Portsmtocr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Portsmtocr</em>'.
+	 * @see aSA.ComposantSimple#getPortsmtocr()
+	 * @see #getSecurityManager()
+	 * @generated
+	 */
+	EReference getSecurityManager_Portsmtocr();
 
 	/**
 	 * Returns the meta object for class '{@link aSA.PortComposantFourni <em>Port Clientto RPC</em>}'.
@@ -5583,17 +5605,6 @@ public interface M1Package extends EPackage {
 	EClass getPortCMtoCR();
 
 	/**
-	 * Returns the meta object for the reference '{@link aSA.PortComposantFourni#getAttachmentcmtocr <em>Attachmentcmtocr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attachmentcmtocr</em>'.
-	 * @see aSA.PortComposantFourni#getAttachmentcmtocr()
-	 * @see #getPortCMtoCR()
-	 * @generated
-	 */
-	EReference getPortCMtoCR_Attachmentcmtocr();
-
-	/**
 	 * Returns the meta object for class '{@link aSA.PortComposantRequis <em>Port CRto SM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5605,17 +5616,6 @@ public interface M1Package extends EPackage {
 	EClass getPortCRtoSM();
 
 	/**
-	 * Returns the meta object for the reference '{@link aSA.PortComposantRequis#getSecuritymanager <em>Securitymanager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Securitymanager</em>'.
-	 * @see aSA.PortComposantRequis#getSecuritymanager()
-	 * @see #getPortCRtoSM()
-	 * @generated
-	 */
-	EReference getPortCRtoSM_Securitymanager();
-
-	/**
 	 * Returns the meta object for class '{@link aSA.PortComposantFourni <em>Port SMto CR</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5625,17 +5625,6 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getPortSMtoCR();
-
-	/**
-	 * Returns the meta object for the reference '{@link aSA.PortComposantFourni#getAttachmentsmtocr <em>Attachmentsmtocr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attachmentsmtocr</em>'.
-	 * @see aSA.PortComposantFourni#getAttachmentsmtocr()
-	 * @see #getPortSMtoCR()
-	 * @generated
-	 */
-	EReference getPortSMtoCR_Attachmentsmtocr();
 
 	/**
 	 * Returns the meta object for class '{@link aSA.PortComposantRequis <em>Port SQto DB</em>}'.
@@ -5658,17 +5647,6 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getPortCRtoCM();
-
-	/**
-	 * Returns the meta object for the reference '{@link aSA.PortComposantRequis#getConnectionmanager <em>Connectionmanager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Connectionmanager</em>'.
-	 * @see aSA.PortComposantRequis#getConnectionmanager()
-	 * @see #getPortCRtoCM()
-	 * @generated
-	 */
-	EReference getPortCRtoCM_Connectionmanager();
 
 	/**
 	 * Returns the meta object for class '{@link aSA.PortComposantFourni <em>Port CMto SQL</em>}'.
@@ -6133,6 +6111,17 @@ public interface M1Package extends EPackage {
 	EReference getAttachmentCMtoCR_Rolecrfromcm();
 
 	/**
+	 * Returns the meta object for the reference '{@link aSA.Attachment#getPortcmtocr <em>Portcmtocr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Portcmtocr</em>'.
+	 * @see aSA.Attachment#getPortcmtocr()
+	 * @see #getAttachmentCMtoCR()
+	 * @generated
+	 */
+	EReference getAttachmentCMtoCR_Portcmtocr();
+
+	/**
 	 * Returns the meta object for class '{@link aSA.Attachment <em>Attachment SMto CR</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6153,6 +6142,17 @@ public interface M1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getAttachmentSMtoCR_Rolecrfromsm();
+
+	/**
+	 * Returns the meta object for the reference '{@link aSA.Attachment#getPortsmtocr <em>Portsmtocr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Portsmtocr</em>'.
+	 * @see aSA.Attachment#getPortsmtocr()
+	 * @see #getAttachmentSMtoCR()
+	 * @generated
+	 */
+	EReference getAttachmentSMtoCR_Portsmtocr();
 
 	/**
 	 * Returns the meta object for class '{@link aSA.Attachment <em>Attachment CRto SM</em>}'.
@@ -7049,14 +7049,6 @@ public interface M1Package extends EPackage {
 		EClass CONNECTION_MANAGER = eINSTANCE.getConnectionManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Portcmtocr</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION_MANAGER__PORTCMTOCR = eINSTANCE.getConnectionManager_Portcmtocr();
-
-		/**
 		 * The meta object literal for the '<em><b>Portsqltocm</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7087,6 +7079,22 @@ public interface M1Package extends EPackage {
 		 * @generated
 		 */
 		EReference CONNECTION_MANAGER__PORTCMTOBINDING = eINSTANCE.getConnectionManager_Portcmtobinding();
+
+		/**
+		 * The meta object literal for the '<em><b>Portcrtocm</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_MANAGER__PORTCRTOCM = eINSTANCE.getConnectionManager_Portcrtocm();
+
+		/**
+		 * The meta object literal for the '<em><b>Portcmtocr</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_MANAGER__PORTCMTOCR = eINSTANCE.getConnectionManager_Portcmtocr();
 
 		/**
 		 * The meta object literal for the '{@link M1.impl.DatabaseImpl <em>Database</em>}' class.
@@ -7141,14 +7149,6 @@ public interface M1Package extends EPackage {
 		EClass SECURITY_MANAGER = eINSTANCE.getSecurityManager();
 
 		/**
-		 * The meta object literal for the '<em><b>Portsmtocr</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SECURITY_MANAGER__PORTSMTOCR = eINSTANCE.getSecurityManager_Portsmtocr();
-
-		/**
 		 * The meta object literal for the '<em><b>Portsmtosq</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7163,6 +7163,22 @@ public interface M1Package extends EPackage {
 		 * @generated
 		 */
 		EReference SECURITY_MANAGER__PORTSQTOSM = eINSTANCE.getSecurityManager_Portsqtosm();
+
+		/**
+		 * The meta object literal for the '<em><b>Portcrtosm</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SECURITY_MANAGER__PORTCRTOSM = eINSTANCE.getSecurityManager_Portcrtosm();
+
+		/**
+		 * The meta object literal for the '<em><b>Portsmtocr</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SECURITY_MANAGER__PORTSMTOCR = eINSTANCE.getSecurityManager_Portsmtocr();
 
 		/**
 		 * The meta object literal for the '{@link M1.impl.PortClienttoRPCImpl <em>Port Clientto RPC</em>}' class.
@@ -7381,14 +7397,6 @@ public interface M1Package extends EPackage {
 		EClass PORT_CMTO_CR = eINSTANCE.getPortCMtoCR();
 
 		/**
-		 * The meta object literal for the '<em><b>Attachmentcmtocr</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PORT_CMTO_CR__ATTACHMENTCMTOCR = eINSTANCE.getPortCMtoCR_Attachmentcmtocr();
-
-		/**
 		 * The meta object literal for the '{@link M1.impl.PortCRtoSMImpl <em>Port CRto SM</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7399,14 +7407,6 @@ public interface M1Package extends EPackage {
 		EClass PORT_CRTO_SM = eINSTANCE.getPortCRtoSM();
 
 		/**
-		 * The meta object literal for the '<em><b>Securitymanager</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PORT_CRTO_SM__SECURITYMANAGER = eINSTANCE.getPortCRtoSM_Securitymanager();
-
-		/**
 		 * The meta object literal for the '{@link M1.impl.PortSMtoCRImpl <em>Port SMto CR</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7415,14 +7415,6 @@ public interface M1Package extends EPackage {
 		 * @generated
 		 */
 		EClass PORT_SMTO_CR = eINSTANCE.getPortSMtoCR();
-
-		/**
-		 * The meta object literal for the '<em><b>Attachmentsmtocr</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PORT_SMTO_CR__ATTACHMENTSMTOCR = eINSTANCE.getPortSMtoCR_Attachmentsmtocr();
 
 		/**
 		 * The meta object literal for the '{@link M1.impl.PortSQtoDBImpl <em>Port SQto DB</em>}' class.
@@ -7443,14 +7435,6 @@ public interface M1Package extends EPackage {
 		 * @generated
 		 */
 		EClass PORT_CRTO_CM = eINSTANCE.getPortCRtoCM();
-
-		/**
-		 * The meta object literal for the '<em><b>Connectionmanager</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PORT_CRTO_CM__CONNECTIONMANAGER = eINSTANCE.getPortCRtoCM_Connectionmanager();
 
 		/**
 		 * The meta object literal for the '{@link M1.impl.PortCMtoSQLImpl <em>Port CMto SQL</em>}' class.
@@ -7823,6 +7807,14 @@ public interface M1Package extends EPackage {
 		EReference ATTACHMENT_CMTO_CR__ROLECRFROMCM = eINSTANCE.getAttachmentCMtoCR_Rolecrfromcm();
 
 		/**
+		 * The meta object literal for the '<em><b>Portcmtocr</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTACHMENT_CMTO_CR__PORTCMTOCR = eINSTANCE.getAttachmentCMtoCR_Portcmtocr();
+
+		/**
 		 * The meta object literal for the '{@link M1.impl.AttachmentSMtoCRImpl <em>Attachment SMto CR</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7839,6 +7831,14 @@ public interface M1Package extends EPackage {
 		 * @generated
 		 */
 		EReference ATTACHMENT_SMTO_CR__ROLECRFROMSM = eINSTANCE.getAttachmentSMtoCR_Rolecrfromsm();
+
+		/**
+		 * The meta object literal for the '<em><b>Portsmtocr</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTACHMENT_SMTO_CR__PORTSMTOCR = eINSTANCE.getAttachmentSMtoCR_Portsmtocr();
 
 		/**
 		 * The meta object literal for the '{@link M1.impl.AttachmentCRtoSMImpl <em>Attachment CRto SM</em>}' class.

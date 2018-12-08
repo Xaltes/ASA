@@ -56,8 +56,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" instanceClassName="aSA.ComposantSimple"
       eSuperTypes="aSA.ecore#//ComposantSimple">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtocr" lowerBound="1"
-        eType="#//PortCMtoCR"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portsqltocm" lowerBound="1"
         eType="#//PortSQLtoCM" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtosql" lowerBound="1"
@@ -66,6 +64,10 @@
         eType="#//PortBindingToCM" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtobinding" lowerBound="1"
         eType="#//PortCMtoBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcrtocm" lowerBound="1"
+        eType="#//PortCRtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtocr" lowerBound="1"
+        eType="#//PortCMtoCR" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Database" instanceClassName="aSA.ComposantSimple"
       eSuperTypes="aSA.ecore#//ComposantSimple">
@@ -80,12 +82,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" instanceClassName="aSA.ComposantSimple"
       eSuperTypes="aSA.ecore#//ComposantSimple">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtocr" lowerBound="1"
-        eType="#//PortSMtoCR"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtosq" lowerBound="1"
         eType="#//PortSMtoSQ" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portsqtosm" lowerBound="1"
         eType="#//PortSQtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcrtosm" lowerBound="1"
+        eType="#//PortCRtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtocr" lowerBound="1"
+        eType="#//PortSMtoCR" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PortClienttoRPC" instanceClassName="aSA.PortComposantFourni"
       eSuperTypes="aSA.ecore#//PortComposantFourni"/>
@@ -140,27 +144,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="PortSQLtoCM" instanceClassName="aSA.PortComposantRequis"
       eSuperTypes="aSA.ecore#//PortComposantRequis"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortCMtoCR" instanceClassName="aSA.PortComposantFourni"
-      eSuperTypes="aSA.ecore#//PortComposantFourni">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentcmtocr" lowerBound="1"
-        eType="#//AttachmentCMtoCR"/>
-  </eClassifiers>
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortCRtoSM" instanceClassName="aSA.PortComposantRequis"
-      eSuperTypes="aSA.ecore#//PortComposantRequis">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="securitymanager" lowerBound="1"
-        eType="#//SecurityManager"/>
-  </eClassifiers>
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortSMtoCR" instanceClassName="aSA.PortComposantFourni"
-      eSuperTypes="aSA.ecore#//PortComposantFourni">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentsmtocr" lowerBound="1"
-        eType="#//AttachmentSMtoCR"/>
-  </eClassifiers>
+      eSuperTypes="aSA.ecore#//PortComposantFourni"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortSQtoDB" instanceClassName="aSA.PortComposantRequis"
       eSuperTypes="aSA.ecore#//PortComposantRequis"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortCRtoCM" instanceClassName="aSA.PortComposantRequis"
-      eSuperTypes="aSA.ecore#//PortComposantRequis">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionmanager" lowerBound="1"
-        eType="#//ConnectionManager"/>
-  </eClassifiers>
+      eSuperTypes="aSA.ecore#//PortComposantRequis"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortCMtoSQL" instanceClassName="aSA.PortComposantFourni"
       eSuperTypes="aSA.ecore#//PortComposantFourni"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortDBtoSQ" instanceClassName="aSA.PortComposantFourni"
@@ -257,11 +249,15 @@
       eSuperTypes="aSA.ecore#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromcm" lowerBound="1"
         eType="#//RoleCRfromCM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtocr" lowerBound="1"
+        eType="#//PortCMtoCR"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentSMtoCR" instanceClassName="aSA.Attachment"
       eSuperTypes="aSA.ecore#//Attachment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolecrfromsm" lowerBound="1"
         eType="#//RoleCRfromSM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtocr" lowerBound="1"
+        eType="#//PortSMtoCR"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttachmentCRtoSM" instanceClassName="aSA.Attachment"
       eSuperTypes="aSA.ecore#//Attachment">

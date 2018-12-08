@@ -34,11 +34,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ServerConfiguration/attachmentcrtosm"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//ConnectionManager">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtocr"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portsqltocm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtosql"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portbindingtocm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtobinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcrtocm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//ConnectionManager/portcmtocr"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//Database">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portdbtosql"/>
@@ -47,9 +48,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//Database/portsqtodb"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//SecurityManager">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsmtocr"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsmtosq"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsqtosm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portcrtosm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference M1.ecore#//SecurityManager/portsmtocr"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//PortClienttoRPC"/>
     <genClasses ecoreClass="M1.ecore#//PortRPCtoClient"/>
@@ -80,19 +82,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentRPCToClient/rolerpctoclient"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//PortSQLtoCM"/>
-    <genClasses ecoreClass="M1.ecore#//PortCMtoCR">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCMtoCR/attachmentcmtocr"/>
-    </genClasses>
-    <genClasses ecoreClass="M1.ecore#//PortCRtoSM">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCRtoSM/securitymanager"/>
-    </genClasses>
-    <genClasses ecoreClass="M1.ecore#//PortSMtoCR">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortSMtoCR/attachmentsmtocr"/>
-    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortCMtoCR"/>
+    <genClasses ecoreClass="M1.ecore#//PortCRtoSM"/>
+    <genClasses ecoreClass="M1.ecore#//PortSMtoCR"/>
     <genClasses ecoreClass="M1.ecore#//PortSQtoDB"/>
-    <genClasses ecoreClass="M1.ecore#//PortCRtoCM">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//PortCRtoCM/connectionmanager"/>
-    </genClasses>
+    <genClasses ecoreClass="M1.ecore#//PortCRtoCM"/>
     <genClasses ecoreClass="M1.ecore#//PortCMtoSQL"/>
     <genClasses ecoreClass="M1.ecore#//PortDBtoSQ"/>
     <genClasses ecoreClass="M1.ecore#//PortDBtoSQL"/>
@@ -147,9 +141,11 @@
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//AttachmentCMtoCR">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCMtoCR/rolecrfromcm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCMtoCR/portcmtocr"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//AttachmentSMtoCR">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSMtoCR/rolecrfromsm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentSMtoCR/portsmtocr"/>
     </genClasses>
     <genClasses ecoreClass="M1.ecore#//AttachmentCRtoSM">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference M1.ecore#//AttachmentCRtoSM/portcrtosm"/>
