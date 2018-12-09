@@ -6,7 +6,6 @@ import M1.M1Package;
 
 import aSA.Binding;
 import aSA.PortComposantRequis;
-import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 import aSA.impl.BindingImpl;
 

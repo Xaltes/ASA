@@ -8,8 +8,6 @@ import aSA.ComposantSimple;
 import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
 import aSA.impl.ComposantSimpleImpl;
-import aSA.impl.PortComposantFourniImpl;
-import aSA.impl.PortComposantRequisImpl;
 
 import java.util.Random;
 

@@ -58,8 +58,10 @@ public class SQLQueryConnectorInImpl extends ConnecteurImpl implements Connecteu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SQLQueryConnectorInImpl() {
+	protected SQLQueryConnectorInImpl(RoleFourni r1, RoleRequis r2) {
 		super();
+		this.rolesqltodb = r1;
+		this.rolesqlfromcm = r2;
 	}
 
 	/**

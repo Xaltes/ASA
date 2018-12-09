@@ -58,8 +58,10 @@ public class SQLQueryConnectorOutImpl extends ConnecteurImpl implements Connecte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SQLQueryConnectorOutImpl() {
+	protected SQLQueryConnectorOutImpl(RoleRequis r1, RoleFourni r2) {
 		super();
+		this.rolesqlfromdb = r1;
+		this.rolesqltocm = r2;
 	}
 
 	/**

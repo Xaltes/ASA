@@ -58,8 +58,10 @@ public class ClearanceRequestConnectorOutImpl extends ConnecteurImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClearanceRequestConnectorOutImpl() {
+	protected ClearanceRequestConnectorOutImpl(RoleRequis r1, RoleFourni r2) {
 		super();
+		this.rolecrtocm = r1;
+		this.rolecrfromsm = r2;
 	}
 
 	/**

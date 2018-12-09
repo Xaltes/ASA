@@ -58,8 +58,10 @@ public class SecurityQueryConnectorOutImpl extends ConnecteurImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SecurityQueryConnectorOutImpl() {
+	protected SecurityQueryConnectorOutImpl(RoleFourni r1, RoleRequis r2) {
 		super();
+		this.rolesqfromdb = r1;
+		this.rolesqtosm = r2;
 	}
 
 	/**

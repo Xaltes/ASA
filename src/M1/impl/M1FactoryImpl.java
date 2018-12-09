@@ -19,7 +19,6 @@ import aSA.RoleRequis;
 
 import java.util.ArrayList;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -173,8 +172,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createRPCConnectorClientServer() {
-		RPCConnectorClientServerImpl rpcConnectorClientServer = new RPCConnectorClientServerImpl();
+	public Connecteur createRPCConnectorClientServer(RoleRequis r1, RoleFourni r2) {
+		RPCConnectorClientServerImpl rpcConnectorClientServer = new RPCConnectorClientServerImpl(r1, r2);
 		return rpcConnectorClientServer;
 	}
 
@@ -203,8 +202,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createRPCConnectorServerClient() {
-		RPCConnectorServerClientImpl rpcConnectorServerClient = new RPCConnectorServerClientImpl();
+	public Connecteur createRPCConnectorServerClient(RoleRequis r1, RoleFourni r2) {
+		RPCConnectorServerClientImpl rpcConnectorServerClient = new RPCConnectorServerClientImpl(r1, r2);
 		return rpcConnectorServerClient;
 	}
 
@@ -323,8 +322,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createSQLQueryConnectorOut() {
-		SQLQueryConnectorOutImpl sqlQueryConnectorOut = new SQLQueryConnectorOutImpl();
+	public Connecteur createSQLQueryConnectorOut(RoleRequis r1, RoleFourni r2) {
+		SQLQueryConnectorOutImpl sqlQueryConnectorOut = new SQLQueryConnectorOutImpl(r1, r2);
 		return sqlQueryConnectorOut;
 	}
 
@@ -333,8 +332,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createClearanceRequestConnectorIn() {
-		ClearanceRequestConnectorInImpl clearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl();
+	public Connecteur createClearanceRequestConnectorIn(RoleFourni r1, RoleRequis r2) {
+		ClearanceRequestConnectorInImpl clearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl(r1, r2);
 		return clearanceRequestConnectorIn;
 	}
 
@@ -343,8 +342,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createSecurityQueryConnectorIn() {
-		SecurityQueryConnectorInImpl securityQueryConnectorIn = new SecurityQueryConnectorInImpl();
+	public Connecteur createSecurityQueryConnectorIn(RoleRequis r1, RoleFourni r2) {
+		SecurityQueryConnectorInImpl securityQueryConnectorIn = new SecurityQueryConnectorInImpl(r1, r2);
 		return securityQueryConnectorIn;
 	}
 
@@ -473,8 +472,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createSQLQueryConnectorIn() {
-		SQLQueryConnectorInImpl sqlQueryConnectorIn = new SQLQueryConnectorInImpl();
+	public Connecteur createSQLQueryConnectorIn(RoleFourni r1, RoleRequis r2) {
+		SQLQueryConnectorInImpl sqlQueryConnectorIn = new SQLQueryConnectorInImpl(r1, r2);
 		return sqlQueryConnectorIn;
 	}
 
@@ -483,8 +482,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createSecurityQueryConnectorOut() {
-		SecurityQueryConnectorOutImpl securityQueryConnectorOut = new SecurityQueryConnectorOutImpl();
+	public Connecteur createSecurityQueryConnectorOut(RoleFourni r1, RoleRequis r2) {
+		SecurityQueryConnectorOutImpl securityQueryConnectorOut = new SecurityQueryConnectorOutImpl(r1, r2);
 		return securityQueryConnectorOut;
 	}
 
@@ -493,8 +492,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connecteur createClearanceRequestConnectorOut() {
-		ClearanceRequestConnectorOutImpl clearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl();
+	public Connecteur createClearanceRequestConnectorOut(RoleRequis r1, RoleFourni r2) {
+		ClearanceRequestConnectorOutImpl clearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl(r1, r2);
 		return clearanceRequestConnectorOut;
 	}
 

@@ -27,6 +27,7 @@ public class Main {
 		// lancer le serveur
 		LancementServeur();
 
+		//creation configurationClientServer
 		ArrayList<PortConfigurationFourni> portsbindingtoconfigclientserver = new ArrayList<PortConfigurationFourni>();
 		ArrayList<PortConfigurationRequis> portsconfigclientservertobinding = new ArrayList<PortConfigurationRequis>();
 		ArrayList<Binding> bindingsclienttoconfigclientserver = new ArrayList<Binding>();
@@ -39,6 +40,7 @@ public class Main {
 				bindingsclienttoconfigclientserver, bindingsconfigclientservertoclient, attachmentsrpctoclient, 
 				attachmentsservertorpc,	attachmentsclienttorpc, attachmentsrpctoserver);
 
+		//ajout des bindings et attachments pour les clients presents de base dans la BDD
 		for(ClientImpl c : database.getClients()) {
 			createAndAddLinks(c);
 		}
@@ -153,26 +155,32 @@ public class Main {
 		configClientServer.portconfigclientservertobinding.add(portconfigclientservertobinding);
 		BindingConfigClientServerToClientImpl bindingconfigclientservertoclient = new BindingConfigClientServerToClientImpl(c.portbindingtoclient, portconfigclientservertobinding);
 		configClientServer.addBindingconfigclientservertoclient(bindingconfigclientservertoclient);
+				
+		PortClienttoRPCImpl portclienttorpc = new PortClienttoRPCImpl();
+		RoleRPCfromClientImpl rolerpcfromclient = new RoleRPCfromClientImpl();
+		AttachmentClienttoRPCImpl attachmentclienttorpc = new AttachmentClienttoRPCImpl(portclienttorpc, rolerpcfromclient);
+		configClientServer.attachmentclienttorpc.add(attachmentclienttorpc);				
+		
+		PortRPCtoServerImpl portrpctoserver = new PortRPCtoServerImpl();
+		RoleRPCtoServerImpl rolerpctoserver = new RoleRPCtoServerImpl();
+		AttachmentRPCtoServerImpl attachmentrpctoserver = new AttachmentRPCtoServerImpl(portrpctoserver, rolerpctoserver);
+		configClientServer.attachmentrpctoserver.add(attachmentrpctoserver);	
+		
+		RPCConnectorClientServerImpl connectorClientServer = new RPCConnectorClientServerImpl(rolerpcfromclient, rolerpctoserver);
+		configClientServer.connectors.add(connectorClientServer);
+				
+		PortServerToRPCImpl portservertorpc = new PortServerToRPCImpl();
+		RoleRPCfromServerImpl rolerpcfromserver = new RoleRPCfromServerImpl();
+		AttachmentServerToRPCImpl attachmentservertorpc = new AttachmentServerToRPCImpl(portservertorpc, rolerpcfromserver);
+		configClientServer.attachmentservertorpc.add(attachmentservertorpc);
 		
 		PortRPCtoClientImpl portrpctoclient = new PortRPCtoClientImpl();
 		RoleRPCtoClientImpl rolerpctoclient = new RoleRPCtoClientImpl();
 		AttachmentRPCToClientImpl attachmentrpctoclient = new AttachmentRPCToClientImpl(portrpctoclient, rolerpctoclient);
 		configClientServer.attachmentrpctoclient.add(attachmentrpctoclient);
 		
-		PortServerToRPCImpl portservertorpc = new PortServerToRPCImpl();
-		RoleRPCfromServerImpl rolerpcfromserver = new RoleRPCfromServerImpl();
-		AttachmentServerToRPCImpl attachmentservertorpc = new AttachmentServerToRPCImpl(portservertorpc, rolerpcfromserver);
-		configClientServer.attachmentservertorpc.add(attachmentservertorpc);
-		
-		PortClienttoRPCImpl portclienttorpc = new PortClienttoRPCImpl();
-		RoleRPCfromClientImpl rolerpcfromclient = new RoleRPCfromClientImpl();
-		AttachmentClienttoRPCImpl attachmentclienttorpc = new AttachmentClienttoRPCImpl(portclienttorpc, rolerpcfromclient);
-		configClientServer.attachmentclienttorpc.add(attachmentclienttorpc);
-		
-		PortRPCtoServerImpl portrpctoserver = new PortRPCtoServerImpl();
-		RoleRPCtoServerImpl rolerpctoserver = new RoleRPCtoServerImpl();
-		AttachmentRPCtoServerImpl attachmentrpctoserver = new AttachmentRPCtoServerImpl(portrpctoserver, rolerpctoserver);
-		configClientServer.attachmentrpctoserver.add(attachmentrpctoserver);
+		RPCConnectorServerClientImpl connectorServerClient = new RPCConnectorServerClientImpl(rolerpcfromclient, rolerpctoserver);
+		configClientServer.connectors.add(connectorServerClient);		
 	}
 	
 	public static void LancementServeur() {
@@ -197,67 +205,82 @@ public class Main {
 			
 			ArrayList<PortComposantRequis> portrpctoserver = new ArrayList<PortComposantRequis>();
 			
+			PortDBtoSQLImpl portdbtosql = new PortDBtoSQLImpl();		
+			RoleSQLfromDBImpl rolesqlfromdb = new RoleSQLfromDBImpl();
+			Attachment attachmentdbtosql = new AttachmentDBtoSQLImpl(portdbtosql, rolesqlfromdb);
+			
 			PortSQLtoCMImpl portsqltocm = new PortSQLtoCMImpl();
 			RoleSQLtoCMImpl rolesqltocm = new RoleSQLtoCMImpl();
 			Attachment attachmentsqltocm = new AttachmentSQLtoCMImpl(portsqltocm, rolesqltocm);
 			
+			SQLQueryConnectorOutImpl SQLQueryConnectorOut = new SQLQueryConnectorOutImpl(rolesqlfromdb, rolesqltocm);
+			server.connectors.add(SQLQueryConnectorOut);
+			
 			PortCMtoSQLImpl portcmtosql = new PortCMtoSQLImpl(); 
 			RoleSQLfromCMImpl rolesqlfromcm = new RoleSQLfromCMImpl();
 			Attachment attachmentcmtosql = new AttachmentCMtoSQLImpl(portcmtosql, rolesqlfromcm);
-			
+						
 			PortSQLtoDBImpl portsqltodb = new PortSQLtoDBImpl();
 			RoleSQLtoDBImpl rolesqltodb = new RoleSQLtoDBImpl();
 			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl(portsqltodb,rolesqltodb);	
 			
-			PortDBtoSQLImpl portdbtosql = new PortDBtoSQLImpl();		
-			RoleSQLfromDBImpl rolesqlfromdb = new RoleSQLfromDBImpl();
-			Attachment attachmentdbtosql = new AttachmentDBtoSQLImpl(portdbtosql, rolesqlfromdb);	
-			
-			PortDBtoSQImpl portdbtosq = new PortDBtoSQImpl();			
-			RoleSQfromDBImpl rolesqfromdb = new RoleSQfromDBImpl();
-			Attachment attachmentdbtosq = new AttachmentDBtoSQImpl(portdbtosq, rolesqfromdb);	
-			
+			SQLQueryConnectorInImpl SQLQueryConnectorIn = new SQLQueryConnectorInImpl(rolesqltodb, rolesqlfromcm);
+			server.connectors.add(SQLQueryConnectorIn);
+						
 			PortSQtoDBImpl portsqtodb = new PortSQtoDBImpl();
 			RoleSQtoDBImpl rolesqtodb = new RoleSQtoDBImpl();
 			Attachment attachmentsqtodb = new AttachmentSQtoDBImpl(portsqtodb, rolesqtodb);
-			
-			PortSQtoSMImpl portsqtosm = new PortSQtoSMImpl();
-			RoleSQtoSMImpl rolesqtosm = new RoleSQtoSMImpl();
-			Attachment attachmentsqtosm = new AttachmentSQtoSMImpl(portsqtosm, rolesqtosm);
 			
 			PortSMtoSQImpl portsmtosq = new PortSMtoSQImpl();
 			RoleSQfromSMImpl rolesqfromsm = new RoleSQfromSMImpl();
 			Attachment attachmentsmtosq = new AttachmentSMtoSQImpl(portsmtosq, rolesqfromsm);
 			
-			PortCRtoCMImpl portcrtocm = new PortCRtoCMImpl();
-			RoleCRtoCMImpl rolecrtocm = new RoleCRtoCMImpl();
-			Attachment attachmentcrtocm = new AttachmentCRtoCMImpl(portcrtocm, rolecrtocm);
+			SecurityQueryConnectorInImpl SecurityQueryConnectorIn = new SecurityQueryConnectorInImpl(rolesqtodb, rolesqfromsm);
+			server.connectors.add(SecurityQueryConnectorIn);
+			
+			PortSQtoSMImpl portsqtosm = new PortSQtoSMImpl();
+			RoleSQtoSMImpl rolesqtosm = new RoleSQtoSMImpl();
+			Attachment attachmentsqtosm = new AttachmentSQtoSMImpl(portsqtosm, rolesqtosm);
+						
+			PortDBtoSQImpl portdbtosq = new PortDBtoSQImpl();			
+			RoleSQfromDBImpl rolesqfromdb = new RoleSQfromDBImpl();
+			Attachment attachmentdbtosq = new AttachmentDBtoSQImpl(portdbtosq, rolesqfromdb);	
+			
+			SecurityQueryConnectorOutImpl SecurityQueryConnectorOut = new SecurityQueryConnectorOutImpl(rolesqfromdb, rolesqtosm);
+			server.connectors.add(SecurityQueryConnectorOut);
+			
+			PortCRtoSMImpl portcrtosm = new PortCRtoSMImpl();
+			RoleCRtoSMImpl rolecrtosm = new RoleCRtoSMImpl();
+			Attachment attachmentcrtosm = new AttachmentCRtoSMImpl(portcrtosm, rolecrtosm);
 			
 			PortCMtoCRImpl portcmtocr = new PortCMtoCRImpl();
 			RoleCRfromCMImpl rolecrfromcm = new RoleCRfromCMImpl();
 			Attachment attachmentcmtocr = new AttachmentCMtoCRImpl(portcmtocr, rolecrfromcm);
 			
+			ClearanceRequestConnectorInImpl ClearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl(rolecrfromcm, rolecrtosm);
+			server.connectors.add(ClearanceRequestConnectorIn);
+			
 			PortSMtoCRImpl portsmtocr = new PortSMtoCRImpl();
 			RoleCRfromSMImpl rolecrfromsm = new RoleCRfromSMImpl();
 			Attachment attachmentsmtocr = new AttachmentSMtoCRImpl(portsmtocr, rolecrfromsm);
+						
+			PortCRtoCMImpl portcrtocm = new PortCRtoCMImpl();
+			RoleCRtoCMImpl rolecrtocm = new RoleCRtoCMImpl();
+			Attachment attachmentcrtocm = new AttachmentCRtoCMImpl(portcrtocm, rolecrtocm);
 			
-			PortCRtoSMImpl portcrtosm = new PortCRtoSMImpl();
-			RoleCRtoSMImpl rolecrtosm = new RoleCRtoSMImpl();
-			Attachment attachmentcrtosm = new AttachmentCRtoSMImpl(portcrtosm, rolecrtosm);
-												
+			ClearanceRequestConnectorOutImpl ClearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl(rolecrtocm, rolecrfromsm);
+			server.connectors.add(ClearanceRequestConnectorOut);
 			
 			server = new ServerConfigurationImpl(bindingcmtoserver, bindingservertocm, 
 					portservertorpc, portrpctoserver, portservertobinding, portbindingtoserver, 
 					attachmentsqltocm, attachmentcmtosql, attachmentsqltodb, attachmentdbtosql, attachmentdbtosq, 
 					attachmentsqtodb, attachmentsqtosm, attachmentsmtosq, attachmentcrtocm, attachmentcmtocr, 
 					attachmentsmtocr, attachmentcrtosm);
-			
-			database = new DatabaseImpl(portdbtosql, portsqltodb, portdbtosq, portsqtodb);
-			
+				
+			database = new DatabaseImpl(portdbtosql, portsqltodb, portdbtosq, portsqtodb);			
 			
 			connectionManager = new ConnectionManagerImpl(portsqltocm, portcmtosql, portbindingtocm, portcmtobinding, portcrtocm, portcmtocr);
-			
-			
+						
 			securityManager = new SecurityManagerImpl(portsmtosq, portsqtosm, portcrtosm, portsmtocr);
 
 		} catch (IOException e) {

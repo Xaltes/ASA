@@ -16,7 +16,6 @@ import aSA.RoleRequis;
 
 import java.util.ArrayList;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EFactory;
 
 import M1.impl.PortBindingToCMImpl;
@@ -164,7 +163,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>RPC Connector Client Server</em>'.
 	 * @generated
 	 */
-	Connecteur createRPCConnectorClientServer();
+	Connecteur createRPCConnectorClientServer(RoleRequis r1, RoleFourni r2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment RP Cto Server</em>'.
@@ -191,7 +190,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>RPC Connector Server Client</em>'.
 	 * @generated
 	 */
-	Connecteur createRPCConnectorServerClient();
+	Connecteur createRPCConnectorServerClient(RoleRequis r1, RoleFourni r2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment RPC To Client</em>'.
@@ -299,7 +298,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>SQL Query Connector Out</em>'.
 	 * @generated
 	 */
-	Connecteur createSQLQueryConnectorOut();
+	Connecteur createSQLQueryConnectorOut(RoleRequis r1, RoleFourni r2);
 
 	/**
 	 * Returns a new object of class '<em>Clearance Request Connector In</em>'.
@@ -308,7 +307,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Clearance Request Connector In</em>'.
 	 * @generated
 	 */
-	Connecteur createClearanceRequestConnectorIn();
+	Connecteur createClearanceRequestConnectorIn(RoleFourni r1, RoleRequis r2);
 
 	/**
 	 * Returns a new object of class '<em>Security Query Connector In</em>'.
@@ -317,7 +316,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Security Query Connector In</em>'.
 	 * @generated
 	 */
-	Connecteur createSecurityQueryConnectorIn();
+	Connecteur createSecurityQueryConnectorIn(RoleRequis r1, RoleFourni r2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SQ Lto DB</em>'.
@@ -434,7 +433,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>SQL Query Connector In</em>'.
 	 * @generated
 	 */
-	Connecteur createSQLQueryConnectorIn();
+	Connecteur createSQLQueryConnectorIn(RoleFourni r1, RoleRequis r2);
 
 	/**
 	 * Returns a new object of class '<em>Security Query Connector Out</em>'.
@@ -443,7 +442,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Security Query Connector Out</em>'.
 	 * @generated
 	 */
-	Connecteur createSecurityQueryConnectorOut();
+	Connecteur createSecurityQueryConnectorOut(RoleFourni r1, RoleRequis r2);
 
 	/**
 	 * Returns a new object of class '<em>Clearance Request Connector Out</em>'.
@@ -452,7 +451,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Clearance Request Connector Out</em>'.
 	 * @generated
 	 */
-	Connecteur createClearanceRequestConnectorOut();
+	Connecteur createClearanceRequestConnectorOut(RoleRequis r1, RoleFourni r2);
 
 	/**
 	 * Returns a new object of class '<em>Port SQto SM</em>'.

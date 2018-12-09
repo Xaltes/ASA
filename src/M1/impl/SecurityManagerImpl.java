@@ -87,6 +87,10 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 		this.portcrtosm = p3;
 		this.portsmtocr = p4;
 	}
+	
+	public boolean checkRights(String pseudo, String query) {
+		return true;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

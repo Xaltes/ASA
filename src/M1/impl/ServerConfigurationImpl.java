@@ -13,6 +13,7 @@ import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 
 import aSA.impl.ConfigurationImpl;
+import aSA.impl.ConnecteurImpl;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,14 +21,11 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -240,14 +238,18 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	 * @ordered
 	 */
 	protected Attachment attachmentcrtosm;
+	
+	protected ArrayList<ConnecteurImpl> connectors;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServerConfigurationImpl(Binding b1, Binding b2, ArrayList<PortComposantFourni> p1, ArrayList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
-			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12) {
+	protected ServerConfigurationImpl(Binding b1, Binding b2, ArrayList<PortComposantFourni> p1, ArrayList<PortComposantRequis> p2, 
+			PortConfigurationRequis p3, PortConfigurationFourni p4, Attachment a1, Attachment a2, Attachment a3, Attachment a4, 
+			Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, 
+			Attachment a12) {
 		super();
 		this.bindingcmtoserver = b1;
 		this.bindingservertocm = b2;
@@ -267,7 +269,7 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 		this.attachmentcmtocr = a10;
 		this.attachmentsmtocr = a11;
 		this.attachmentcrtosm = a12;
-		
+		this.connectors = new ArrayList<ConnecteurImpl>();
 	}
 
 	/**

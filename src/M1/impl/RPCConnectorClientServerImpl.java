@@ -58,8 +58,10 @@ public class RPCConnectorClientServerImpl extends ConnecteurImpl implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RPCConnectorClientServerImpl() {
+	protected RPCConnectorClientServerImpl(RoleRequis r1, RoleFourni r2) {
 		super();
+		this.rolerpcfromclient = r1;
+		this.rolerpctoserver = r2;
 	}
 
 	/**

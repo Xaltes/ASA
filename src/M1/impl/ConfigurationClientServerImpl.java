@@ -11,19 +11,17 @@ import aSA.PortConfigurationFourni;
 import aSA.PortConfigurationRequis;
 
 import aSA.impl.ConfigurationImpl;
+import aSA.impl.ConnecteurImpl;
 
-import java.net.ServerSocket;
 import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -126,7 +124,10 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @ordered
 	 */
 	protected ArrayList<Attachment> attachmentrpctoserver;
-
+	
+	//Liste des connecteurs présents dans la configuration Client Server
+	protected ArrayList<ConnecteurImpl> connectors = new ArrayList<ConnecteurImpl>();
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

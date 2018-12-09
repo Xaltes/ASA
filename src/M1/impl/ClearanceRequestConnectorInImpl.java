@@ -58,8 +58,10 @@ public class ClearanceRequestConnectorInImpl extends ConnecteurImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ClearanceRequestConnectorInImpl() {
+	protected ClearanceRequestConnectorInImpl(RoleFourni r1, RoleRequis r2) {
 		super();
+		this.rolecrfromcm = r1;
+		this.rolecrtosm = r2;
 	}
 
 	/**
