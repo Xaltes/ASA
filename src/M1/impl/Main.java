@@ -211,7 +211,6 @@ public class Main {
 			System.out.println("Création du serveur avec le port numéro " + port);
 			//s=sSocket.accept();
 
-
 			PortBindingToServerImpl portbindingtoserver = new PortBindingToServerImpl();
 			PortCMtoBindingImpl portcmtobinding = new PortCMtoBindingImpl();
 			Binding bindingcmtoserver = new BindingCMtoServerImpl(portcmtobinding, portbindingtoserver);
@@ -231,10 +230,7 @@ public class Main {
 			PortSQLtoCMImpl portsqltocm = new PortSQLtoCMImpl();
 			RoleSQLtoCMImpl rolesqltocm = new RoleSQLtoCMImpl();
 			Attachment attachmentsqltocm = new AttachmentSQLtoCMImpl(portsqltocm, rolesqltocm);
-
-			SQLQueryConnectorOutImpl SQLQueryConnectorOut = new SQLQueryConnectorOutImpl(rolesqlfromdb, rolesqltocm);
-			server.connectors.add(SQLQueryConnectorOut);
-
+			
 			PortCMtoSQLImpl portcmtosql = new PortCMtoSQLImpl(); 
 			RoleSQLfromCMImpl rolesqlfromcm = new RoleSQLfromCMImpl();
 			Attachment attachmentcmtosql = new AttachmentCMtoSQLImpl(portcmtosql, rolesqlfromcm);
@@ -242,10 +238,7 @@ public class Main {
 			PortSQLtoDBImpl portsqltodb = new PortSQLtoDBImpl();
 			RoleSQLtoDBImpl rolesqltodb = new RoleSQLtoDBImpl();
 			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl(portsqltodb,rolesqltodb);	
-
-			SQLQueryConnectorInImpl SQLQueryConnectorIn = new SQLQueryConnectorInImpl(rolesqltodb, rolesqlfromcm);
-			server.connectors.add(SQLQueryConnectorIn);
-
+	
 			PortSQtoDBImpl portsqtodb = new PortSQtoDBImpl();
 			RoleSQtoDBImpl rolesqtodb = new RoleSQtoDBImpl();
 			Attachment attachmentsqtodb = new AttachmentSQtoDBImpl(portsqtodb, rolesqtodb);
@@ -253,9 +246,6 @@ public class Main {
 			PortSMtoSQImpl portsmtosq = new PortSMtoSQImpl();
 			RoleSQfromSMImpl rolesqfromsm = new RoleSQfromSMImpl();
 			Attachment attachmentsmtosq = new AttachmentSMtoSQImpl(portsmtosq, rolesqfromsm);
-
-			SecurityQueryConnectorInImpl SecurityQueryConnectorIn = new SecurityQueryConnectorInImpl(rolesqtodb, rolesqfromsm);
-			server.connectors.add(SecurityQueryConnectorIn);
 
 			PortSQtoSMImpl portsqtosm = new PortSQtoSMImpl();
 			RoleSQtoSMImpl rolesqtosm = new RoleSQtoSMImpl();
@@ -265,9 +255,6 @@ public class Main {
 			RoleSQfromDBImpl rolesqfromdb = new RoleSQfromDBImpl();
 			Attachment attachmentdbtosq = new AttachmentDBtoSQImpl(portdbtosq, rolesqfromdb);	
 
-			SecurityQueryConnectorOutImpl SecurityQueryConnectorOut = new SecurityQueryConnectorOutImpl(rolesqfromdb, rolesqtosm);
-			server.connectors.add(SecurityQueryConnectorOut);
-
 			PortCRtoSMImpl portcrtosm = new PortCRtoSMImpl();
 			RoleCRtoSMImpl rolecrtosm = new RoleCRtoSMImpl();
 			Attachment attachmentcrtosm = new AttachmentCRtoSMImpl(portcrtosm, rolecrtosm);
@@ -275,9 +262,6 @@ public class Main {
 			PortCMtoCRImpl portcmtocr = new PortCMtoCRImpl();
 			RoleCRfromCMImpl rolecrfromcm = new RoleCRfromCMImpl();
 			Attachment attachmentcmtocr = new AttachmentCMtoCRImpl(portcmtocr, rolecrfromcm);
-
-			ClearanceRequestConnectorInImpl ClearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl(rolecrfromcm, rolecrtosm);
-			server.connectors.add(ClearanceRequestConnectorIn);
 
 			PortSMtoCRImpl portsmtocr = new PortSMtoCRImpl();
 			RoleCRfromSMImpl rolecrfromsm = new RoleCRfromSMImpl();
@@ -287,15 +271,30 @@ public class Main {
 			RoleCRtoCMImpl rolecrtocm = new RoleCRtoCMImpl();
 			Attachment attachmentcrtocm = new AttachmentCRtoCMImpl(portcrtocm, rolecrtocm);
 
-			ClearanceRequestConnectorOutImpl ClearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl(rolecrtocm, rolecrfromsm);
-			server.connectors.add(ClearanceRequestConnectorOut);
-
 			server = new ServerConfigurationImpl(bindingcmtoserver, bindingservertocm, 
 					portservertorpc, portrpctoserver, portservertobinding, portbindingtoserver, 
 					attachmentsqltocm, attachmentcmtosql, attachmentsqltodb, attachmentdbtosql, attachmentdbtosq, 
 					attachmentsqtodb, attachmentsqtosm, attachmentsmtosq, attachmentcrtocm, attachmentcmtocr, 
 					attachmentsmtocr, attachmentcrtosm);
 
+			SQLQueryConnectorOutImpl SQLQueryConnectorOut = new SQLQueryConnectorOutImpl(rolesqlfromdb, rolesqltocm);
+			server.connectors.add(SQLQueryConnectorOut);
+			
+			SQLQueryConnectorInImpl SQLQueryConnectorIn = new SQLQueryConnectorInImpl(rolesqltodb, rolesqlfromcm);
+			server.connectors.add(SQLQueryConnectorIn);
+			
+			SecurityQueryConnectorInImpl SecurityQueryConnectorIn = new SecurityQueryConnectorInImpl(rolesqtodb, rolesqfromsm);
+			server.connectors.add(SecurityQueryConnectorIn);
+			
+			SecurityQueryConnectorOutImpl SecurityQueryConnectorOut = new SecurityQueryConnectorOutImpl(rolesqfromdb, rolesqtosm);
+			server.connectors.add(SecurityQueryConnectorOut);
+			
+			ClearanceRequestConnectorInImpl ClearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl(rolecrfromcm, rolecrtosm);
+			server.connectors.add(ClearanceRequestConnectorIn);
+			
+			ClearanceRequestConnectorOutImpl ClearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl(rolecrtocm, rolecrfromsm);
+			server.connectors.add(ClearanceRequestConnectorOut);
+			
 			database = new DatabaseImpl(portdbtosql, portsqltodb, portdbtosq, portsqtodb);			
 
 			connectionManager = new ConnectionManagerImpl(portsqltocm, portcmtosql, portbindingtocm, portcmtobinding, portcrtocm, portcmtocr);
