@@ -58,8 +58,10 @@ public class AttachmentSQLtoCMImpl extends AttachmentImpl implements Attachment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentSQLtoCMImpl() {
+	protected AttachmentSQLtoCMImpl(PortComposantRequis p, RoleFourni r) {
 		super();
+		this.portsqltocm = p;
+		this.rolesqltocm = r;		
 	}
 
 	/**

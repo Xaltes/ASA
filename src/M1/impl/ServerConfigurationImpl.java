@@ -14,6 +14,7 @@ import aSA.PortConfigurationRequis;
 
 import aSA.impl.ConfigurationImpl;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -88,7 +89,7 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PortComposantFourni> portservertorpc;
+	protected ArrayList<PortComposantFourni> portservertorpc;
 
 	/**
 	 * The cached value of the '{@link #getPortrpctoserver() <em>Portrpctoserver</em>}' containment reference list.
@@ -98,7 +99,7 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PortComposantRequis> portrpctoserver;
+	protected ArrayList<PortComposantRequis> portrpctoserver;
 
 	/**
 	 * The cached value of the '{@link #getPortservertobinding() <em>Portservertobinding</em>}' containment reference.
@@ -245,7 +246,7 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServerConfigurationImpl(Binding b1, Binding b2, EList<PortComposantFourni> p1, EList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
+	protected ServerConfigurationImpl(Binding b1, Binding b2, ArrayList<PortComposantFourni> p1, ArrayList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
 			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12) {
 		super();
 		this.bindingcmtoserver = b1;
@@ -365,27 +366,11 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.SERVER_CONFIGURATION__BINDINGSERVERTOCM, newBindingservertocm, newBindingservertocm));
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<PortComposantFourni> getPortservertorpc() {
-		if (portservertorpc == null) {
-			portservertorpc = new EObjectContainmentEList<PortComposantFourni>(PortComposantFourni.class, this, M1Package.SERVER_CONFIGURATION__PORTSERVERTORPC);
-		}
+	public ArrayList<PortComposantFourni> getPortservertorpc() {
 		return portservertorpc;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<PortComposantRequis> getPortrpctoserver() {
-		if (portrpctoserver == null) {
-			portrpctoserver = new EObjectContainmentEList<PortComposantRequis>(PortComposantRequis.class, this, M1Package.SERVER_CONFIGURATION__PORTRPCTOSERVER);
-		}
+	
+	public ArrayList<PortComposantRequis> getPortrpctoserver() {		
 		return portrpctoserver;
 	}
 

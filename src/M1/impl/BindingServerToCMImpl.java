@@ -58,8 +58,10 @@ public class BindingServerToCMImpl extends BindingImpl implements Binding {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BindingServerToCMImpl() {
+	protected BindingServerToCMImpl(PortComposantRequis p1, PortConfigurationRequis p2) {
 		super();
+		this.portbindingtocm = p1;
+		this.portservertobinding = p2;
 	}
 
 	/**

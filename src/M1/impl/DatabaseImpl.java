@@ -79,8 +79,13 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 
 	private ArrayList<ClientImpl> clients = new ArrayList<ClientImpl>();
 
-	public DatabaseImpl() {
+	public DatabaseImpl(PortComposantFourni p1, PortComposantRequis p2, PortComposantFourni p3, PortComposantRequis p4) {
 		super();
+		this.portdbtosql = p1;
+		this.portsqltodb = p2;
+		this.portdbtosq = p3;
+		this.portsqtodb = p4;
+		
 		ClientImpl c1 = new ClientImpl("Florian","1234",2);
 		ClientImpl c2 = new ClientImpl("Ophelie","4321",1);
 		this.clients.add(c1);
@@ -136,6 +141,16 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 		}
 		clients.remove(c);
 		System.out.println("Successfully deleted client " + c.getPseudo());
+	}
+	
+	public boolean testConnection(String pseudo, String mdp) {
+		boolean result = false;
+		for(ClientImpl client : clients) {
+			if(client.getPseudo().equals(pseudo) && client.getPassword().equals(mdp)) {
+				result = true;
+			}
+		}
+		return result;
 	}
 
 	/**

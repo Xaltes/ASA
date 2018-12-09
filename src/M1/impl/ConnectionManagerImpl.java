@@ -102,8 +102,19 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConnectionManagerImpl() {
+	protected ConnectionManagerImpl(PortSQLtoCMImpl p1, 
+			PortCMtoSQLImpl p2, 
+			PortBindingToCMImpl p3,
+			PortCMtoBindingImpl p4,
+			PortCRtoCMImpl p5,
+			PortCMtoCRImpl p6) {
 		super();
+		this.portsqltocm = p1;
+		this.portcmtosql = p2;
+		this.portbindingtocm = p3;
+		this.portcmtobinding = p4;
+		this.portcrtocm = p5;
+		this.portcmtocr = p6;		
 	}
 
 	/**
@@ -504,6 +515,10 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 				return portcmtocr != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	public boolean testConnection(DatabaseImpl database, String pseudo, String motDePasse) {
+		return database.testConnection(pseudo, motDePasse);
 	}
 
 } //ConnectionManagerImpl

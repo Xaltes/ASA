@@ -80,8 +80,12 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SecurityManagerImpl() {
+	protected SecurityManagerImpl(PortComposantFourni p1, PortComposantRequis p2, PortComposantRequis p3, PortComposantFourni p4) {
 		super();
+		this.portsmtosq = p1;
+		this.portsqtosm = p2;
+		this.portcrtosm = p3;
+		this.portsmtocr = p4;
 	}
 
 	/**
