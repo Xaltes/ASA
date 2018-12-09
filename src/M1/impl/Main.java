@@ -170,7 +170,7 @@ public class Main {
 			Attachment attachmentcmtosql = new AttachmentCMtoSQLImpl(portcmtosql, rolesqlfromcm);
 			
 			PortSQLtoDBImpl portsqltodb = new PortSQLtoDBImpl();
-			RoleSQLfromCMImpl rolesqltodb = new RoleSQLfromCMImpl();
+			RoleSQLtoDBImpl rolesqltodb = new RoleSQLtoDBImpl();
 			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl(portsqltodb,rolesqltodb);	
 			
 			PortDBtoSQLImpl portdbtosql = new PortDBtoSQLImpl();		

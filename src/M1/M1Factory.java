@@ -14,7 +14,35 @@ import aSA.PortConfigurationRequis;
 import aSA.RoleFourni;
 import aSA.RoleRequis;
 
+import java.util.ArrayList;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EFactory;
+
+import M1.impl.PortBindingToCMImpl;
+import M1.impl.PortCMtoBindingImpl;
+import M1.impl.PortCMtoCRImpl;
+import M1.impl.PortCMtoSQLImpl;
+import M1.impl.PortCRtoCMImpl;
+import M1.impl.PortCRtoSMImpl;
+import M1.impl.PortDBtoSQImpl;
+import M1.impl.PortDBtoSQLImpl;
+import M1.impl.PortSMtoCRImpl;
+import M1.impl.PortSMtoSQImpl;
+import M1.impl.PortSQLtoCMImpl;
+import M1.impl.PortSQLtoDBImpl;
+import M1.impl.PortSQtoDBImpl;
+import M1.impl.PortSQtoSMImpl;
+import M1.impl.RoleCRfromCMImpl;
+import M1.impl.RoleCRfromSMImpl;
+import M1.impl.RoleCRtoCMImpl;
+import M1.impl.RoleCRtoSMImpl;
+import M1.impl.RoleSQLfromDBImpl;
+import M1.impl.RoleSQLtoDBImpl;
+import M1.impl.RoleSQfromDBImpl;
+import M1.impl.RoleSQfromSMImpl;
+import M1.impl.RoleSQtoDBImpl;
+import M1.impl.RoleSQtoSMImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -49,7 +77,8 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Server Configuration</em>'.
 	 * @generated
 	 */
-	Configuration createServerConfiguration();
+	Configuration createServerConfiguration(Binding b1, Binding b2, ArrayList<PortComposantFourni> p1, ArrayList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
+			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12);
 
 	/**
 	 * Returns a new object of class '<em>Connection Manager</em>'.
@@ -58,7 +87,12 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Connection Manager</em>'.
 	 * @generated
 	 */
-	ComposantSimple createConnectionManager();
+	ComposantSimple createConnectionManager(PortSQLtoCMImpl p1, 
+			PortCMtoSQLImpl p2, 
+			PortBindingToCMImpl p3,
+			PortCMtoBindingImpl p4,
+			PortCRtoCMImpl p5,
+			PortCMtoCRImpl p6);
 
 	/**
 	 * Returns a new object of class '<em>Database</em>'.
@@ -67,7 +101,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Database</em>'.
 	 * @generated
 	 */
-	ComposantSimple createDatabase();
+	ComposantSimple createDatabase(PortComposantFourni p1, PortComposantRequis p2, PortComposantFourni p3, PortComposantRequis p4);
 
 	/**
 	 * Returns a new object of class '<em>Security Manager</em>'.
@@ -76,7 +110,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Security Manager</em>'.
 	 * @generated
 	 */
-	ComposantSimple createSecurityManager();
+	ComposantSimple createSecurityManager(PortComposantFourni p1, PortComposantRequis p2, PortComposantRequis p3, PortComposantFourni p4);
 
 	/**
 	 * Returns a new object of class '<em>Port Clientto RPC</em>'.
@@ -292,7 +326,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SQ Lto DB</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSQLtoDB();
+	Attachment createAttachmentSQLtoDB(PortSQLtoDBImpl portsqltodb2, RoleSQLtoDBImpl rolesqltodb2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment DBto SQL</em>'.
@@ -301,7 +335,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment DBto SQL</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentDBtoSQL();
+	Attachment createAttachmentDBtoSQL(PortDBtoSQLImpl p, RoleSQLfromDBImpl r);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SQ Lto CM</em>'.
@@ -310,7 +344,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SQ Lto CM</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSQLtoCM();
+	Attachment createAttachmentSQLtoCM(PortComposantRequis p, RoleFourni r);
 
 	/**
 	 * Returns a new object of class '<em>Attachment CMto SQL</em>'.
@@ -319,7 +353,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment CMto SQL</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentCMtoSQL();
+	Attachment createAttachmentCMtoSQL(PortComposantFourni p, RoleRequis r);
 
 	/**
 	 * Returns a new object of class '<em>Attachment DBto SQ</em>'.
@@ -328,7 +362,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment DBto SQ</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentDBtoSQ();
+	Attachment createAttachmentDBtoSQ(PortDBtoSQImpl portdbtosq2, RoleSQfromDBImpl rolesqfromdb2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SQto DB</em>'.
@@ -337,7 +371,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SQto DB</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSQtoDB();
+	Attachment createAttachmentSQtoDB(PortSQtoDBImpl portsqtodb2, RoleSQtoDBImpl rolesqtodb2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SQto SM</em>'.
@@ -346,7 +380,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SQto SM</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSQtoSM();
+	Attachment createAttachmentSQtoSM(PortSQtoSMImpl portsqtosm2, RoleSQtoSMImpl rolesqtosm2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SMto SQ</em>'.
@@ -355,7 +389,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SMto SQ</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSMtoSQ();
+	Attachment createAttachmentSMtoSQ(PortSMtoSQImpl portsmtosq2, RoleSQfromSMImpl rolesqfromsm2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment CRto CM</em>'.
@@ -364,7 +398,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment CRto CM</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentCRtoCM();
+	Attachment createAttachmentCRtoCM(PortCRtoCMImpl portcrtocm2, RoleCRtoCMImpl rolecrtocm2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment CMto CR</em>'.
@@ -373,7 +407,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment CMto CR</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentCMtoCR();
+	Attachment createAttachmentCMtoCR(PortCMtoCRImpl portcmtocr2, RoleCRfromCMImpl rolecrfromcm2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment SMto CR</em>'.
@@ -382,7 +416,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment SMto CR</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentSMtoCR();
+	Attachment createAttachmentSMtoCR(PortSMtoCRImpl portsmtocr2, RoleCRfromSMImpl rolecrfromsm2);
 
 	/**
 	 * Returns a new object of class '<em>Attachment CRto SM</em>'.
@@ -391,7 +425,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment CRto SM</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentCRtoSM();
+	Attachment createAttachmentCRtoSM(PortCRtoSMImpl portcrtosm2, RoleCRtoSMImpl rolecrtosm2);
 
 	/**
 	 * Returns a new object of class '<em>SQL Query Connector In</em>'.
@@ -481,7 +515,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding Server To CM</em>'.
 	 * @generated
 	 */
-	Binding createBindingServerToCM();
+	Binding createBindingServerToCM(PortComposantRequis p1, PortConfigurationRequis p2);
 
 	/**
 	 * Returns a new object of class '<em>Binding CMto Server</em>'.
@@ -490,7 +524,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding CMto Server</em>'.
 	 * @generated
 	 */
-	Binding createBindingCMtoServer();
+	Binding createBindingCMtoServer(PortComposantFourni p1, PortConfigurationFourni p2);
 
 	/**
 	 * Returns a new object of class '<em>Role RP Cfrom Client</em>'.
@@ -643,7 +677,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Configuration Client Server</em>'.
 	 * @generated
 	 */
-	Configuration createConfigurationClientServer();
+	Configuration createConfigurationClientServer(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4);
 
 	/**
 	 * Returns a new object of class '<em>Port Binding To Config Client Server</em>'.

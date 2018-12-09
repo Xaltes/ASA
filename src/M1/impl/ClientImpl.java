@@ -7,7 +7,6 @@ import M1.M1Package;
 import aSA.ComposantSimple;
 import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
-import aSA.PortConfigurationFourni;
 import aSA.impl.ComposantSimpleImpl;
 
 import java.util.Random;

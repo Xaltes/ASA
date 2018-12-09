@@ -17,9 +17,9 @@ import aSA.PortConfigurationRequis;
 import aSA.RoleFourni;
 import aSA.RoleRequis;
 
+import java.util.ArrayList;
+
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
@@ -67,111 +67,17 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case M1Package.CLIENT: return (EObject)createClient(null, null, eFlags);
-			case M1Package.SERVER_CONFIGURATION: return (EObject)createServerConfiguration();
-			case M1Package.CONNECTION_MANAGER: return (EObject)createConnectionManager();
-			case M1Package.DATABASE: return (EObject)createDatabase();
-			case M1Package.SECURITY_MANAGER: return (EObject)createSecurityManager();
-			case M1Package.PORT_CLIENTTO_RPC: return (EObject)createPortClienttoRPC();
-			case M1Package.PORT_RP_CTO_CLIENT: return (EObject)createPortRPCtoClient();
-			case M1Package.PORT_RP_CTO_SERVER: return (EObject)createPortRPCtoServer();
-			case M1Package.PORT_SERVER_TO_RPC: return (EObject)createPortServerToRPC();
-			case M1Package.ATTACHMENT_CLIENTTO_RPC: return (EObject)createAttachmentClienttoRPC();
-			case M1Package.RPC_CONNECTOR_CLIENT_SERVER: return (EObject)createRPCConnectorClientServer();
-			case M1Package.ATTACHMENT_RP_CTO_SERVER: return (EObject)createAttachmentRPCtoServer();
-			case M1Package.ATTACHMENT_SERVER_TO_RPC: return (EObject)createAttachmentServerToRPC();
-			case M1Package.RPC_CONNECTOR_SERVER_CLIENT: return (EObject)createRPCConnectorServerClient();
-			case M1Package.ATTACHMENT_RPC_TO_CLIENT: return (EObject)createAttachmentRPCToClient();
-			case M1Package.PORT_SQ_LTO_CM: return (EObject)createPortSQLtoCM();
-			case M1Package.PORT_CMTO_CR: return (EObject)createPortCMtoCR();
-			case M1Package.PORT_CRTO_SM: return (EObject)createPortCRtoSM();
-			case M1Package.PORT_SMTO_CR: return (EObject)createPortSMtoCR();
-			case M1Package.PORT_SQTO_DB: return (EObject)createPortSQtoDB();
-			case M1Package.PORT_CRTO_CM: return (EObject)createPortCRtoCM();
-			case M1Package.PORT_CMTO_SQL: return (EObject)createPortCMtoSQL();
-			case M1Package.PORT_DBTO_SQ: return (EObject)createPortDBtoSQ();
-			case M1Package.PORT_DBTO_SQL: return (EObject)createPortDBtoSQL();
-			case M1Package.PORT_SQ_LTO_DB: return (EObject)createPortSQLtoDB();
-			case M1Package.SQL_QUERY_CONNECTOR_OUT: return (EObject)createSQLQueryConnectorOut();
-			case M1Package.CLEARANCE_REQUEST_CONNECTOR_IN: return (EObject)createClearanceRequestConnectorIn();
-			case M1Package.SECURITY_QUERY_CONNECTOR_IN: return (EObject)createSecurityQueryConnectorIn();
-			case M1Package.ATTACHMENT_SQ_LTO_DB: return (EObject)createAttachmentSQLtoDB();
-			case M1Package.ATTACHMENT_DBTO_SQL: return (EObject)createAttachmentDBtoSQL();
-			case M1Package.ATTACHMENT_SQ_LTO_CM: return (EObject)createAttachmentSQLtoCM();
-			case M1Package.ATTACHMENT_CMTO_SQL: return (EObject)createAttachmentCMtoSQL();
-			case M1Package.ATTACHMENT_DBTO_SQ: return (EObject)createAttachmentDBtoSQ();
-			case M1Package.ATTACHMENT_SQTO_DB: return (EObject)createAttachmentSQtoDB();
-			case M1Package.ATTACHMENT_SQTO_SM: return (EObject)createAttachmentSQtoSM();
-			case M1Package.ATTACHMENT_SMTO_SQ: return (EObject)createAttachmentSMtoSQ();
-			case M1Package.ATTACHMENT_CRTO_CM: return (EObject)createAttachmentCRtoCM();
-			case M1Package.ATTACHMENT_CMTO_CR: return (EObject)createAttachmentCMtoCR();
-			case M1Package.ATTACHMENT_SMTO_CR: return (EObject)createAttachmentSMtoCR();
-			case M1Package.ATTACHMENT_CRTO_SM: return (EObject)createAttachmentCRtoSM();
-			case M1Package.SQL_QUERY_CONNECTOR_IN: return (EObject)createSQLQueryConnectorIn();
-			case M1Package.SECURITY_QUERY_CONNECTOR_OUT: return (EObject)createSecurityQueryConnectorOut();
-			case M1Package.CLEARANCE_REQUEST_CONNECTOR_OUT: return (EObject)createClearanceRequestConnectorOut();
-			case M1Package.PORT_SQTO_SM: return (EObject)createPortSQtoSM();
-			case M1Package.PORT_SMTO_SQ: return (EObject)createPortSMtoSQ();
-			case M1Package.PORT_SERVER_TO_BINDING: return (EObject)createPortServerToBinding();
-			case M1Package.PORT_BINDING_TO_SERVER: return (EObject)createPortBindingToServer();
-			case M1Package.PORT_BINDING_TO_CM: return (EObject)createPortBindingToCM();
-			case M1Package.PORT_CMTO_BINDING: return (EObject)createPortCMtoBinding();
-			case M1Package.BINDING_SERVER_TO_CM: return (EObject)createBindingServerToCM();
-			case M1Package.BINDING_CMTO_SERVER: return (EObject)createBindingCMtoServer();
-			case M1Package.ROLE_RP_CFROM_CLIENT: return (EObject)createRoleRPCfromClient();
-			case M1Package.ROLE_RP_CTO_CLIENT: return (EObject)createRoleRPCtoClient();
-			case M1Package.ROLE_RP_CTO_SERVER: return (EObject)createRoleRPCtoServer();
-			case M1Package.ROLE_RP_CFROM_SERVER: return (EObject)createRoleRPCfromServer();
-			case M1Package.ROLE_SQ_LTO_DB: return (EObject)createRoleSQLtoDB();
-			case M1Package.ROLE_SQ_LFROM_DB: return (EObject)createRoleSQLfromDB();
-			case M1Package.ROLE_SQ_LTO_CM: return (EObject)createRoleSQLtoCM();
-			case M1Package.ROLE_SQ_LFROM_CM: return (EObject)createRoleSQLfromCM();
-			case M1Package.ROLE_SQFROM_DB: return (EObject)createRoleSQfromDB();
-			case M1Package.ROLE_SQTO_DB: return (EObject)createRoleSQtoDB();
-			case M1Package.ROLE_SQTO_SM: return (EObject)createRoleSQtoSM();
-			case M1Package.ROLE_SQFROM_SM: return (EObject)createRoleSQfromSM();
-			case M1Package.ROLE_CRTO_CM: return (EObject)createRoleCRtoCM();
-			case M1Package.ROLE_CRFROM_SM: return (EObject)createRoleCRfromSM();
-			case M1Package.ROLE_CRTO_SM: return (EObject)createRoleCRtoSM();
-			case M1Package.ROLE_CRFROM_CM: return (EObject)createRoleCRfromCM();
-			case M1Package.CONFIGURATION_CLIENT_SERVER: return (EObject)createConfigurationClientServer();
-			case M1Package.PORT_BINDING_TO_CONFIG_CLIENT_SERVER: return (EObject)createPortBindingToConfigClientServer();
-			case M1Package.PORT_CONFIG_CLIENT_SERVER_TO_BINDING: return (EObject)createPortConfigClientServerToBinding();
-			case M1Package.PORT_CLIENT_TO_BINDING: return (EObject)createPortClientToBinding();
-			case M1Package.PORT_BINDING_TO_CLIENT: return (EObject)createPortBindingToClient();
-			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER: return (EObject)createBindingClientToConfigClientServer();
-			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT: return (EObject)createBindingConfigClientServerToClient();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ComposantSimple createClient(String s, String p, int v) {
 		ClientImpl client = new ClientImpl(s, p, v);
 		return client;
 	}
 	
-
-	@Override
-	public Configuration createServerConfiguration() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Configuration createServerConfiguration(Binding b1, Binding b2, EList<PortComposantFourni> p1, EList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
+	public Configuration createServerConfiguration(Binding b1, Binding b2, ArrayList<PortComposantFourni> p1, ArrayList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
 			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12) {
 		ServerConfigurationImpl serverConfiguration = new ServerConfigurationImpl(b1, b2, p1, p2, p3, p4, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
 		return serverConfiguration;
@@ -182,8 +88,13 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposantSimple createConnectionManager() {
-		ConnectionManagerImpl connectionManager = new ConnectionManagerImpl();
+	public ComposantSimple createConnectionManager(PortSQLtoCMImpl p1, 
+			PortCMtoSQLImpl p2, 
+			PortBindingToCMImpl p3,
+			PortCMtoBindingImpl p4,
+			PortCRtoCMImpl p5,
+			PortCMtoCRImpl p6) {
+		ConnectionManagerImpl connectionManager = new ConnectionManagerImpl(p1, p2, p3, p4, p5, p6);
 		return connectionManager;
 	}
 
@@ -192,8 +103,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposantSimple createDatabase() {
-		DatabaseImpl database = new DatabaseImpl();
+	public ComposantSimple createDatabase(PortComposantFourni p1, PortComposantRequis p2, PortComposantFourni p3, PortComposantRequis p4) {
+		DatabaseImpl database = new DatabaseImpl(p1, p2, p3, p4);
 		return database;
 	}
 
@@ -202,8 +113,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposantSimple createSecurityManager() {
-		SecurityManagerImpl securityManager = new SecurityManagerImpl();
+	public ComposantSimple createSecurityManager(PortComposantFourni p1, PortComposantRequis p2, PortComposantRequis p3, PortComposantFourni p4) {
+		SecurityManagerImpl securityManager = new SecurityManagerImpl(p1, p2, p3, p4);
 		return securityManager;
 	}
 
@@ -442,8 +353,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSQLtoDB() {
-		AttachmentSQLtoDBImpl attachmentSQLtoDB = new AttachmentSQLtoDBImpl();
+	public Attachment createAttachmentSQLtoDB(PortSQLtoDBImpl portsqltodb2, RoleSQLtoDBImpl rolesqltodb2) {
+		AttachmentSQLtoDBImpl attachmentSQLtoDB = new AttachmentSQLtoDBImpl(portsqltodb2, rolesqltodb2);
 		return attachmentSQLtoDB;
 	}
 
@@ -452,8 +363,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentDBtoSQL() {
-		AttachmentDBtoSQLImpl attachmentDBtoSQL = new AttachmentDBtoSQLImpl();
+	public Attachment createAttachmentDBtoSQL(PortDBtoSQLImpl p, RoleSQLfromDBImpl r) {
+		AttachmentDBtoSQLImpl attachmentDBtoSQL = new AttachmentDBtoSQLImpl(p, r);
 		return attachmentDBtoSQL;
 	}
 
@@ -462,8 +373,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSQLtoCM() {
-		AttachmentSQLtoCMImpl attachmentSQLtoCM = new AttachmentSQLtoCMImpl();
+	public Attachment createAttachmentSQLtoCM(PortComposantRequis p, RoleFourni r) {
+		AttachmentSQLtoCMImpl attachmentSQLtoCM = new AttachmentSQLtoCMImpl(p, r);
 		return attachmentSQLtoCM;
 	}
 
@@ -472,8 +383,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentCMtoSQL() {
-		AttachmentCMtoSQLImpl attachmentCMtoSQL = new AttachmentCMtoSQLImpl();
+	public Attachment createAttachmentCMtoSQL(PortComposantFourni p, RoleRequis r) {
+		AttachmentCMtoSQLImpl attachmentCMtoSQL = new AttachmentCMtoSQLImpl(p, r);
 		return attachmentCMtoSQL;
 	}
 
@@ -482,8 +393,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentDBtoSQ() {
-		AttachmentDBtoSQImpl attachmentDBtoSQ = new AttachmentDBtoSQImpl();
+	public Attachment createAttachmentDBtoSQ(PortDBtoSQImpl portdbtosq2, RoleSQfromDBImpl rolesqfromdb2) {
+		AttachmentDBtoSQImpl attachmentDBtoSQ = new AttachmentDBtoSQImpl(portdbtosq2, rolesqfromdb2);
 		return attachmentDBtoSQ;
 	}
 
@@ -492,8 +403,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSQtoDB() {
-		AttachmentSQtoDBImpl attachmentSQtoDB = new AttachmentSQtoDBImpl();
+	public Attachment createAttachmentSQtoDB(PortSQtoDBImpl portsqtodb2, RoleSQtoDBImpl rolesqtodb2) {
+		AttachmentSQtoDBImpl attachmentSQtoDB = new AttachmentSQtoDBImpl(portsqtodb2, rolesqtodb2);
 		return attachmentSQtoDB;
 	}
 
@@ -502,8 +413,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSQtoSM() {
-		AttachmentSQtoSMImpl attachmentSQtoSM = new AttachmentSQtoSMImpl();
+	public Attachment createAttachmentSQtoSM(PortSQtoSMImpl portsqtosm2, RoleSQtoSMImpl rolesqtosm2) {
+		AttachmentSQtoSMImpl attachmentSQtoSM = new AttachmentSQtoSMImpl(portsqtosm2, rolesqtosm2);
 		return attachmentSQtoSM;
 	}
 
@@ -512,8 +423,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSMtoSQ() {
-		AttachmentSMtoSQImpl attachmentSMtoSQ = new AttachmentSMtoSQImpl();
+	public Attachment createAttachmentSMtoSQ(PortSMtoSQImpl portsmtosq2, RoleSQfromSMImpl rolesqfromsm2) {
+		AttachmentSMtoSQImpl attachmentSMtoSQ = new AttachmentSMtoSQImpl(portsmtosq2, rolesqfromsm2);
 		return attachmentSMtoSQ;
 	}
 
@@ -522,8 +433,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentCRtoCM() {
-		AttachmentCRtoCMImpl attachmentCRtoCM = new AttachmentCRtoCMImpl();
+	public Attachment createAttachmentCRtoCM(PortCRtoCMImpl portcrtocm2, RoleCRtoCMImpl rolecrtocm2) {
+		AttachmentCRtoCMImpl attachmentCRtoCM = new AttachmentCRtoCMImpl(portcrtocm2, rolecrtocm2);
 		return attachmentCRtoCM;
 	}
 
@@ -532,8 +443,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentCMtoCR() {
-		AttachmentCMtoCRImpl attachmentCMtoCR = new AttachmentCMtoCRImpl();
+	public Attachment createAttachmentCMtoCR(PortCMtoCRImpl portcmtocr2, RoleCRfromCMImpl rolecrfromcm2) {
+		AttachmentCMtoCRImpl attachmentCMtoCR = new AttachmentCMtoCRImpl(portcmtocr2, rolecrfromcm2);
 		return attachmentCMtoCR;
 	}
 
@@ -542,8 +453,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentSMtoCR() {
-		AttachmentSMtoCRImpl attachmentSMtoCR = new AttachmentSMtoCRImpl();
+	public Attachment createAttachmentSMtoCR(PortSMtoCRImpl portsmtocr2, RoleCRfromSMImpl rolecrfromsm2) {
+		AttachmentSMtoCRImpl attachmentSMtoCR = new AttachmentSMtoCRImpl(portsmtocr2, rolecrfromsm2);
 		return attachmentSMtoCR;
 	}
 
@@ -552,8 +463,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentCRtoSM() {
-		AttachmentCRtoSMImpl attachmentCRtoSM = new AttachmentCRtoSMImpl();
+	public Attachment createAttachmentCRtoSM(PortCRtoSMImpl portcrtosm2, RoleCRtoSMImpl rolecrtosm2) {
+		AttachmentCRtoSMImpl attachmentCRtoSM = new AttachmentCRtoSMImpl(portcrtosm2, rolecrtosm2);
 		return attachmentCRtoSM;
 	}
 
@@ -652,8 +563,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding createBindingServerToCM() {
-		BindingServerToCMImpl bindingServerToCM = new BindingServerToCMImpl();
+	public Binding createBindingServerToCM(PortComposantRequis p1, PortConfigurationRequis p2) {
+		BindingServerToCMImpl bindingServerToCM = new BindingServerToCMImpl(p1, p2);
 		return bindingServerToCM;
 	}
 
@@ -662,8 +573,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding createBindingCMtoServer() {
-		BindingCMtoServerImpl bindingCMtoServer = new BindingCMtoServerImpl();
+	public Binding createBindingCMtoServer(PortComposantFourni p1, PortConfigurationFourni p2) {
+		BindingCMtoServerImpl bindingCMtoServer = new BindingCMtoServerImpl(p1, p2);
 		return bindingCMtoServer;
 	}
 
@@ -825,13 +736,6 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	public RoleFourni createRoleCRfromCM() {
 		RoleCRfromCMImpl roleCRfromCM = new RoleCRfromCMImpl();
 		return roleCRfromCM;
-	}
-
-	
-	@Override
-	public Configuration createConfigurationClientServer() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	/**
