@@ -6,7 +6,7 @@ import M1.M1Package;
 
 import aSA.Binding;
 import aSA.PortComposantFourni;
-import aSA.PortConfigurationRequis;
+import aSA.PortConfigurationFourni;
 
 import aSA.impl.BindingImpl;
 
@@ -41,7 +41,7 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected PortConfigurationRequis portbindingtoconfigclientserver;
+	protected PortConfigurationFourni portbindingtoconfigclientserver;
 
 	/**
 	 * The cached value of the '{@link #getPortclienttobinding() <em>Portclienttobinding</em>}' reference.
@@ -58,8 +58,10 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BindingClientToConfigClientServerImpl() {
+	protected BindingClientToConfigClientServerImpl(PortConfigurationFourni p1, PortComposantFourni p2) {
 		super();
+		this.portbindingtoconfigclientserver = p1;
+		this.portclienttobinding = p2;
 	}
 
 	/**
@@ -77,10 +79,10 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationRequis getPortbindingtoconfigclientserver() {
+	public PortConfigurationFourni getPortbindingtoconfigclientserver() {
 		if (portbindingtoconfigclientserver != null && ((EObject)portbindingtoconfigclientserver).eIsProxy()) {
 			InternalEObject oldPortbindingtoconfigclientserver = (InternalEObject)portbindingtoconfigclientserver;
-			portbindingtoconfigclientserver = (PortConfigurationRequis)eResolveProxy(oldPortbindingtoconfigclientserver);
+			portbindingtoconfigclientserver = (PortConfigurationFourni)eResolveProxy(oldPortbindingtoconfigclientserver);
 			if (portbindingtoconfigclientserver != oldPortbindingtoconfigclientserver) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER, oldPortbindingtoconfigclientserver, portbindingtoconfigclientserver));
@@ -94,7 +96,7 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationRequis basicGetPortbindingtoconfigclientserver() {
+	public PortConfigurationFourni basicGetPortbindingtoconfigclientserver() {
 		return portbindingtoconfigclientserver;
 	}
 
@@ -103,8 +105,8 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPortbindingtoconfigclientserver(PortConfigurationRequis newPortbindingtoconfigclientserver) {
-		PortConfigurationRequis oldPortbindingtoconfigclientserver = portbindingtoconfigclientserver;
+	public void setPortbindingtoconfigclientserver(PortConfigurationFourni newPortbindingtoconfigclientserver) {
+		PortConfigurationFourni oldPortbindingtoconfigclientserver = portbindingtoconfigclientserver;
 		portbindingtoconfigclientserver = newPortbindingtoconfigclientserver;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER, oldPortbindingtoconfigclientserver, portbindingtoconfigclientserver));
@@ -175,7 +177,7 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				setPortbindingtoconfigclientserver((PortConfigurationRequis)newValue);
+				setPortbindingtoconfigclientserver((PortConfigurationFourni)newValue);
 				return;
 			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTCLIENTTOBINDING:
 				setPortclienttobinding((PortComposantFourni)newValue);
@@ -193,7 +195,7 @@ public class BindingClientToConfigClientServerImpl extends BindingImpl implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
-				setPortbindingtoconfigclientserver((PortConfigurationRequis)null);
+				setPortbindingtoconfigclientserver((PortConfigurationFourni)null);
 				return;
 			case M1Package.BINDING_CLIENT_TO_CONFIG_CLIENT_SERVER__PORTCLIENTTOBINDING:
 				setPortclienttobinding((PortComposantFourni)null);

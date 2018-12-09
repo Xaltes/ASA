@@ -13,6 +13,7 @@ import aSA.PortConfigurationRequis;
 import aSA.impl.ConfigurationImpl;
 
 import java.net.ServerSocket;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -54,7 +55,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PortConfigurationRequis> portbindingtoconfigclientserver;
+	protected ArrayList<PortConfigurationFourni> portbindingtoconfigclientserver;
 
 	/**
 	 * The cached value of the '{@link #getPortconfigclientservertobinding() <em>Portconfigclientservertobinding</em>}' containment reference list.
@@ -64,7 +65,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PortConfigurationFourni> portconfigclientservertobinding;
+	protected ArrayList<PortConfigurationRequis> portconfigclientservertobinding;
 
 	/**
 	 * The cached value of the '{@link #getBindingclienttoconfigclientserver() <em>Bindingclienttoconfigclientserver</em>}' containment reference list.
@@ -74,7 +75,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Binding> bindingclienttoconfigclientserver;
+	protected ArrayList<Binding> bindingclienttoconfigclientserver;
 
 	/**
 	 * The cached value of the '{@link #getBindingconfigclientservertoclient() <em>Bindingconfigclientservertoclient</em>}' containment reference list.
@@ -84,7 +85,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Binding> bindingconfigclientservertoclient;
+	protected ArrayList<Binding> bindingconfigclientservertoclient;
 
 	/**
 	 * The cached value of the '{@link #getAttachmentrpctoclient() <em>Attachmentrpctoclient</em>}' containment reference list.
@@ -94,7 +95,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attachment> attachmentrpctoclient;
+	protected ArrayList<Attachment> attachmentrpctoclient;
 
 	/**
 	 * The cached value of the '{@link #getAttachmentservertorpc() <em>Attachmentservertorpc</em>}' containment reference list.
@@ -104,7 +105,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attachment> attachmentservertorpc;
+	protected ArrayList<Attachment> attachmentservertorpc;
 
 	/**
 	 * The cached value of the '{@link #getAttachmentclienttorpc() <em>Attachmentclienttorpc</em>}' containment reference list.
@@ -114,7 +115,7 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attachment> attachmentclienttorpc;
+	protected ArrayList<Attachment> attachmentclienttorpc;
 
 	/**
 	 * The cached value of the '{@link #getAttachmentrpctoserver() <em>Attachmentrpctoserver</em>}' containment reference list.
@@ -124,14 +125,14 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attachment> attachmentrpctoserver;
+	protected ArrayList<Attachment> attachmentrpctoserver;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConfigurationClientServerImpl(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4) {
+	protected ConfigurationClientServerImpl(ArrayList<PortConfigurationFourni> p1, ArrayList<PortConfigurationRequis> p2, ArrayList<Binding> b1, ArrayList<Binding> b2, ArrayList<Attachment> a1, ArrayList<Attachment> a2, ArrayList<Attachment> a3, ArrayList<Attachment> a4) {
 		super();	
 		this.portbindingtoconfigclientserver = p1;
 		this.portconfigclientservertobinding = p2;
@@ -158,83 +159,77 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PortConfigurationRequis> getPortbindingtoconfigclientserver() {
-		if (portbindingtoconfigclientserver == null) {
-			portbindingtoconfigclientserver = new EObjectContainmentEList<PortConfigurationRequis>(PortConfigurationRequis.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER);
-		}
+	public ArrayList<PortConfigurationFourni> getPortbindingtoconfigclientserver() {
 		return portbindingtoconfigclientserver;
 	}
+	
+	public void addPortbindingtoconfigclientserver(PortConfigurationFourni p) {
+		portbindingtoconfigclientserver.add(p);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PortConfigurationFourni> getPortconfigclientservertobinding() {
-		if (portconfigclientservertobinding == null) {
-			portconfigclientservertobinding = new EObjectContainmentEList<PortConfigurationFourni>(PortConfigurationFourni.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING);
-		}
+	public ArrayList<PortConfigurationRequis> getPortconfigclientservertobinding() {
 		return portconfigclientservertobinding;
 	}
+	
+	public void addPortconfigclientservertobinding(PortConfigurationRequis p) {
+		portconfigclientservertobinding.add(p);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Binding> getBindingclienttoconfigclientserver() {
-		if (bindingclienttoconfigclientserver == null) {
-			bindingclienttoconfigclientserver = new EObjectContainmentEList<Binding>(Binding.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER);
-		}
+	public ArrayList<Binding> getBindingclienttoconfigclientserver() {
 		return bindingclienttoconfigclientserver;
 	}
+	
+	public void addBindingclienttoconfigclientserver(Binding b) {
+		bindingclienttoconfigclientserver.add(b);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Binding> getBindingconfigclientservertoclient() {
-		if (bindingconfigclientservertoclient == null) {
-			bindingconfigclientservertoclient = new EObjectContainmentEList<Binding>(Binding.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCONFIGCLIENTSERVERTOCLIENT);
-		}
+	public ArrayList<Binding> getBindingconfigclientservertoclient() {
 		return bindingconfigclientservertoclient;
 	}
+	
+	public void addBindingconfigclientservertoclient(Binding b) {
+		bindingconfigclientservertoclient.add(b);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attachment> getAttachmentrpctoclient() {
-		if (attachmentrpctoclient == null) {
-			attachmentrpctoclient = new EObjectContainmentEList<Attachment>(Attachment.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOCLIENT);
-		}
+	public ArrayList<Attachment> getAttachmentrpctoclient() {
 		return attachmentrpctoclient;
 	}
+	
+	public void addAttachmentrpctoclient(Attachment a) {
+		attachmentrpctoclient.add(a);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attachment> getAttachmentservertorpc() {
-		if (attachmentservertorpc == null) {
-			attachmentservertorpc = new EObjectContainmentEList<Attachment>(Attachment.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTSERVERTORPC);
-		}
+	public ArrayList<Attachment> getAttachmentservertorpc() {
 		return attachmentservertorpc;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Attachment> getAttachmentclienttorpc() {
-		if (attachmentclienttorpc == null) {
-			attachmentclienttorpc = new EObjectContainmentEList<Attachment>(Attachment.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTCLIENTTORPC);
-		}
-		return attachmentclienttorpc;
+	
+	public void addAttachmentservertorpc(Attachment a) {
+		attachmentservertorpc.add(a);
 	}
 
 	/**
@@ -242,11 +237,25 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attachment> getAttachmentrpctoserver() {
-		if (attachmentrpctoserver == null) {
-			attachmentrpctoserver = new EObjectContainmentEList<Attachment>(Attachment.class, this, M1Package.CONFIGURATION_CLIENT_SERVER__ATTACHMENTRPCTOSERVER);
-		}
+	public ArrayList<Attachment> getAttachmentclienttorpc() {
+		return attachmentclienttorpc;
+	}
+	
+	public void addAttachmentclienttorpc(Attachment a) {
+		attachmentclienttorpc.add(a);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArrayList<Attachment> getAttachmentrpctoserver() {
 		return attachmentrpctoserver;
+	}
+	
+	public void addAttachmentrpctoserver(Attachment a) {
+		attachmentrpctoserver.add(a);
 	}
 
 	/**
@@ -316,11 +325,11 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 		switch (featureID) {
 		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTBINDINGTOCONFIGCLIENTSERVER:
 			getPortbindingtoconfigclientserver().clear();
-			getPortbindingtoconfigclientserver().addAll((Collection<? extends PortConfigurationRequis>)newValue);
+			getPortbindingtoconfigclientserver().addAll((Collection<? extends PortConfigurationFourni>)newValue);
 			return;
 		case M1Package.CONFIGURATION_CLIENT_SERVER__PORTCONFIGCLIENTSERVERTOBINDING:
 			getPortconfigclientservertobinding().clear();
-			getPortconfigclientservertobinding().addAll((Collection<? extends PortConfigurationFourni>)newValue);
+			getPortconfigclientservertobinding().addAll((Collection<? extends PortConfigurationRequis>)newValue);
 			return;
 		case M1Package.CONFIGURATION_CLIENT_SERVER__BINDINGCLIENTTOCONFIGCLIENTSERVER:
 			getBindingclienttoconfigclientserver().clear();
@@ -416,10 +425,10 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	
 	
 	// La configuration joue le rôle d'observateur sur le Client
-    public void notifier(){
+    public void notifier(String s){
 
-        String requete = "SELECT FROM WHERE";
-        if(requete == null){
+        String requete = s;
+        if(requete == null || requete.equals("")){
             System.out.println("Pas de nouvelle requete");
         }else {
             System.out.println("La configuration client serveur a recu la notif");

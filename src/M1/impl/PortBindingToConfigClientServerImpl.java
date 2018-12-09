@@ -3,10 +3,8 @@
 package M1.impl;
 
 import M1.M1Package;
-
-import aSA.PortConfigurationRequis;
-
-import aSA.impl.PortConfigurationRequisImpl;
+import aSA.PortConfigurationFourni;
+import aSA.impl.PortConfigurationFourniImpl;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -17,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PortBindingToConfigClientServerImpl extends PortConfigurationRequisImpl implements PortConfigurationRequis {
+public class PortBindingToConfigClientServerImpl extends PortConfigurationFourniImpl implements PortConfigurationFourni {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

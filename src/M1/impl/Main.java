@@ -5,8 +5,6 @@ import java.net.ServerSocket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.eclipse.emf.common.util.EList;
-
 import aSA.Attachment;
 import aSA.Binding;
 import aSA.PortComposantFourni;
@@ -29,17 +27,21 @@ public class Main {
 		// lancer le serveur
 		LancementServeur();
 
-		EList<PortConfigurationRequis> p1ClientServer = configClientServer.portbindingtoconfigclientserver;
-		EList<PortConfigurationFourni> p2ClientServer = configClientServer.portconfigclientservertobinding;
-		EList<Binding> b1ClientServer = configClientServer.bindingclienttoconfigclientserver;
-		EList<Binding> b2ClientServer = configClientServer.bindingconfigclientservertoclient;
-		EList<Attachment> a1ClientServer = configClientServer.attachmentrpctoclient;
-		EList<Attachment> a2ClientServer = configClientServer.attachmentservertorpc;
-		EList<Attachment> a3ClientServer = configClientServer.attachmentclienttorpc;
-		EList<Attachment> a4ClientServer = configClientServer.attachmentrpctoserver;
-		configClientServer = new ConfigurationClientServerImpl(p1ClientServer, p2ClientServer, b1ClientServer, b2ClientServer, a1ClientServer, a2ClientServer, a3ClientServer, a4ClientServer);
+		ArrayList<PortConfigurationFourni> portsbindingtoconfigclientserver = new ArrayList<PortConfigurationFourni>();
+		ArrayList<PortConfigurationRequis> portsconfigclientservertobinding = new ArrayList<PortConfigurationRequis>();
+		ArrayList<Binding> bindingsclienttoconfigclientserver = new ArrayList<Binding>();
+		ArrayList<Binding> bindingsconfigclientservertoclient = new ArrayList<Binding>();
+		ArrayList<Attachment> attachmentsrpctoclient = new ArrayList<Attachment>();
+		ArrayList<Attachment> attachmentsservertorpc = new ArrayList<Attachment>();
+		ArrayList<Attachment> attachmentsclienttorpc = new ArrayList<Attachment>();
+		ArrayList<Attachment> attachmentsrpctoserver = new ArrayList<Attachment>();
+		configClientServer = new ConfigurationClientServerImpl(portsbindingtoconfigclientserver, portsconfigclientservertobinding,
+				bindingsclienttoconfigclientserver, bindingsconfigclientservertoclient, attachmentsrpctoclient, 
+				attachmentsservertorpc,	attachmentsclienttorpc, attachmentsrpctoserver);
 
-
+		for(ClientImpl c : database.getClients()) {
+			createAndAddLinks(c);
+		}
 
 		String pseudo = "";
 		String motDePasse;
@@ -110,7 +112,9 @@ public class Main {
 						System.out.println("La value doit forcément être un chiffre ou un nombre");
 					}
 				}
+				ClientImpl c = new ClientImpl(newPseudo, newMDP, newValue);
 				database.add(newPseudo, newMDP, newValue);
+				createAndAddLinks(c);
 				break;
 			}
 			case 4 : {
@@ -139,6 +143,38 @@ public class Main {
 		arreterServeur(sSocket);		
 	}
 
+	public static void createAndAddLinks(ClientImpl c) {
+		PortBindingToConfigClientServerImpl portbindingtoconfigclientserver = new PortBindingToConfigClientServerImpl();
+		configClientServer.portbindingtoconfigclientserver.add(portbindingtoconfigclientserver);
+		BindingClientToConfigClientServerImpl bindingclienttoconfigclientserver = new BindingClientToConfigClientServerImpl(portbindingtoconfigclientserver, c.portclienttobinding);
+		configClientServer.addBindingclienttoconfigclientserver(bindingclienttoconfigclientserver);
+		
+		PortConfigClientServerToBindingImpl portconfigclientservertobinding = new PortConfigClientServerToBindingImpl();
+		configClientServer.portconfigclientservertobinding.add(portconfigclientservertobinding);
+		BindingConfigClientServerToClientImpl bindingconfigclientservertoclient = new BindingConfigClientServerToClientImpl(c.portbindingtoclient, portconfigclientservertobinding);
+		configClientServer.addBindingconfigclientservertoclient(bindingconfigclientservertoclient);
+		
+		PortRPCtoClientImpl portrpctoclient = new PortRPCtoClientImpl();
+		RoleRPCtoClientImpl rolerpctoclient = new RoleRPCtoClientImpl();
+		AttachmentRPCToClientImpl attachmentrpctoclient = new AttachmentRPCToClientImpl(portrpctoclient, rolerpctoclient);
+		configClientServer.attachmentrpctoclient.add(attachmentrpctoclient);
+		
+		PortServerToRPCImpl portservertorpc = new PortServerToRPCImpl();
+		RoleRPCfromServerImpl rolerpcfromserver = new RoleRPCfromServerImpl();
+		AttachmentServerToRPCImpl attachmentservertorpc = new AttachmentServerToRPCImpl(portservertorpc, rolerpcfromserver);
+		configClientServer.attachmentservertorpc.add(attachmentservertorpc);
+		
+		PortClienttoRPCImpl portclienttorpc = new PortClienttoRPCImpl();
+		RoleRPCfromClientImpl rolerpcfromclient = new RoleRPCfromClientImpl();
+		AttachmentClienttoRPCImpl attachmentclienttorpc = new AttachmentClienttoRPCImpl(portclienttorpc, rolerpcfromclient);
+		configClientServer.attachmentclienttorpc.add(attachmentclienttorpc);
+		
+		PortRPCtoServerImpl portrpctoserver = new PortRPCtoServerImpl();
+		RoleRPCtoServerImpl rolerpctoserver = new RoleRPCtoServerImpl();
+		AttachmentRPCtoServerImpl attachmentrpctoserver = new AttachmentRPCtoServerImpl(portrpctoserver, rolerpctoserver);
+		configClientServer.attachmentrpctoserver.add(attachmentrpctoserver);
+	}
+	
 	public static void LancementServeur() {
 
 		int port = 2380;		

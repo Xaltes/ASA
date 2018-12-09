@@ -7,7 +7,7 @@ import M1.M1Package;
 import aSA.Binding;
 import aSA.PortComposantRequis;
 import aSA.PortConfigurationFourni;
-
+import aSA.PortConfigurationRequis;
 import aSA.impl.BindingImpl;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -51,15 +51,17 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 	 * @generated
 	 * @ordered
 	 */
-	protected PortConfigurationFourni portconfigclientservertobinding;
+	protected PortConfigurationRequis portconfigclientservertobinding;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BindingConfigClientServerToClientImpl() {
+	protected BindingConfigClientServerToClientImpl(PortComposantRequis p1, PortConfigurationRequis p2) {
 		super();
+		this.portbindingtoclient = p1;
+		this.portconfigclientservertobinding = p2;
 	}
 
 	/**
@@ -115,10 +117,10 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationFourni getPortconfigclientservertobinding() {
+	public PortConfigurationRequis getPortconfigclientservertobinding() {
 		if (portconfigclientservertobinding != null && ((EObject)portconfigclientservertobinding).eIsProxy()) {
 			InternalEObject oldPortconfigclientservertobinding = (InternalEObject)portconfigclientservertobinding;
-			portconfigclientservertobinding = (PortConfigurationFourni)eResolveProxy(oldPortconfigclientservertobinding);
+			portconfigclientservertobinding = (PortConfigurationRequis)eResolveProxy(oldPortconfigclientservertobinding);
 			if (portconfigclientservertobinding != oldPortconfigclientservertobinding) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT__PORTCONFIGCLIENTSERVERTOBINDING, oldPortconfigclientservertobinding, portconfigclientservertobinding));
@@ -132,7 +134,7 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationFourni basicGetPortconfigclientservertobinding() {
+	public PortConfigurationRequis basicGetPortconfigclientservertobinding() {
 		return portconfigclientservertobinding;
 	}
 
@@ -141,8 +143,8 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPortconfigclientservertobinding(PortConfigurationFourni newPortconfigclientservertobinding) {
-		PortConfigurationFourni oldPortconfigclientservertobinding = portconfigclientservertobinding;
+	public void setPortconfigclientservertobinding(PortConfigurationRequis newPortconfigclientservertobinding) {
+		PortConfigurationRequis oldPortconfigclientservertobinding = portconfigclientservertobinding;
 		portconfigclientservertobinding = newPortconfigclientservertobinding;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT__PORTCONFIGCLIENTSERVERTOBINDING, oldPortconfigclientservertobinding, portconfigclientservertobinding));
@@ -178,7 +180,7 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 				setPortbindingtoclient((PortComposantRequis)newValue);
 				return;
 			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT__PORTCONFIGCLIENTSERVERTOBINDING:
-				setPortconfigclientservertobinding((PortConfigurationFourni)newValue);
+				setPortconfigclientservertobinding((PortConfigurationRequis)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -196,7 +198,7 @@ public class BindingConfigClientServerToClientImpl extends BindingImpl implement
 				setPortbindingtoclient((PortComposantRequis)null);
 				return;
 			case M1Package.BINDING_CONFIG_CLIENT_SERVER_TO_CLIENT__PORTCONFIGCLIENTSERVERTOBINDING:
-				setPortconfigclientservertobinding((PortConfigurationFourni)null);
+				setPortconfigclientservertobinding((PortConfigurationRequis)null);
 				return;
 		}
 		super.eUnset(featureID);

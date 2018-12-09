@@ -8,6 +8,8 @@ import aSA.ComposantSimple;
 import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
 import aSA.impl.ComposantSimpleImpl;
+import aSA.impl.PortComposantFourniImpl;
+import aSA.impl.PortComposantRequisImpl;
 
 import java.util.Random;
 
@@ -129,6 +131,11 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	 */
 	protected ClientImpl(String p, String pwd, int v) {
 		super();
+		portrpctoclient = new PortRPCtoClientImpl();
+		portclienttorpc = new PortClienttoRPCImpl();
+		portclienttobinding = new PortClientToBindingImpl();
+		portbindingtoclient = new PortBindingToClientImpl();
+		
 		this.id = generateRandomId();
 		this.pseudo = p;
 		this.setPassword(pwd);

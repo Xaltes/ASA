@@ -163,8 +163,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentClienttoRPC() {
-		AttachmentClienttoRPCImpl attachmentClienttoRPC = new AttachmentClienttoRPCImpl();
+	public Attachment createAttachmentClienttoRPC(PortComposantFourni p, RoleRequis r) {
+		AttachmentClienttoRPCImpl attachmentClienttoRPC = new AttachmentClienttoRPCImpl(p, r);
 		return attachmentClienttoRPC;
 	}
 
@@ -183,8 +183,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentRPCtoServer() {
-		AttachmentRPCtoServerImpl attachmentRPCtoServer = new AttachmentRPCtoServerImpl();
+	public Attachment createAttachmentRPCtoServer(PortComposantRequis p, RoleFourni r) {
+		AttachmentRPCtoServerImpl attachmentRPCtoServer = new AttachmentRPCtoServerImpl(p, r);
 		return attachmentRPCtoServer;
 	}
 
@@ -193,8 +193,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentServerToRPC() {
-		AttachmentServerToRPCImpl attachmentServerToRPC = new AttachmentServerToRPCImpl();
+	public Attachment createAttachmentServerToRPC(PortComposantFourni p, RoleRequis r) {
+		AttachmentServerToRPCImpl attachmentServerToRPC = new AttachmentServerToRPCImpl(p, r);
 		return attachmentServerToRPC;
 	}
 
@@ -213,8 +213,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attachment createAttachmentRPCToClient() {
-		AttachmentRPCToClientImpl attachmentRPCToClient = new AttachmentRPCToClientImpl();
+	public Attachment createAttachmentRPCToClient(PortComposantRequis p, RoleFourni r) {
+		AttachmentRPCToClientImpl attachmentRPCToClient = new AttachmentRPCToClientImpl(p, r);
 		return attachmentRPCToClient;
 	}
 
@@ -743,7 +743,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Configuration createConfigurationClientServer(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4) {
+	public Configuration createConfigurationClientServer(ArrayList<PortConfigurationFourni> p1, ArrayList<PortConfigurationRequis> p2, ArrayList<Binding> b1, ArrayList<Binding> b2, ArrayList<Attachment> a1, ArrayList<Attachment> a2, ArrayList<Attachment> a3, ArrayList<Attachment> a4) {
 		ConfigurationClientServerImpl configurationClientServer = new ConfigurationClientServerImpl(p1, p2, b1, b2, a1, a2, a3, a4);
 		return configurationClientServer;
 	}
@@ -753,7 +753,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationRequis createPortBindingToConfigClientServer() {
+	public PortConfigurationFourni createPortBindingToConfigClientServer() {
 		PortBindingToConfigClientServerImpl portBindingToConfigClientServer = new PortBindingToConfigClientServerImpl();
 		return portBindingToConfigClientServer;
 	}
@@ -763,7 +763,7 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PortConfigurationFourni createPortConfigClientServerToBinding() {
+	public PortConfigurationRequis createPortConfigClientServerToBinding() {
 		PortConfigClientServerToBindingImpl portConfigClientServerToBinding = new PortConfigClientServerToBindingImpl();
 		return portConfigClientServerToBinding;
 	}
@@ -793,8 +793,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding createBindingClientToConfigClientServer() {
-		BindingClientToConfigClientServerImpl bindingClientToConfigClientServer = new BindingClientToConfigClientServerImpl();
+	public Binding createBindingClientToConfigClientServer(PortConfigurationFourni p1, PortComposantFourni p2) {
+		BindingClientToConfigClientServerImpl bindingClientToConfigClientServer = new BindingClientToConfigClientServerImpl(p1, p2);
 		return bindingClientToConfigClientServer;
 	}
 
@@ -803,8 +803,8 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Binding createBindingConfigClientServerToClient() {
-		BindingConfigClientServerToClientImpl bindingConfigClientServerToClient = new BindingConfigClientServerToClientImpl();
+	public Binding createBindingConfigClientServerToClient(PortComposantRequis p1, PortConfigurationRequis p2) {
+		BindingConfigClientServerToClientImpl bindingConfigClientServerToClient = new BindingConfigClientServerToClientImpl(p1, p2);
 		return bindingConfigClientServerToClient;
 	}
 

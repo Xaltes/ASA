@@ -88,13 +88,13 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 		
 		ClientImpl c1 = new ClientImpl("Florian","1234",2);
 		ClientImpl c2 = new ClientImpl("Ophelie","4321",1);
-		this.clients.add(c1);
-		this.clients.add(c2);
+		this.getClients().add(c1);
+		this.getClients().add(c2);
 	}
 
 	public String read() {
 		String result = "";
-		for(ClientImpl client : clients) {
+		for(ClientImpl client : getClients()) {
 			if(result.equals("")) {
 				result = client.toString();
 			}
@@ -107,12 +107,12 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 
 	public void add(String s, String p, int v) {
 		ClientImpl newClient = new ClientImpl(s, p, v);
-		clients.add(newClient);
+		getClients().add(newClient);
 		System.out.println("Successfully added new client " + newClient.getPseudo() + " to DB with value " + newClient.getValue());
 	}
 
 	public void update(String pseudo, String mdp) {
-		for(ClientImpl client : clients) {
+		for(ClientImpl client : getClients()) {
 			if(client.getPseudo().equals(pseudo)) {
 				client.setPassword(mdp);
 				System.out.println("Successfully changed client " + client.getPseudo() + " password to " + client.getPassword());
@@ -122,7 +122,7 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 	}
 
 	public void update(String pseudo, int value) {
-		for(ClientImpl client : clients) {
+		for(ClientImpl client : getClients()) {
 			if(client.getPseudo().equals(pseudo)) {
 				client.setValue(value);
 				System.out.println("Successfully changed client " + client.getPseudo() + " value to " + client.getValue());
@@ -133,19 +133,19 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 
 	public void delete(String pseudo) {
 		ClientImpl c = null;
-		for(ClientImpl client : clients) {
+		for(ClientImpl client : getClients()) {
 			if(client.getPseudo().equals(pseudo)) {
 				c = client;					
 				break;
 			}
 		}
-		clients.remove(c);
+		getClients().remove(c);
 		System.out.println("Successfully deleted client " + c.getPseudo());
 	}
 	
 	public boolean testConnection(String pseudo, String mdp) {
 		boolean result = false;
-		for(ClientImpl client : clients) {
+		for(ClientImpl client : getClients()) {
 			if(client.getPseudo().equals(pseudo) && client.getPassword().equals(mdp)) {
 				result = true;
 			}
@@ -441,6 +441,14 @@ public class DatabaseImpl extends ComposantSimpleImpl implements ComposantSimple
 			return portsqtodb != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	public ArrayList<ClientImpl> getClients() {
+		return clients;
+	}
+
+	public void setClients(ArrayList<ClientImpl> clients) {
+		this.clients = clients;
 	}
 
 } //DatabaseImpl

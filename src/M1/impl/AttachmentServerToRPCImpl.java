@@ -58,8 +58,10 @@ public class AttachmentServerToRPCImpl extends AttachmentImpl implements Attachm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentServerToRPCImpl() {
+	protected AttachmentServerToRPCImpl(PortComposantFourni p, RoleRequis r) {
 		super();
+		this.portservertorpc = p;
+		this.rolerpcfromserver = r;
 	}
 
 	/**

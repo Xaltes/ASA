@@ -58,8 +58,10 @@ public class AttachmentRPCToClientImpl extends AttachmentImpl implements Attachm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentRPCToClientImpl() {
+	protected AttachmentRPCToClientImpl(PortComposantRequis p, RoleFourni r) {
 		super();
+		this.portrpctoclient = p;
+		this.rolerpctoclient = r;
 	}
 
 	/**

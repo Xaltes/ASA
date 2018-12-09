@@ -155,7 +155,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment Clientto RPC</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentClienttoRPC();
+	Attachment createAttachmentClienttoRPC(PortComposantFourni p, RoleRequis r);
 
 	/**
 	 * Returns a new object of class '<em>RPC Connector Client Server</em>'.
@@ -173,7 +173,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment RP Cto Server</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentRPCtoServer();
+	Attachment createAttachmentRPCtoServer(PortComposantRequis p, RoleFourni r);
 
 	/**
 	 * Returns a new object of class '<em>Attachment Server To RPC</em>'.
@@ -182,7 +182,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment Server To RPC</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentServerToRPC();
+	Attachment createAttachmentServerToRPC(PortComposantFourni p, RoleRequis r);
 
 	/**
 	 * Returns a new object of class '<em>RPC Connector Server Client</em>'.
@@ -200,7 +200,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Attachment RPC To Client</em>'.
 	 * @generated
 	 */
-	Attachment createAttachmentRPCToClient();
+	Attachment createAttachmentRPCToClient(PortComposantRequis p, RoleFourni r);
 
 	/**
 	 * Returns a new object of class '<em>Port SQ Lto CM</em>'.
@@ -677,7 +677,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Configuration Client Server</em>'.
 	 * @generated
 	 */
-	Configuration createConfigurationClientServer(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4);
+	Configuration createConfigurationClientServer(ArrayList<PortConfigurationFourni> p1, ArrayList<PortConfigurationRequis> p2, ArrayList<Binding> b1, ArrayList<Binding> b2, ArrayList<Attachment> a1, ArrayList<Attachment> a2, ArrayList<Attachment> a3, ArrayList<Attachment> a4);
 
 	/**
 	 * Returns a new object of class '<em>Port Binding To Config Client Server</em>'.
@@ -686,7 +686,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Port Binding To Config Client Server</em>'.
 	 * @generated
 	 */
-	PortConfigurationRequis createPortBindingToConfigClientServer();
+	PortConfigurationFourni createPortBindingToConfigClientServer();
 
 	/**
 	 * Returns a new object of class '<em>Port Config Client Server To Binding</em>'.
@@ -695,7 +695,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Port Config Client Server To Binding</em>'.
 	 * @generated
 	 */
-	PortConfigurationFourni createPortConfigClientServerToBinding();
+	PortConfigurationRequis createPortConfigClientServerToBinding();
 
 	/**
 	 * Returns a new object of class '<em>Port Client To Binding</em>'.
@@ -722,7 +722,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding Client To Config Client Server</em>'.
 	 * @generated
 	 */
-	Binding createBindingClientToConfigClientServer();
+	Binding createBindingClientToConfigClientServer(PortConfigurationFourni p1, PortComposantFourni p2);
 
 	/**
 	 * Returns a new object of class '<em>Binding Config Client Server To Client</em>'.
@@ -731,7 +731,7 @@ public interface M1Factory extends EFactory {
 	 * @return a new object of class '<em>Binding Config Client Server To Client</em>'.
 	 * @generated
 	 */
-	Binding createBindingConfigClientServerToClient();
+	Binding createBindingConfigClientServerToClient(PortComposantRequis p1, PortConfigurationRequis p2);
 
 	/**
 	 * Returns the package supported by this factory.
