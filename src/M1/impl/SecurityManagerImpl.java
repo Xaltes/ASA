@@ -88,8 +88,8 @@ public class SecurityManagerImpl extends ComposantSimpleImpl implements Composan
 		this.portsmtocr = p4;
 	}
 	
-	public boolean checkRights(String pseudo, String query) {
-		return true;
+	public boolean checkRights(String pseudo, String query) {		
+		return pseudo.equals("Ophelie");
 	}
 
 	/**

@@ -520,5 +520,9 @@ public class ConnectionManagerImpl extends ComposantSimpleImpl implements Compos
 	public boolean testConnection(DatabaseImpl database, String pseudo, String motDePasse) {
 		return database.testConnection(pseudo, motDePasse);
 	}
+	
+	public boolean checkRights(SecurityManagerImpl sc, String pseudo, String query) {
+		return sc.checkRights(pseudo, query);
+	}
 
 } //ConnectionManagerImpl
