@@ -245,8 +245,28 @@ public class ServerConfigurationImpl extends ConfigurationImpl implements Config
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServerConfigurationImpl() {
+	protected ServerConfigurationImpl(Binding b1, Binding b2, EList<PortComposantFourni> p1, EList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
+			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12) {
 		super();
+		this.bindingcmtoserver = b1;
+		this.bindingservertocm = b2;
+		this.portservertorpc = p1;
+		this.portrpctoserver = p2;
+		this.portservertobinding = p3;
+		this.portbindingtoserver = p4;
+		this.attachmentsqltocm = a1;
+		this.attachmentcmtosql = a2;
+		this.attachmentsqltodb = a3;
+		this.attachmentdbtosql = a4;
+		this.attachmentdbtosq = a5;
+		this.attachmentsqtodb = a6;
+		this.attachmentsqtosm = a7;
+		this.attachmentsmtosq = a8;
+		this.attachmentcrtocm = a9;
+		this.attachmentcmtocr = a10;
+		this.attachmentsmtocr = a11;
+		this.attachmentcrtosm = a12;
+		
 	}
 
 	/**

@@ -17,6 +17,7 @@ import aSA.PortConfigurationRequis;
 import aSA.RoleFourni;
 import aSA.RoleRequis;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -157,14 +158,22 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 		ClientImpl client = new ClientImpl(s, p, v);
 		return client;
 	}
+	
+
+	@Override
+	public Configuration createServerConfiguration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Configuration createServerConfiguration() {
-		ServerConfigurationImpl serverConfiguration = new ServerConfigurationImpl();
+	public Configuration createServerConfiguration(Binding b1, Binding b2, EList<PortComposantFourni> p1, EList<PortComposantRequis> p2, PortConfigurationRequis p3, PortConfigurationFourni p4, 
+			Attachment a1, Attachment a2, Attachment a3, Attachment a4, Attachment a5, Attachment a6, Attachment a7, Attachment a8, Attachment a9, Attachment a10, Attachment a11, Attachment a12) {
+		ServerConfigurationImpl serverConfiguration = new ServerConfigurationImpl(b1, b2, p1, p2, p3, p4, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
 		return serverConfiguration;
 	}
 
@@ -818,13 +827,20 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 		return roleCRfromCM;
 	}
 
+	
+	@Override
+	public Configuration createConfigurationClientServer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Configuration createConfigurationClientServer() {
-		ConfigurationClientServerImpl configurationClientServer = new ConfigurationClientServerImpl();
+	public Configuration createConfigurationClientServer(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4) {
+		ConfigurationClientServerImpl configurationClientServer = new ConfigurationClientServerImpl(p1, p2, b1, b2, a1, a2, a3, a4);
 		return configurationClientServer;
 	}
 
@@ -908,4 +924,5 @@ public class M1FactoryImpl extends EFactoryImpl implements M1Factory {
 		return M1Package.eINSTANCE;
 	}
 
+	
 } //M1FactoryImpl

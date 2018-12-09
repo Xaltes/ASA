@@ -131,8 +131,16 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConfigurationClientServerImpl() {
-		super();		
+	protected ConfigurationClientServerImpl(EList<PortConfigurationRequis> p1, EList<PortConfigurationFourni> p2, EList<Binding> b1, EList<Binding> b2, EList<Attachment> a1, EList<Attachment> a2, EList<Attachment> a3, EList<Attachment> a4) {
+		super();	
+		this.portbindingtoconfigclientserver = p1;
+		this.portconfigclientservertobinding = p2;
+		this.bindingclienttoconfigclientserver = b1;
+		this.bindingconfigclientservertoclient = b2;
+		this.attachmentrpctoclient = a1;
+		this.attachmentservertorpc = a2;
+		this.attachmentclienttorpc = a3;
+		this.attachmentrpctoserver = a4;
 	}
 
 	/**
@@ -405,5 +413,21 @@ public class ConfigurationClientServerImpl extends ConfigurationImpl implements 
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	
+	// La configuration joue le rôle d'observateur sur le Client
+    public void notifier(){
+
+        String requete = "SELECT FROM WHERE";
+        if(requete == null){
+            System.out.println("Pas de nouvelle requete");
+        }else {
+            System.out.println("La configuration client serveur a recu la notif");
+            System.out.println("Nouvelle requete: "+requete);
+        }
+
+        //getAttachmentclienttorpc();
+    }
+	
 
 } //ConfigurationClientServerImpl

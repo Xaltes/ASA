@@ -7,7 +7,7 @@ import M1.M1Package;
 import aSA.ComposantSimple;
 import aSA.PortComposantFourni;
 import aSA.PortComposantRequis;
-
+import aSA.PortConfigurationFourni;
 import aSA.impl.ComposantSimpleImpl;
 
 import java.util.Random;
@@ -555,5 +555,33 @@ public class ClientImpl extends ComposantSimpleImpl implements ComposantSimple {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+	//Client joue le role d'Observable
+
+    public void notifierObservateur()
+    {
+    	//Il faut dire au port du serveur que c'est le serveur la configuration, comme ça le serveur reçoit la notification du port. 
+    	//Après si le port correspond a celui dans le binding alors il retransmet au bon port
+    	
+            //ConfigurationClientServerImpl obs = new ConfigurationClientServerImpl();
+        PortComposantFourni port = getPortclienttobinding();
+        //obs = port.get
+          //      BindingClientToConfigClientServer binding = getBinding port;
+            //obs.notifier();
+    }
+
+    private boolean m_detecteVariation;
+
+    // Le code de la boucle while en environnement Threadé
+    public void run()
+    {
+        while(true)
+        {
+            // si le client fait une requete
+            if(m_detecteVariation)
+                notifierObservateur();
+        }
+    }
 
 } //ClientImpl
