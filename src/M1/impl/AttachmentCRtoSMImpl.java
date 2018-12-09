@@ -58,8 +58,10 @@ public class AttachmentCRtoSMImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentCRtoSMImpl() {
+	protected AttachmentCRtoSMImpl(PortCRtoSMImpl portcrtosm2, RoleCRtoSMImpl rolecrtosm2) {
 		super();
+		this.portcrtosm = portcrtosm2;
+		this.rolecrtosm = rolecrtosm2;
 	}
 
 	/**

@@ -58,8 +58,10 @@ public class AttachmentSMtoSQImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentSMtoSQImpl() {
+	protected AttachmentSMtoSQImpl(PortSMtoSQImpl portsmtosq2, RoleSQfromSMImpl rolesqfromsm2) {
 		super();
+		this.portsmtosq = portsmtosq2;
+		this.rolesqfromsm = rolesqfromsm2;
 	}
 
 	/**

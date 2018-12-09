@@ -58,8 +58,10 @@ public class AttachmentDBtoSQLImpl extends AttachmentImpl implements Attachment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentDBtoSQLImpl() {
+	protected AttachmentDBtoSQLImpl(PortDBtoSQLImpl p, RoleSQLfromDBImpl r) {
 		super();
+		this.portdbtosql =p;
+		this.rolesqlfromdb =r;
 	}
 
 	/**

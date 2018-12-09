@@ -149,9 +149,6 @@ public class Main {
 			//s=sSocket.accept();
 			
 			
-			PortCRtoCMImpl portcrtocm = new PortCRtoCMImpl();
-			PortCMtoCRImpl portcmtocr = new PortCMtoCRImpl();
-			
 			PortBindingToServerImpl portbindingtoserver = new PortBindingToServerImpl();
 			PortCMtoBindingImpl portcmtobinding = new PortCMtoBindingImpl();
 			Binding bindingcmtoserver = new BindingCMtoServerImpl(portcmtobinding, portbindingtoserver);
@@ -172,25 +169,46 @@ public class Main {
 			RoleSQLfromCMImpl rolesqlfromcm = new RoleSQLfromCMImpl();
 			Attachment attachmentcmtosql = new AttachmentCMtoSQLImpl(portcmtosql, rolesqlfromcm);
 			
-			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl();
+			PortSQLtoDBImpl portsqltodb = new PortSQLtoDBImpl();
+			RoleSQLfromCMImpl rolesqltodb = new RoleSQLfromCMImpl();
+			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl(portsqltodb,rolesqltodb);	
 			
-			Attachment attachmentdbtosql = new AttachmentDBtoSQLImpl();
+			PortDBtoSQLImpl portdbtosql = new PortDBtoSQLImpl();		
+			RoleSQLfromDBImpl rolesqlfromdb = new RoleSQLfromDBImpl();
+			Attachment attachmentdbtosql = new AttachmentDBtoSQLImpl(portdbtosql, rolesqlfromdb);	
 			
-			Attachment attachmentdbtosq = new AttachmentDBtoSQImpl();
+			PortDBtoSQImpl portdbtosq = new PortDBtoSQImpl();			
+			RoleSQfromDBImpl rolesqfromdb = new RoleSQfromDBImpl();
+			Attachment attachmentdbtosq = new AttachmentDBtoSQImpl(portdbtosq, rolesqfromdb);	
 			
-			Attachment attachmentsqtodb = new AttachmentSQtoDBImpl();
+			PortSQtoDBImpl portsqtodb = new PortSQtoDBImpl();
+			RoleSQtoDBImpl rolesqtodb = new RoleSQtoDBImpl();
+			Attachment attachmentsqtodb = new AttachmentSQtoDBImpl(portsqtodb, rolesqtodb);
 			
-			Attachment attachmentsqtosm = new AttachmentSQtoSMImpl();
+			PortSQtoSMImpl portsqtosm = new PortSQtoSMImpl();
+			RoleSQtoSMImpl rolesqtosm = new RoleSQtoSMImpl();
+			Attachment attachmentsqtosm = new AttachmentSQtoSMImpl(portsqtosm, rolesqtosm);
 			
-			Attachment attachmentsmtosq = new AttachmentSMtoSQImpl();
+			PortSMtoSQImpl portsmtosq = new PortSMtoSQImpl();
+			RoleSQfromSMImpl rolesqfromsm = new RoleSQfromSMImpl();
+			Attachment attachmentsmtosq = new AttachmentSMtoSQImpl(portsmtosq, rolesqfromsm);
 			
-			Attachment attachmentcrtocm = new AttachmentCRtoCMImpl();
+			PortCRtoCMImpl portcrtocm = new PortCRtoCMImpl();
+			RoleCRtoCMImpl rolecrtocm = new RoleCRtoCMImpl();
+			Attachment attachmentcrtocm = new AttachmentCRtoCMImpl(portcrtocm, rolecrtocm);
 			
-			Attachment attachmentcmtocr = new AttachmentCMtoCRImpl();
+			PortCMtoCRImpl portcmtocr = new PortCMtoCRImpl();
+			RoleCRfromCMImpl rolecrfromcm = new RoleCRfromCMImpl();
+			Attachment attachmentcmtocr = new AttachmentCMtoCRImpl(portcmtocr, rolecrfromcm);
 			
-			Attachment attachmentsmtocr = new AttachmentSMtoCRImpl();
+			PortSMtoCRImpl portsmtocr = new PortSMtoCRImpl();
+			RoleCRfromSMImpl rolecrfromsm = new RoleCRfromSMImpl();
+			Attachment attachmentsmtocr = new AttachmentSMtoCRImpl(portsmtocr, rolecrfromsm);
 			
-			Attachment attachmentcrtosm = new AttachmentCRtoSMImpl();
+			PortCRtoSMImpl portcrtosm = new PortCRtoSMImpl();
+			RoleCRtoSMImpl rolecrtosm = new RoleCRtoSMImpl();
+			Attachment attachmentcrtosm = new AttachmentCRtoSMImpl(portcrtosm, rolecrtosm);
+												
 			
 			server = new ServerConfigurationImpl(bindingcmtoserver, bindingservertocm, 
 					portservertorpc, portrpctoserver, portservertobinding, portbindingtoserver, 

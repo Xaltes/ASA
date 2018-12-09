@@ -58,9 +58,12 @@ public class AttachmentSMtoCRImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentSMtoCRImpl() {
+	protected AttachmentSMtoCRImpl(PortSMtoCRImpl portsmtocr2, RoleCRfromSMImpl rolecrfromsm2) {
 		super();
+		this.portsmtocr = portsmtocr2;
+		this.rolecrfromsm = rolecrfromsm2;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

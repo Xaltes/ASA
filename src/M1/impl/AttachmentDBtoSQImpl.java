@@ -58,9 +58,12 @@ public class AttachmentDBtoSQImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentDBtoSQImpl() {
+	protected AttachmentDBtoSQImpl(PortDBtoSQImpl portdbtosq2, RoleSQfromDBImpl rolesqfromdb2) {
 		super();
+		this.portdbtosq = portdbtosq2;
+		this.rolesqfromdb = rolesqfromdb2;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

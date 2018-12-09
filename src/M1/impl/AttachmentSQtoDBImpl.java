@@ -58,8 +58,10 @@ public class AttachmentSQtoDBImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentSQtoDBImpl() {
+	protected AttachmentSQtoDBImpl(PortSQtoDBImpl portsqtodb2, RoleSQtoDBImpl rolesqtodb2) {
 		super();
+		this.portsqtodb = portsqtodb2;
+		this.rolesqtodb = rolesqtodb2;
 	}
 
 	/**

@@ -58,9 +58,12 @@ public class AttachmentSQtoSMImpl extends AttachmentImpl implements Attachment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttachmentSQtoSMImpl() {
+	protected AttachmentSQtoSMImpl(PortSQtoSMImpl portsqtosm2, RoleSQtoSMImpl rolesqtosm2) {
 		super();
+		this.portsqtosm = portsqtosm2;
+		this.rolesqtosm = rolesqtosm2;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
