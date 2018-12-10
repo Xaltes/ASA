@@ -50,114 +50,125 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		int choice;
 		boolean doingThings = true;
+		boolean leaving = false;
 
-		while(!clientConnected) {
-			// "veuillez entrer votre pseudo et mdp" dans la console
-			System.out.println("Veuillez entrer votre pseudo");
-			pseudo = in.nextLine();
+		while(!leaving) {
+			while(!clientConnected) {
+				// "veuillez entrer votre pseudo et mdp" dans la console
+				System.out.println("Veuillez entrer votre pseudo");
+				pseudo = in.nextLine();
 
-			System.out.println("Veuillez entrer votre mot de passe");
-			motDePasse = in.nextLine();
-			boolean testMDP = server.testConnection(motDePasse);
-			if(!testMDP) {
-				while(!testMDP) {
-					System.out.println("\nErreur : mot de passe incorrect. \nVeuillez rentrez votre mot de passe à nouveau.");
-					testMDP = server.testConnection(motDePasse);
-				}			
-			}
+				System.out.println("Veuillez entrer votre mot de passe");
+				motDePasse = in.nextLine();
+				boolean testMDP = server.testConnection(motDePasse);
+				if(!testMDP) {
+					while(!testMDP) {
+						System.out.println("\nErreur : mot de passe incorrect. \nVeuillez rentrez votre mot de passe à nouveau.");
+						testMDP = server.testConnection(motDePasse);
+					}			
+				}
 
-			clientConnected = connectionManager.testConnection(database, pseudo, motDePasse);
-			if(clientConnected) {
-				System.out.println("Bienvenue " + pseudo + " !");
+				clientConnected = connectionManager.testConnection(database, pseudo, motDePasse);
+				if(clientConnected) {
+					System.out.println("Bienvenue " + pseudo + " !");
+				}
+				else {
+					System.out.println("Erreur de saisie pour la connection. Veuillez rentrez vos informations à nouveau.\n");
+				}
 			}
-			else {
-				System.out.println("Erreur de saisie pour la connection. Veuillez rentrez vos informations à nouveau.\n");
-			}
-		}
-		while(doingThings && clientConnected) {
-			System.out.println("\nQue voulez vous faire ? (rentrez le numéro correspondant à l'action souhaitée)");
-			System.out.println("	1-changer mon mdp");
-			System.out.println("	2-changer ma value");
-			System.out.println("	3-ajouter un nouveau client");
-			System.out.println("	4-supprimer un client");
-			System.out.println("	5-montrer tous les éléments de la database");
-			System.out.println("	6-quitter l'exécution");
-			choice = in.nextInt();
-			in.nextLine();
-			switch (choice){
-			case 1 : {
-				System.out.println("Veuillez rentrer un nouveau mot de passe : ");
-				String newMDP = in.nextLine();
-				database.update(pseudo, newMDP);
-				break;
-			}			
-			case 2 : {
-				System.out.println("Veuillez rentrer votre nouvelle value : ");
-				int newValue = in.nextInt();
+			while(clientConnected) {
+				System.out.println("\nQue voulez vous faire ? (rentrez le numéro correspondant à l'action souhaitée)");
+				System.out.println("	1-changer mon mdp");
+				System.out.println("	2-changer ma value");
+				System.out.println("	3-ajouter un nouveau client");
+				System.out.println("	4-supprimer un client");
+				System.out.println("	5-montrer tous les éléments de la database");
+				System.out.println("	6-déconnexion");
+				System.out.println("	7-quitter l'exécution");
+				choice = in.nextInt();
 				in.nextLine();
-				database.update(pseudo, newValue);
-				break;
-			}
-			case 3 : {
-				if(connectionManager.checkRights(securityManager, pseudo, "")) {
-					System.out.println("Vous avez les droits pour faire ça !\n");
-					System.out.println("Veuillez rentrer le pseudo du nouveau client : ");
-					String newPseudo = in.nextLine();
-					System.out.println("Veuillez rentrer le mot de passe du nouveau client : ");
+				switch (choice){
+				case 1 : {
+					System.out.println("Veuillez rentrer un nouveau mot de passe : ");
 					String newMDP = in.nextLine();
-					System.out.println("Veuillez rentrer la value que vous voulez pour ce nouveau client : ");
-					int newValue = 0;
-					while(true) {
-						try{
-							newValue = in.nextInt();
-							break;
+					database.update(pseudo, newMDP);
+					break;
+				}			
+				case 2 : {
+					System.out.println("Veuillez rentrer votre nouvelle value : ");
+					int newValue = in.nextInt();
+					in.nextLine();
+					database.update(pseudo, newValue);
+					break;
+				}
+				case 3 : {
+					if(connectionManager.checkRights(securityManager, pseudo, "")) {
+						System.out.println("Vous avez les droits pour faire ça !\n");
+						System.out.println("Veuillez rentrer le pseudo du nouveau client : ");
+						String newPseudo = in.nextLine();
+						System.out.println("Veuillez rentrer le mot de passe du nouveau client : ");
+						String newMDP = in.nextLine();
+						System.out.println("Veuillez rentrer la value que vous voulez pour ce nouveau client : ");
+						int newValue = 0;
+						while(true) {
+							try{
+								newValue = in.nextInt();
+								break;
+							}
+							catch(Exception e) {
+								System.out.println("La value doit forcément être un chiffre ou un nombre");
+							}
 						}
-						catch(Exception e) {
-							System.out.println("La value doit forcément être un chiffre ou un nombre");
-						}
+						ClientImpl c = new ClientImpl(newPseudo, newMDP, newValue);
+						database.add(newPseudo, newMDP, newValue);
+						createAndAddLinks(c);
 					}
-					ClientImpl c = new ClientImpl(newPseudo, newMDP, newValue);
-					database.add(newPseudo, newMDP, newValue);
-					createAndAddLinks(c);
-				}
-				else {
-					System.out.println("Vous n'avez pas les droits pour faire ça !!");
-				}
-				break;
+					else {
+						System.out.println("Vous n'avez pas les droits pour faire ça !!");
+					}
+					break;
 
-			}
-			case 4 : {
-				if(connectionManager.checkRights(securityManager, pseudo, "")) {
-					System.out.println("Vous avez les droits pour faire ça !\n");
-					System.out.println("Veuillez entrer le pseudo du client que vous souhaiter supprimer de la database : ");
-					String p = in.nextLine();
-					database.delete(p);
 				}
-				else {
-					System.out.println("Vous n'avez pas les droits pour faire ça !!");
+				case 4 : {
+					if(connectionManager.checkRights(securityManager, pseudo, "")) {
+						System.out.println("Vous avez les droits pour faire ça !\n");
+						System.out.println("Veuillez entrer le pseudo du client que vous souhaiter supprimer de la database : ");
+						String p = in.nextLine();
+						database.delete(p);
+					}
+					else {
+						System.out.println("Vous n'avez pas les droits pour faire ça !!");
+					}
+					break;
 				}
-				break;
-			}
-			case 5 : {
-				if(connectionManager.checkRights(securityManager, pseudo, "")) {
-					System.out.println("Vous avez les droits pour faire ça !\n");
-					String dbAll = database.read();
-					System.out.println("Voici le contenu de la DB : \n" + dbAll + "\n");
+				case 5 : {
+					if(connectionManager.checkRights(securityManager, pseudo, "")) {
+						System.out.println("Vous avez les droits pour faire ça !\n");
+						String dbAll = database.read();
+						System.out.println("Voici le contenu de la DB : \n" + dbAll + "\n");
+					}
+					else {
+						System.out.println("Vous n'avez pas les droits pour faire ça !!");
+					}
+					break;
 				}
-				else {
-					System.out.println("Vous n'avez pas les droits pour faire ça !!");
+				case 6 : {
+					System.out.println("Merci de votre passage !!");
+					clientConnected = false;
+					System.out.println("\nNouvelle connexion.");
+					break;
 				}
-				break;
-			}
-			case 6 : {
-				System.out.println("A bientôt !");
-				doingThings = false;
-				break;
-			}
-			default : {
-				System.out.println("Le choix doit forcément être un chiffre entre 1 et 6 afin de correspoondre à l'un des possibilitées précédemment énoncées.");
-				break;
-			}
+				case 7 : {
+					System.out.println("A bientôt !");
+					clientConnected = false;
+					leaving = true;
+					break;
+				}
+				default : {
+					System.out.println("Le choix doit forcément être un chiffre entre 1 et 6 afin de correspoondre à l'un des possibilitées précédemment énoncées.");
+					break;
+				}
+				}
 			}
 		}
 		in.close();
@@ -230,7 +241,7 @@ public class Main {
 			PortSQLtoCMImpl portsqltocm = new PortSQLtoCMImpl();
 			RoleSQLtoCMImpl rolesqltocm = new RoleSQLtoCMImpl();
 			Attachment attachmentsqltocm = new AttachmentSQLtoCMImpl(portsqltocm, rolesqltocm);
-			
+
 			PortCMtoSQLImpl portcmtosql = new PortCMtoSQLImpl(); 
 			RoleSQLfromCMImpl rolesqlfromcm = new RoleSQLfromCMImpl();
 			Attachment attachmentcmtosql = new AttachmentCMtoSQLImpl(portcmtosql, rolesqlfromcm);
@@ -238,7 +249,7 @@ public class Main {
 			PortSQLtoDBImpl portsqltodb = new PortSQLtoDBImpl();
 			RoleSQLtoDBImpl rolesqltodb = new RoleSQLtoDBImpl();
 			Attachment attachmentsqltodb = new AttachmentSQLtoDBImpl(portsqltodb,rolesqltodb);	
-	
+
 			PortSQtoDBImpl portsqtodb = new PortSQtoDBImpl();
 			RoleSQtoDBImpl rolesqtodb = new RoleSQtoDBImpl();
 			Attachment attachmentsqtodb = new AttachmentSQtoDBImpl(portsqtodb, rolesqtodb);
@@ -279,22 +290,22 @@ public class Main {
 
 			SQLQueryConnectorOutImpl SQLQueryConnectorOut = new SQLQueryConnectorOutImpl(rolesqlfromdb, rolesqltocm);
 			server.connectors.add(SQLQueryConnectorOut);
-			
+
 			SQLQueryConnectorInImpl SQLQueryConnectorIn = new SQLQueryConnectorInImpl(rolesqltodb, rolesqlfromcm);
 			server.connectors.add(SQLQueryConnectorIn);
-			
+
 			SecurityQueryConnectorInImpl SecurityQueryConnectorIn = new SecurityQueryConnectorInImpl(rolesqtodb, rolesqfromsm);
 			server.connectors.add(SecurityQueryConnectorIn);
-			
+
 			SecurityQueryConnectorOutImpl SecurityQueryConnectorOut = new SecurityQueryConnectorOutImpl(rolesqfromdb, rolesqtosm);
 			server.connectors.add(SecurityQueryConnectorOut);
-			
+
 			ClearanceRequestConnectorInImpl ClearanceRequestConnectorIn = new ClearanceRequestConnectorInImpl(rolecrfromcm, rolecrtosm);
 			server.connectors.add(ClearanceRequestConnectorIn);
-			
+
 			ClearanceRequestConnectorOutImpl ClearanceRequestConnectorOut = new ClearanceRequestConnectorOutImpl(rolecrtocm, rolecrfromsm);
 			server.connectors.add(ClearanceRequestConnectorOut);
-			
+
 			database = new DatabaseImpl(portdbtosql, portsqltodb, portdbtosq, portsqtodb);			
 
 			connectionManager = new ConnectionManagerImpl(portsqltocm, portcmtosql, portbindingtocm, portcmtobinding, portcrtocm, portcmtocr);
